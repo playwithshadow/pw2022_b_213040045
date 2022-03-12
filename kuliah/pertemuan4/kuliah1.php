@@ -51,6 +51,7 @@ echo ceil(2.1); // pembulatan ke atas dari kata (ceiling yang artinya langit2)
 echo "<br>";
 echo floor(2.9); // pembulatan ke bawah (floor / lantai)
 
+echo "<hr>";
 
 
 
