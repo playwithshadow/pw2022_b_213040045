@@ -12,7 +12,7 @@
             height : 30px;
             background-color: #BADA55;
             text-align : center;
-            line-hegith: 30px;
+            line-height: 30px;
             margin : 3px;
             float : left;
             transition: 0.5s;
