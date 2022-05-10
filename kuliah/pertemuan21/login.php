@@ -94,6 +94,7 @@ if (isset($_POST["login"])) {
             <li>
                 <button type="submit" name="login">Login</button>
             </li>
+            <br>
         </ul>
     </form>
 </body>
