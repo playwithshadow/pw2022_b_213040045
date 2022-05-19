@@ -61,19 +61,27 @@
                             <!-- Post header-->
                             <header class="mb-4">
                                 <!-- Post title-->
-                                <h1 class="fw-bolder mb-1">Prosesor intel Core Generasi ke 12</h1>
+                                <h1 class="fw-bolder mb-1">Oppo A16k ponsel ramping Rp2 Jutaan Diluncurkan di RI</h1>
                                 <!-- Post meta content-->
-                                <div class="text-muted fst-italic mb-2">January 5, 2022</div>
+                                <div class="text-muted fst-italic mb-2">Mei 22, 2022</div>
                             </header>
                             <!-- Preview image figure-->
-                            <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/blog2-more.jpg" alt="..." /></figure>
+                            <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/artikel3-more.jpg" alt="..." /></figure>
                             <!-- Post content-->
                             <section class="mb-5">
-                                <p class="fs-5 mb-4">Prosesor intel core generasi 12, menghadirkan performa superior dimanapun anda membutuhkannya. Dengan hadirnya dari prosesor intel core generasi ke-12 anda akan mendapatkan performa yang dibutuhkan, dimanapun anda membutuhkannya baik anda seorang gamer, kreator, streamer, atau pengguna harian. Apapun kegemaran Anda, Lakukan lebih banyak, dimana pun Anda menginginkannya.</p>
-                                <p class="fs-5 mb-4">Prosesor Intel® Core™ Generasi ke-12—generasi yang berbeda dari sebelumnya. Dengan arsitektur hibrida performa baru yang belum pernah ada sebelumnya, prosesor Intel® Core™ Generasi ke-12 menawarkan kombinasi unik inti Performa dan Efisien P-core dan E-core. Ini artinya performa nyata dapat secara intuitif diskalakan untuk menyesuaikan dengan apa pun pekerjaan Anda.</p>
-                                <p class="fs-5 mb-4">Inti Performa adalah inti CPU Intel dengan performa tertinggi. Dan inti ini dirancang untuk memaksimalkan performa dan responsivitas thread tunggal untuk beban kerja intensif komputasi seperti gaming dan desain 3D. Inti Efisien menghadirkan performa multithread untuk tugas yang dapat dijalankan secara paralel seperti render gambar, beserta pembongkaran efisien tugas latar belakang untuk multitugas modern.</p>
-                                <p class="fs-5 mb-4">Agar Performance-core dan Efficient-core dapat bekerja secara lancar dengan sistem operasi, Intel membangun Intel® Thread Director tepat di dalam perangkat keras3. Secara otomatis memantau dan menganalisis secara langsung, Intel® Thread Director memandu sistem operasi, membantunya menempatkan thread yang tepat pada inti yang tepat, di saat yang tepat. Dan semuanya dilakukan secara dinamis, menyesuaikan panduan penjadwalan berdasarkan pada kebutuhan komputasi, tidak berdasarkan aturan statis.</p>
-                                <p class="fs-5 mb-4">Dengan prosesor Intel® Core™ Generasi ke-12, fitur standar dan bawaan memungkinkan kemampuan seperti peredam kebisingan, pembingkaian otomatis, dan optimasi untuk bandwidth dan resolusi video saat bermain 4game. Hal ini menghemat waktu Anda dan memungkinkan Anda untuk melakukan multitugas dengan cara yang hanya dapat Anda impikan—sampai sekarang.</p>
+                                <p class="fs-5 mb-4">Penerus Oppo A16 itu disebut hadir dengan tampilan yang lebih stylish dan lebih ramping. OPPO A16 dan A16e memberikan kontribusi cukup tinggi selama momen Ramadan dan Idulfitri di tahun ini. Secara total dari kedua perangkat ini memberikan kontribusi hampir 40 persen. Berarti, sambutan dan ketertarikan konsumen terhadap perangkat ini sangat tinggi</p>
+                                <p class="fs-5 mb-4">Oppo A16k memiliki dimensi 164mm × 75.4mm × 7.85mm dan berat 175 gram. Oppo A16k mengusung layar LCD 6,52 inci dengan resolusi HD+ atau 720 x 1600 piksel. Untuk fotografi, Oppo A16k mengusung kamera utama tunggal beresolusi 13MP di bagian belakang. Sementara kamera depan berukuran 5MP berdesain waterdrop notch atau poni tetesan air.
+                                </p>
+                                <p class="fs-5 mb-4">Tak ketinggalan, smartphone ini juga dilengkapi sejumlah fitur penunjang fotografi meliputi fitur HDR Backlight untuk menunjang pengambilan foto saat cahaya latar belakang kuat maupun saat cahaya pada objek foto cukup redup. Ada pula tiga filter malam baru, AI beautification, hingga AI Pallete yang mampu mengubah foto dengan gaya gambar referensi populer di media sosial dalam satu klik.
+                                </p>
+                                <p class="fs-5 mb-4">Oppo A16k mengusung chipset MediaTek Helio G35, RAM 4GB dan ROM 64GB serta menjalankan ColorOS 11.1 berbasis sistem operasi Android 11. HP itu memiliki baterainya berkapasitas 4.230mAh dengan charger 10W
+                                </p>
+                                <p class="fs-5 mb-4">Dibanding pendahulunya, Oppo A16K diklaim tampil dengan desain yang baru, stylish dan ramping. Selain itu, A16K juga menawarkan daya tahan yang mumpuni berkat sertifikasi IPX4 yang membuatnya tahan dari cipratan air.
+                                </p>
+                                <p class="fs-5 mb-4">Oppo A16K menawarkan fleksibilitas penggunaan smartphone dalam kondisi apapun berkat uji kualitas ketat dan juga kemampuannya terhadap ciptaran air melalui sertifikasi IPX4," imbuhnya.
+                                </p>
+                                <p class="fs-5 mb-4">Harga Oppo A16k mulai Rp 2.199.000 dan tersedia dalam varian warna Hitam dan Putih. Ponsel bisa didapatkan secara daring melalui aplikasi Oppo Store atau Oppo Official Store pada jaringan situs e-dagang seperti Shopee, Lazada, Tokopedia, Blibli, JDID, Akulaku, dan Tiktok Shop.
+                                </p>
                             </section>
                         </article>
                     </div>

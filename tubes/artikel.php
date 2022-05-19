@@ -61,19 +61,33 @@
                             <!-- Post header-->
                             <header class="mb-4">
                                 <!-- Post title-->
-                                <h1 class="fw-bolder mb-1">Prosesor intel Core Generasi ke 12</h1>
+                                <h1 class="fw-bolder mb-1">Seberapa Cepat chipset snapdragon gen-1 ?</h1>
                                 <!-- Post meta content-->
-                                <div class="text-muted fst-italic mb-2">January 5, 2022</div>
+                                <div class="text-muted fst-italic mb-2">January 10, 2022</div>
                             </header>
                             <!-- Preview image figure-->
-                            <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/blog2-more.jpg" alt="..." /></figure>
+                            <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/artikel1-more.jpg" alt="..." /></figure>
                             <!-- Post content-->
                             <section class="mb-5">
-                                <p class="fs-5 mb-4">Prosesor intel core generasi 12, menghadirkan performa superior dimanapun anda membutuhkannya. Dengan hadirnya dari prosesor intel core generasi ke-12 anda akan mendapatkan performa yang dibutuhkan, dimanapun anda membutuhkannya baik anda seorang gamer, kreator, streamer, atau pengguna harian. Apapun kegemaran Anda, Lakukan lebih banyak, dimana pun Anda menginginkannya.</p>
-                                <p class="fs-5 mb-4">Prosesor Intel® Core™ Generasi ke-12—generasi yang berbeda dari sebelumnya. Dengan arsitektur hibrida performa baru yang belum pernah ada sebelumnya, prosesor Intel® Core™ Generasi ke-12 menawarkan kombinasi unik inti Performa dan Efisien P-core dan E-core. Ini artinya performa nyata dapat secara intuitif diskalakan untuk menyesuaikan dengan apa pun pekerjaan Anda.</p>
-                                <p class="fs-5 mb-4">Inti Performa adalah inti CPU Intel dengan performa tertinggi. Dan inti ini dirancang untuk memaksimalkan performa dan responsivitas thread tunggal untuk beban kerja intensif komputasi seperti gaming dan desain 3D. Inti Efisien menghadirkan performa multithread untuk tugas yang dapat dijalankan secara paralel seperti render gambar, beserta pembongkaran efisien tugas latar belakang untuk multitugas modern.</p>
-                                <p class="fs-5 mb-4">Agar Performance-core dan Efficient-core dapat bekerja secara lancar dengan sistem operasi, Intel membangun Intel® Thread Director tepat di dalam perangkat keras3. Secara otomatis memantau dan menganalisis secara langsung, Intel® Thread Director memandu sistem operasi, membantunya menempatkan thread yang tepat pada inti yang tepat, di saat yang tepat. Dan semuanya dilakukan secara dinamis, menyesuaikan panduan penjadwalan berdasarkan pada kebutuhan komputasi, tidak berdasarkan aturan statis.</p>
-                                <p class="fs-5 mb-4">Dengan prosesor Intel® Core™ Generasi ke-12, fitur standar dan bawaan memungkinkan kemampuan seperti peredam kebisingan, pembingkaian otomatis, dan optimasi untuk bandwidth dan resolusi video saat bermain 4game. Hal ini menghemat waktu Anda dan memungkinkan Anda untuk melakukan multitugas dengan cara yang hanya dapat Anda impikan—sampai sekarang.</p>
+                                <p class="fs-5 mb-4">Chipset ini merupakan penerus dari Snapdragon 888 yang dirilis pada Desember 2020 lalu. Sesuai namanya, Snapdragon 8 Gen 1 masuk dalam jajaran chipset seri 800 sekarang seri 8 Qualcomm yang digunakan di smartphone flagship.</p>
+                                <p class="fs-5 mb-4">Snapdragon 8 Gen 1 juga merupakan chipset pertama Qualcomm yang dibuat dengan fabrikasi 4 nm, yang hadir dengan beragam fitur premium, mulai dari koneksi 5G, dukungan kecerdasan buatan Artificial Intelligence/AI, game, hingga Wi-Fi dan Bluetooth.</p>
+                                <h2 class="fw-bolder mb-4 mt-5">1. Pertama dengan CPU Armv9</h2>
+                                <p class="fs-5 mb-4">Snapdragon 8 Gen 1 ini menjadi chip pertama Qualcomm degan CPU Armv9. Inti core CPU utamanya Cortex-X2 dengan kecepatan clock 3,0 GHz. Lalu ada tiga core Cortex-A710 dengan kecepatan 2,5GHz, serta empat core Cortex A510 berkecepatan 1,8 GHz.
+                                </p>
+                                <p class="fs-5 mb-4">Qualcomm mengklaim kinerja CPU mengalami peningkatan 20 persen dan mampu melakukan penghematan daya sebanyak 30 persen dibandingkan Snapdragon 888</p>
+                                <p class="fs-5 mb-4">Arsitektur Armv9 juga memungkinkan kemampuan machine learning yang jauh lebih cepat, dengan perusahaan mengklaim kinerja mesin AI-nya telah menerima peningkatan empat kali lipat dari pendahulunya</p>
+                                <h2 class="fw-bolder mb-4 mt-5">2. Kamera makin bertenaga</h2>
+                                <p class="fs-5 mb-4">Dalam hal kamera, Snapdragon 8 Gen 1 ini hadir dengan Snapdragon Sight di chipset generasi sebelumnya dikenal sebagai image signal processor/ ISP yang memiliki kapasitas kamera yang lebih besar dari Snapdragon 888.
+                                </p>
+                                <p class="fs-5 mb-4">Snapdragon Sight adalah fitur yang dirancang khusus untuk kalangan profesional. Snapdragon Sight kini dapat memproses data 3,2 gigapiksel per detik naik dari 2,7 gigapiksel per detik pada Snapdragon 888.</p>
+                                <p class="fs-5 mb-4">Kemampuan foto burst Snapdragon Sight juga meningkat menjadi 240 foto resolusi 12MP per detik dua kali lipat dari yang bisa ditangani ISP Snapdragon 888, dan pemrosesannya mencapai 30 foto multi-frame per detik dari sebelumnya 6 foto.</p>
+                                <p class="fs-5 mb-4">Dalam hal perekaman video, resolusi maksimum yang didukung chipset ini masih sama dengan pendahulunya, yakni 8K 30 fps. Bedanya sekarang, Snapdragon 888 Gen 1kini mendukung perekaman HDR HDR10 dan HDR10+.</p>
+                                <p class="fs-5 mb-4">Snapdragon Sight juga mendukung Electronic Image Stabilization secara bersamaan untuk merekam video sembari memotret, mengambil foto 64 MP saat merekam video 8K/30fps, dan bisa merender bokeh dalam video hingga resolusi 4K.</p>
+                                <h2 class="fw-bolder mb-4 mt-5">3. Performa</h2>
+                                <p class="fs-5 mb-4">Qualcomm Snapdragon 8 Gen 1 juga mendapat update dalam hal konektivitas 5G. Chipset baru ini ditenagai modem X65 yang diumumkan awal tahun ini, yang menawarkan kecepatan download hingga 10 Gbps dan fitur 3GPP Release 16.1.
+                                </p>
+                                <p class="fs-5 mb-4">Sebagai perbandingan, Snapdragon 888 hanya memikiki kecepatan download maksimal 7,5 Gbps.</p>
+                                <p class="fs-5 mb-4">Dalam hal opsi konektivitas lainnya, Snapdragon 8 Gen 1 juga mendapatkan teknologi nirkabel Wi-Fi 6E, Bluetooth 5.2, dan Snapdragon Sound.</p>
                             </section>
                         </article>
                     </div>

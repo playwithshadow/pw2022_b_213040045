@@ -61,19 +61,32 @@
                             <!-- Post header-->
                             <header class="mb-4">
                                 <!-- Post title-->
-                                <h1 class="fw-bolder mb-1">Prosesor intel Core Generasi ke 12</h1>
+                                <h1 class="fw-bolder mb-1">Cara Melindungi HP Dari Serangan Hacker</h1>
                                 <!-- Post meta content-->
-                                <div class="text-muted fst-italic mb-2">January 5, 2022</div>
+                                <div class="text-muted fst-italic mb-2">April 01, 2021</div>
                             </header>
                             <!-- Preview image figure-->
-                            <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/blog2-more.jpg" alt="..." /></figure>
+                            <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/artikel6-more.jpg" alt="..." /></figure>
                             <!-- Post content-->
                             <section class="mb-5">
-                                <p class="fs-5 mb-4">Prosesor intel core generasi 12, menghadirkan performa superior dimanapun anda membutuhkannya. Dengan hadirnya dari prosesor intel core generasi ke-12 anda akan mendapatkan performa yang dibutuhkan, dimanapun anda membutuhkannya baik anda seorang gamer, kreator, streamer, atau pengguna harian. Apapun kegemaran Anda, Lakukan lebih banyak, dimana pun Anda menginginkannya.</p>
-                                <p class="fs-5 mb-4">Prosesor Intel® Core™ Generasi ke-12—generasi yang berbeda dari sebelumnya. Dengan arsitektur hibrida performa baru yang belum pernah ada sebelumnya, prosesor Intel® Core™ Generasi ke-12 menawarkan kombinasi unik inti Performa dan Efisien P-core dan E-core. Ini artinya performa nyata dapat secara intuitif diskalakan untuk menyesuaikan dengan apa pun pekerjaan Anda.</p>
-                                <p class="fs-5 mb-4">Inti Performa adalah inti CPU Intel dengan performa tertinggi. Dan inti ini dirancang untuk memaksimalkan performa dan responsivitas thread tunggal untuk beban kerja intensif komputasi seperti gaming dan desain 3D. Inti Efisien menghadirkan performa multithread untuk tugas yang dapat dijalankan secara paralel seperti render gambar, beserta pembongkaran efisien tugas latar belakang untuk multitugas modern.</p>
-                                <p class="fs-5 mb-4">Agar Performance-core dan Efficient-core dapat bekerja secara lancar dengan sistem operasi, Intel membangun Intel® Thread Director tepat di dalam perangkat keras3. Secara otomatis memantau dan menganalisis secara langsung, Intel® Thread Director memandu sistem operasi, membantunya menempatkan thread yang tepat pada inti yang tepat, di saat yang tepat. Dan semuanya dilakukan secara dinamis, menyesuaikan panduan penjadwalan berdasarkan pada kebutuhan komputasi, tidak berdasarkan aturan statis.</p>
-                                <p class="fs-5 mb-4">Dengan prosesor Intel® Core™ Generasi ke-12, fitur standar dan bawaan memungkinkan kemampuan seperti peredam kebisingan, pembingkaian otomatis, dan optimasi untuk bandwidth dan resolusi video saat bermain 4game. Hal ini menghemat waktu Anda dan memungkinkan Anda untuk melakukan multitugas dengan cara yang hanya dapat Anda impikan—sampai sekarang.</p>
+                                <p class="fs-5 mb-4">Sebagai pengguna smartphone harus bersiap-siap dengan kemungkinan ini. Kamu harus melakukan sejumlah cara pengamanan agar ponse terhindar dari serangan para peretas.</p>
+                                <p class="fs-5 mb-4">Berikut cara untuk mengamankan ponsel kamu dari para peretas, dikutip laman Lembaga Teknologi Singapura, Kamis (1/4/2021).</p>
+                                </p>
+                                <h2 class="fw-bolder mb-4 mt-5">Aktifkan Anti Malware</h2>
+                                <p class="fs-5 mb-4">Kita tidak pernah tahu kapan menjadi korban malware-malware jahat ini. Apalagi menurut laporan di tahun 2019 saja, ditemukan ratusan aplikasi yang berisi malware DresCode di Google Play Store. DresCode dikabarkan telah menginfeksi hingga 400an aplikasi. Artinya kita tidak bisa mempercayai bahwa ada tempat yang benar-benar aman.
+                                </p>
+                                <p class="fs-5 mb-4">Sebagai langkah pencegahan, sebaiknya aktifkan anti-malware misalnya Google Play Protect. Caranya memindai aplikasi sebelum akhirnya diunduh, serta melakukan pembaruan sebelum melakukan penginstallan.
+                                </p>
+                                <h2 class="fw-bolder mb-4 mt-5">Pastikan OS Mendapatkan Pembaruan</h2>
+                                <p class="fs-5 mb-4">Selain menyiapkan aplikasi yang aman, sistem operasi atau OS juga harus dipastikan selalu diperbarui. Tujuannya untuk ponsel memiliki tambalan keamanan untuk melawan resiko kerentanan pada ponsel.
+                                </p>
+                                <h2 class="fw-bolder mb-4 mt-5">Jangan Lakukan 'root' atau 'jailbreak' Ponsel</h2>
+                                <p class="fs-5 mb-4">Jailbreak memang ide paling bagus untuk menghilangkan banyak peraturan keamanan yang ketat. Jadi ponsel bisa menginstall apapun seperti yang di sisi lain.
+                                </p>
+                                <p class="fs-5 mb-4">Adapun dompet digital yang akan didukung Instagram pada tahap awal meliputi Rainbow, MetaMask, dan Trust Wallet. Dompet digital pihak ketiga lainnya yang disebut akan menyusul yaitu Coinbase, Dapper, dan Phantom.
+                                </p>
+                                <p class="fs-5 mb-4">Namun dengan peraturan keamanan yang dihapus, berarti hilang juga keamanan pada ponsel. Resiko untuk diserang pun semakin tinggi. Maka sebaiknya tidak melakukan Jailbreak dengan alasan apapun.
+                                </p>
                             </section>
                         </article>
                     </div>

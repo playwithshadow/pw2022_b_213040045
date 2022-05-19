@@ -61,19 +61,31 @@
                             <!-- Post header-->
                             <header class="mb-4">
                                 <!-- Post title-->
-                                <h1 class="fw-bolder mb-1">Prosesor intel Core Generasi ke 12</h1>
+                                <h1 class="fw-bolder mb-1">Instagram Bakal Uji Coba Fitur NFT</h1>
                                 <!-- Post meta content-->
-                                <div class="text-muted fst-italic mb-2">January 5, 2022</div>
+                                <div class="text-muted fst-italic mb-2">Mei 11, 2022</div>
                             </header>
                             <!-- Preview image figure-->
-                            <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/blog2-more.jpg" alt="..." /></figure>
+                            <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/artikel5-more.jpg" alt="..." /></figure>
                             <!-- Post content-->
                             <section class="mb-5">
-                                <p class="fs-5 mb-4">Prosesor intel core generasi 12, menghadirkan performa superior dimanapun anda membutuhkannya. Dengan hadirnya dari prosesor intel core generasi ke-12 anda akan mendapatkan performa yang dibutuhkan, dimanapun anda membutuhkannya baik anda seorang gamer, kreator, streamer, atau pengguna harian. Apapun kegemaran Anda, Lakukan lebih banyak, dimana pun Anda menginginkannya.</p>
-                                <p class="fs-5 mb-4">Prosesor Intel® Core™ Generasi ke-12—generasi yang berbeda dari sebelumnya. Dengan arsitektur hibrida performa baru yang belum pernah ada sebelumnya, prosesor Intel® Core™ Generasi ke-12 menawarkan kombinasi unik inti Performa dan Efisien P-core dan E-core. Ini artinya performa nyata dapat secara intuitif diskalakan untuk menyesuaikan dengan apa pun pekerjaan Anda.</p>
-                                <p class="fs-5 mb-4">Inti Performa adalah inti CPU Intel dengan performa tertinggi. Dan inti ini dirancang untuk memaksimalkan performa dan responsivitas thread tunggal untuk beban kerja intensif komputasi seperti gaming dan desain 3D. Inti Efisien menghadirkan performa multithread untuk tugas yang dapat dijalankan secara paralel seperti render gambar, beserta pembongkaran efisien tugas latar belakang untuk multitugas modern.</p>
-                                <p class="fs-5 mb-4">Agar Performance-core dan Efficient-core dapat bekerja secara lancar dengan sistem operasi, Intel membangun Intel® Thread Director tepat di dalam perangkat keras3. Secara otomatis memantau dan menganalisis secara langsung, Intel® Thread Director memandu sistem operasi, membantunya menempatkan thread yang tepat pada inti yang tepat, di saat yang tepat. Dan semuanya dilakukan secara dinamis, menyesuaikan panduan penjadwalan berdasarkan pada kebutuhan komputasi, tidak berdasarkan aturan statis.</p>
-                                <p class="fs-5 mb-4">Dengan prosesor Intel® Core™ Generasi ke-12, fitur standar dan bawaan memungkinkan kemampuan seperti peredam kebisingan, pembingkaian otomatis, dan optimasi untuk bandwidth dan resolusi video saat bermain 4game. Hal ini menghemat waktu Anda dan memungkinkan Anda untuk melakukan multitugas dengan cara yang hanya dapat Anda impikan—sampai sekarang.</p>
+                                <p class="fs-5 mb-4">CEO Meta, Mark Zuckerberg, mengonfirmasi pihaknya akan menguji fitur NFT di aplikasi di bawah naungan Meta, seperti Instagram dan Facebook.</p>
+                                <p class="fs-5 mb-4">Nantinya, karya-karya NFT yang dibuat kreator atau yang dimiliki kolektor, akan dapat dipajang melalui Feed, IG Stories, serta Direct Message (DM). </p>
+                                </p>
+                                <p class="fs-5 mb-4">Menurut CEO Instagram, Adam Mosseri, mengatakan bahwa fitur NFT ini baru akan digelontorkan ke sekelompok pengguna di Amerika Serikat (AS) dalam beberapa waktu ke depan.
+                                </p>
+                                <p class="fs-5 mb-4">"Ada banyak cara kreator untuk mendulang uang, tapi, banyak juga yang tidak bisa diprediksi dan berubah dengan cepat. Kami pikir salah satu kesempatan yang menarik untuk kreator adalah NFT," kata Mosseri dalam video yang diunggah ke akun Twitter dengan handle @mosseri.
+                                </p>
+                                <p class="fs-5 mb-4">Karya dalam bentuk NFT nantinya akan tampil sebagaimana foto atau konten biasa yang dapat diunggah pengguna ke Instagram.
+                                </p>
+                                <p class="fs-5 mb-4">Untuk tahap awal, NFT yang didukung Instagram adalah NFT yang dicetak di blockchain Ethereum dan Polygon. Namun, ke depannya, dukungan tersebut akan diperluas ke Solana dan Flow.
+                                </p>
+                                <p class="fs-5 mb-4">Adapun dompet digital yang akan didukung Instagram pada tahap awal meliputi Rainbow, MetaMask, dan Trust Wallet. Dompet digital pihak ketiga lainnya yang disebut akan menyusul yaitu Coinbase, Dapper, dan Phantom.
+                                </p>
+                                <p class="fs-5 mb-4">Dengan uji coba ini, Mosseri berharap mendapat respons dari pengguna untuk mengevaluasi dukungan NFT di Instagram.
+                                </p>
+                                <p class="fs-5 mb-4">Setelah uji coba rampung, Mosseri menyatakan akan menghadirkan lebih banyak fitur yang mendukung penggunaan NFT di aplikasi berbagi foto dan video tersebut.
+                                </p>
                             </section>
                         </article>
                     </div>

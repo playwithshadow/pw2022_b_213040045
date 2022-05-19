@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
             <div class="container px-5">
                 <img src="assets/img/logo.png" alt="" width="40" height="40" />
-                <a class="navbar-brand" href="index.html">VAN TECHNOLOGY</a>
+                <a class="navbar-brand" href="index.php">VAN TECHNOLOGY</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -62,7 +62,7 @@
                                 <div class="p-4 p-md-5">
                                     <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
                                     <div class="h2 fw-bolder">Apa sih metaverse itu?</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique delectus ab doloremque, qui doloribus ea officiis...</p>
+                                    <p>Intinya, metaverse adalah konsep dunia virtual yang akan menjadi masa depan dari kemutakhiran internet, ia digadang-gadang akan menjadi dunia digital utama di masa mendatang dan akan segera rilis pada awal tahun 2022 ini.</p>
                                     <a class="stretched-link text-decoration-none" href="postblog.php">
                                         Read more
                                         <i class="bi bi-arrow-right"></i>
@@ -88,37 +88,39 @@
                 <div class="row gx-5">
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="https://dummyimage.com/600x350/ced4da/6c757d" alt="..." />
+                            <img class="card-img-top" src="assets/img/artikel1.jpg" alt="..." />
                             <div class="card-body p-4">
-                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
-                                <a class="text-decoration-none link-dark stretched-link" href="#!">
-                                    <div class="h5 card-title mb-3">Blog post title</div>
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="artikel.php">
+                                    <div class="h5 card-title mb-3">Seberapa cepat chipset snapdragon gen-1</div>
                                 </a>
-                                <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text mb-0">Chipset terbaru smartphone membawa performa yang sangat gahar.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="https://dummyimage.com/600x350/adb5bd/495057" alt="..." />
+                            <img class="card-img-top" src="assets/img/artikel2.jpg" alt="..." />
                             <div class="card-body p-4">
-                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div>
-                                <a class="text-decoration-none link-dark stretched-link" href="#!">
-                                    <div class="h5 card-title mb-3">Another blog post title</div>
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="artikel2.php">
+                                    <div class="h5 card-title mb-3">GPU Nvidia Gerforce RTX 3090</div>
                                 </a>
-                                <p class="card-text mb-0">This text is a bit longer to illustrate the adaptive height of each card. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text mb-0">Rangkaian Geforce RTX 3090 The BFGPU.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="https://dummyimage.com/600x350/6c757d/343a40" alt="..." />
+                            <img class="card-img-top" src="assets/img/artikel3.jpg" alt="..." />
                             <div class="card-body p-4">
-                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
-                                <a class="text-decoration-none link-dark stretched-link" href="#!">
-                                    <div class="h5 card-title mb-3">The last blog post title is a little bit longer than the others</div>
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="artikel3.php">
+                                    <div class="h5 card-title mb-3">Oppo A16k ponsel ramping Rp2 Jutaan Diluncurkan di RI</div>
                                 </a>
-                                <p class="card-text mb-0">Some more quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text mb-0">
+                                    Sambutan yang baik pada ponsel Oppo A16 dan A16e membuat Oppo kembali menelurkan ponsel baru Oppo A16k untuk melengkapi seri ponsel ini.
+                                </p>
                             </div>
                         </div>
                     </div>

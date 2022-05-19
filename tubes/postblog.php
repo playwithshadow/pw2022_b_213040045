@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
             <div class="container px-5">
                 <img src="assets/img/logo.png" alt="" width="40" height="40" />
-                <a class="navbar-brand" href="index.html">VAN TECHNOLOGY</a>
+                <a class="navbar-brand" href="index.php">VAN TECHNOLOGY</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -61,22 +61,20 @@
                             <!-- Post header-->
                             <header class="mb-4">
                                 <!-- Post title-->
-                                <h1 class="fw-bolder mb-1">Welcome to Blog Post!</h1>
+                                <h1 class="fw-bolder mb-1">Metavese</h1>
                                 <!-- Post meta content-->
-                                <div class="text-muted fst-italic mb-2">January 1, 2022</div>
+                                <div class="text-muted fst-italic mb-2">Maret 25, 2022</div>
                             </header>
                             <!-- Preview image figure-->
                             <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/blog1-more.jpg" alt="..." /></figure>
                             <!-- Post content-->
                             <section class="mb-5">
-                                <p class="fs-5 mb-4">Science is an enterprise that should be cherished as an activity of the free human mind. Because it transforms who we are, how we live, and it gives us an understanding of our place in the universe.</p>
-                                <p class="fs-5 mb-4">The universe is large and old, and the ingredients for life as we know it are everywhere, so there's no reason to think that Earth would be unique in that regard. Whether of not the life became intelligent is a different
-                                    question, and we'll see if we find that.</p>
-                                <p class="fs-5 mb-4">If you get asteroids about a kilometer in size, those are large enough and carry enough energy into our system to disrupt transportation, communication, the food chains, and that can be a really bad day on Earth.</p>
-                                <h2 class="fw-bolder mb-4 mt-5">I have odd cosmic thoughts every day</h2>
-                                <p class="fs-5 mb-4">For me, the most fascinating interface is Twitter. I have odd cosmic thoughts every day and I realized I could hold them to myself or share them with people who might be interested.</p>
-                                <p class="fs-5 mb-4">Venus has a runaway greenhouse effect. I kind of want to know what happened there because we're twirling knobs here on Earth without knowing the consequences of it. Mars once had running water. It's bone dry today. Something
-                                    bad happened there as well.</p>
+                                <p class="fs-5 mb-4">Meskipun baru populer belakangan ini, metaverse sejatinya adalah sebuah istilah yang sudah lama diciptakan.</p>
+                                <p class="fs-5 mb-4">Ia pertama kali digunakan pada tahun 1992 oleh Neal Stephenson dalam novelnya yang bertajuk “Snow Crash”.</p>
+                                <p class="fs-5 mb-4">Nah, sebagai dunia virtual, metaverse adalah sebuah lingkungan yang menyediakan banyak opsi kegiatan bagi penggunanya.</p>
+                                <h2 class="fw-bolder mb-4 mt-5">Apa Itu Metaverse?</h2>
+                                <p class="fs-5 mb-4">Seperti yang sudah diketahui, Metaverse merupakan dunia virtual 3D yang diciptakan menggunakan teknologi augmented reality, virtual reality, dan video, yang mana pengguna dapat merasakan hidup dalam dunia virtual. Tujuan dari diciptakannya Metaverse ini bukan lain untuk menjadi platform komunikasi yang modern dan mempermudah setiap orang untuk melakukan aktivitas sehari-hari seperti bekerja, bermain, bersosialisasi, bahkan konser secara virtual. </p>
+                                <p class="fs-5 mb-4">Intinya Metaverse adalah gabungan antara teknologi penggabungan virtual reality dan augmented reality yang memberikan pengalaman baru dan unik bagi para penggunanya. Bagi kamu yang ikut meramaikan NFT, tentu kamu membutuhkan web untuk minting bukan? Kamu bisa menggunakan layanan cloud hosting di Dewaweb yang cepat, aman, dan dapat diandalkan untuk proyek NFT kamu.</p>
                             </section>
                         </article>
                     </div>

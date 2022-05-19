@@ -61,19 +61,27 @@
                             <!-- Post header-->
                             <header class="mb-4">
                                 <!-- Post title-->
-                                <h1 class="fw-bolder mb-1">Prosesor intel Core Generasi ke 12</h1>
+                                <h1 class="fw-bolder mb-1">Apple Dikabarkan Uji Coba Iphone dengan port USB-C</h1>
                                 <!-- Post meta content-->
-                                <div class="text-muted fst-italic mb-2">January 5, 2022</div>
+                                <div class="text-muted fst-italic mb-2">Mei 16, 2022</div>
                             </header>
                             <!-- Preview image figure-->
-                            <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/blog2-more.jpg" alt="..." /></figure>
+                            <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/artikel4-more.jpg" alt="..." /></figure>
                             <!-- Post content-->
                             <section class="mb-5">
-                                <p class="fs-5 mb-4">Prosesor intel core generasi 12, menghadirkan performa superior dimanapun anda membutuhkannya. Dengan hadirnya dari prosesor intel core generasi ke-12 anda akan mendapatkan performa yang dibutuhkan, dimanapun anda membutuhkannya baik anda seorang gamer, kreator, streamer, atau pengguna harian. Apapun kegemaran Anda, Lakukan lebih banyak, dimana pun Anda menginginkannya.</p>
-                                <p class="fs-5 mb-4">Prosesor Intel® Core™ Generasi ke-12—generasi yang berbeda dari sebelumnya. Dengan arsitektur hibrida performa baru yang belum pernah ada sebelumnya, prosesor Intel® Core™ Generasi ke-12 menawarkan kombinasi unik inti Performa dan Efisien P-core dan E-core. Ini artinya performa nyata dapat secara intuitif diskalakan untuk menyesuaikan dengan apa pun pekerjaan Anda.</p>
-                                <p class="fs-5 mb-4">Inti Performa adalah inti CPU Intel dengan performa tertinggi. Dan inti ini dirancang untuk memaksimalkan performa dan responsivitas thread tunggal untuk beban kerja intensif komputasi seperti gaming dan desain 3D. Inti Efisien menghadirkan performa multithread untuk tugas yang dapat dijalankan secara paralel seperti render gambar, beserta pembongkaran efisien tugas latar belakang untuk multitugas modern.</p>
-                                <p class="fs-5 mb-4">Agar Performance-core dan Efficient-core dapat bekerja secara lancar dengan sistem operasi, Intel membangun Intel® Thread Director tepat di dalam perangkat keras3. Secara otomatis memantau dan menganalisis secara langsung, Intel® Thread Director memandu sistem operasi, membantunya menempatkan thread yang tepat pada inti yang tepat, di saat yang tepat. Dan semuanya dilakukan secara dinamis, menyesuaikan panduan penjadwalan berdasarkan pada kebutuhan komputasi, tidak berdasarkan aturan statis.</p>
-                                <p class="fs-5 mb-4">Dengan prosesor Intel® Core™ Generasi ke-12, fitur standar dan bawaan memungkinkan kemampuan seperti peredam kebisingan, pembingkaian otomatis, dan optimasi untuk bandwidth dan resolusi video saat bermain 4game. Hal ini menghemat waktu Anda dan memungkinkan Anda untuk melakukan multitugas dengan cara yang hanya dapat Anda impikan—sampai sekarang.</p>
+                                <p class="fs-5 mb-4">Kabar gembira buat kalian yang malas membawa lebih dari satu kabel pengisian daya untuk perangkat Apple dan power bank. Sebab, Apple kemungkinan besar akan meninggalkan konektor lighting yang eksklusif dan beralih ke konektor umum USB Type-C.</p>
+                                <p class="fs-5 mb-4">Melansir The Verge pada Senin 16/5/2022, kabar tersebut datang dari jurnalis Bloomberg Mark Gurman dan analis industri Ming-Chi Kuo. Mereka menyebut iPhone dengan colokan USB-C paling cepat hadir pada 2023. Namun, Apple kemungkinan akan meninggalkan konektor lighting yang eksklusif dan beralih ke konektor umum USB Type-C.</p>
+                                </p>
+                                <p class="fs-5 mb-4">Menurut Gurman, faktor utama Apple beralih menggunakan USB Type-C adalah regulasi di Uni Eropa. Kawasan tersebut sedang menyiapkan aturan undang-undang yang mewajibkan perangkat seluler yang beredar di sana hanya menggunakan satu jenis konektor untuk pengisian daya.
+                                </p>
+                                <p class="fs-5 mb-4">Oleh karena itu, kabar tersebut sebenarnya tak terlalu mengejutkan. Terlebih sejak beberapa tahun belakangan, Apple sudah menggunakan USB Type-C di beberapa perangkatnya, sebut saja iPad Air, iPad Pro dan iPad Mini.
+                                </p>
+                                <p class="fs-5 mb-4">Sebagai catatan, konektor lightning digunakan sejak 2012, tepatnya saat Apple meluncurkan iPhone 5. Sebelumnya, Apple menggunakan konektor panjang atau konektor 30 pin yang sudah digunakan sejak 2007.
+                                </p>
+                                <p class="fs-5 mb-4">Di sisi lain, Apple juga dikabarkan sedang mengembangkan iPhone yang tidak memiliki colokan pengisian daya. Apple diketahui sudah beberapa tahun mengembangkan teknologi tersebut, akan tetapi belum diketahui kapan perusahaan tersebut akan meluncurkannya.
+                                </p>
+                                <p class="fs-5 mb-4">Adapun, untuk iPhone yang akan meluncur dalam waktu dekat atau iPhone 14 kemungkinan akan hadir pada musim gugur. Seperti kebiasaan Apple setiap tahunnya saat meluncurkan iPhone terbaru.
+                                </p>
                             </section>
                         </article>
                     </div>

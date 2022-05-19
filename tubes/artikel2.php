@@ -61,19 +61,24 @@
                             <!-- Post header-->
                             <header class="mb-4">
                                 <!-- Post title-->
-                                <h1 class="fw-bolder mb-1">Prosesor intel Core Generasi ke 12</h1>
+                                <h1 class="fw-bolder mb-1">GPU Nvidia Gerforce RTX 3090</h1>
                                 <!-- Post meta content-->
-                                <div class="text-muted fst-italic mb-2">January 5, 2022</div>
+                                <div class="text-muted fst-italic mb-2">Maret 20, 2022</div>
                             </header>
                             <!-- Preview image figure-->
-                            <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/blog2-more.jpg" alt="..." /></figure>
+                            <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/artikel2-more.jpg" alt="..." /></figure>
                             <!-- Post content-->
                             <section class="mb-5">
-                                <p class="fs-5 mb-4">Prosesor intel core generasi 12, menghadirkan performa superior dimanapun anda membutuhkannya. Dengan hadirnya dari prosesor intel core generasi ke-12 anda akan mendapatkan performa yang dibutuhkan, dimanapun anda membutuhkannya baik anda seorang gamer, kreator, streamer, atau pengguna harian. Apapun kegemaran Anda, Lakukan lebih banyak, dimana pun Anda menginginkannya.</p>
-                                <p class="fs-5 mb-4">Prosesor Intel® Core™ Generasi ke-12—generasi yang berbeda dari sebelumnya. Dengan arsitektur hibrida performa baru yang belum pernah ada sebelumnya, prosesor Intel® Core™ Generasi ke-12 menawarkan kombinasi unik inti Performa dan Efisien P-core dan E-core. Ini artinya performa nyata dapat secara intuitif diskalakan untuk menyesuaikan dengan apa pun pekerjaan Anda.</p>
-                                <p class="fs-5 mb-4">Inti Performa adalah inti CPU Intel dengan performa tertinggi. Dan inti ini dirancang untuk memaksimalkan performa dan responsivitas thread tunggal untuk beban kerja intensif komputasi seperti gaming dan desain 3D. Inti Efisien menghadirkan performa multithread untuk tugas yang dapat dijalankan secara paralel seperti render gambar, beserta pembongkaran efisien tugas latar belakang untuk multitugas modern.</p>
-                                <p class="fs-5 mb-4">Agar Performance-core dan Efficient-core dapat bekerja secara lancar dengan sistem operasi, Intel membangun Intel® Thread Director tepat di dalam perangkat keras3. Secara otomatis memantau dan menganalisis secara langsung, Intel® Thread Director memandu sistem operasi, membantunya menempatkan thread yang tepat pada inti yang tepat, di saat yang tepat. Dan semuanya dilakukan secara dinamis, menyesuaikan panduan penjadwalan berdasarkan pada kebutuhan komputasi, tidak berdasarkan aturan statis.</p>
-                                <p class="fs-5 mb-4">Dengan prosesor Intel® Core™ Generasi ke-12, fitur standar dan bawaan memungkinkan kemampuan seperti peredam kebisingan, pembingkaian otomatis, dan optimasi untuk bandwidth dan resolusi video saat bermain 4game. Hal ini menghemat waktu Anda dan memungkinkan Anda untuk melakukan multitugas dengan cara yang hanya dapat Anda impikan—sampai sekarang.</p>
+                                <p class="fs-5 mb-4">GeForce RTX 3090 Ti dan 3090 adalah big ferocious GPU (BFGPU) dengan performa kelas TITAN. Didukung oleh Ampere, arsitektur RTX generasi ke-2 NVIDIA, yang menggandakan performa ray tracing dan AI dengan Ray Tracing Core, Tensor Core, dan multiprosesor streaming baru yang disempurnakan. Selain itu, perangkat ini dilengkapi memori G6X 24 GB andal, semuanya untuk menghadirkan pengalaman terbaik bagi penggemar game dan pembuat konten.</p>
+                                <h2 class="fw-bolder mb-4 mt-5">Game HDR 8K</h2>
+                                <p class="fs-5 mb-4">Sambung, mainkan, rekam, dan tonton dalam HDR yang brilian dengan resolusi hingga 8K dengan GeForce RTX 3090 Ti atau RTX 3090. Ambil rekaman hingga 8K HDR dengan fitur GeForce Experience™ ShadowPlay™ dan putar kembali secara lancar dengan dekode AV1.
+                                </p>
+                                <h2 class="fw-bolder mb-4 mt-5">Kemenangan Ditentukan Dalam Hitungan Milidetik</h2>
+                                <p class="fs-5 mb-4">NVIDIA Reflex menghadirkan keunggulan kompetitif terbaik. Latensi terendah. Responsivitas terbaik. Didukung oleh Seri GPU GeForce RTX 30 dan Monitor NVIDIA® G-SYNC® dengan Reflex. Kunci target lebih cepat, bereaksi secepat kilat, dan tingkatkan ketepatan bidikan melalui rangkaian teknologi revolusioner yang dibuat untuk mengurangi dan mengukur latensi sistem pada game kompetitif.
+                                </p>
+                                <h2 class="fw-bolder mb-4 mt-5">Driver Siap Game dan Pemngalam Terbaik Untuk Setiap Game</h2>
+                                <p class="fs-5 mb-4">Driver Game Ready GeForce menghadirkan pengalaman terbaik untuk game favorit Anda. Driver ini disetel dengan baik dalam kolaborasi dengan pengembang dan diuji secara ekstensif di ribuan konfigurasi perangkat keras untuk performa dan keandalan maksimum. Driver Game Ready juga memungkinkan Anda mengoptimalkan pengaturan game dengan sekali klik dan memberdayakan Anda dengan teknologi NVIDIA terbaru. Itulah yang kami sebut Game Ready.
+                                </p>
                             </section>
                         </article>
                     </div>
