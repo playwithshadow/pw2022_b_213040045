@@ -105,7 +105,7 @@
         <div class="col-lg-6">
           <h2 class="fw-bolder">Perpustkaan Online</h2>
           <p class="lead fw-normal text-muted mb-0">
-            Menyediakan beberapa buku tentang perkembangan teknologi
+            Menyediakan beberapa buku tentang dunia teknologi, dan disediakan juga berdasarkan kategorinya.
           </p>
         </div>
       </div>
@@ -120,10 +120,7 @@
         <div class="col-lg-6">
           <h2 class="fw-bolder">Blog</h2>
           <p class="lead fw-normal text-muted mb-0">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            est, ut esse a labore aliquam beatae expedita. Blanditiis impedit
-            numquam libero molestiae et fugit cupiditate, quibusdam expedita,
-            maiores eaque quisquam.
+            Menyediakan beberapa artikel terkait berita tentang perkembangan teknologi seperti smartphone, komputer, laptop dan sebagainya.
           </p>
         </div>
         <div class="col-lg-6">
@@ -144,10 +141,7 @@
         <div class="col-lg-6">
           <h2 class="fw-bolder">Galeri</h2>
           <p class="lead fw-normal text-muted mb-0">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            est, ut esse a labore aliquam beatae expedita. Blanditiis impedit
-            numquam libero molestiae et fugit cupiditate, quibusdam expedita,
-            maiores eaque quisquam.
+            Menyediakan beberapa foto - foto tentang dunia teknologi seperti smartphone, komputer, laptop dan sebagainya.
           </p>
         </div>
       </div>
