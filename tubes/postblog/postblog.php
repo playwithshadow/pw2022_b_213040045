@@ -8,13 +8,13 @@
     <meta name="author" content="" />
     <title>VAN TECH</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo.png" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo.png" />
 
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
     <!-- Bootstrap Core-->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Css saya -->
 </head>
@@ -24,21 +24,21 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
             <div class="container px-5">
-                <img src="assets/img/logo.png" alt="" width="40" height="40" />
-                <a class="navbar-brand" href="index.php">VAN TECHNOLOGY</a>
+                <img src="../assets/img/logo.png" alt="" width="40" height="40" />
+                <a class="navbar-brand" href="../index.php">VAN TECHNOLOGY</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">Home</a>
+                            <a class="nav-link" href="../index.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Perpustakaan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.php">Blog</a>
+                            <a class="nav-link" href="../blog/blog.php">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Galeri</a>
@@ -61,19 +61,20 @@
                             <!-- Post header-->
                             <header class="mb-4">
                                 <!-- Post title-->
-                                <h1 class="fw-bolder mb-1">Prosesor intel Core Generasi ke 12</h1>
+                                <h1 class="fw-bolder mb-1">Metavese</h1>
                                 <!-- Post meta content-->
-                                <div class="text-muted fst-italic mb-2">January 5, 2022</div>
+                                <div class="text-muted fst-italic mb-2">Maret 25, 2022</div>
                             </header>
                             <!-- Preview image figure-->
-                            <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/blog2-more.jpg" alt="..." /></figure>
+                            <figure class="mb-4"><img class="img-fluid rounded" src="../assets/img/blog1-more.jpg" alt="..." /></figure>
                             <!-- Post content-->
                             <section class="mb-5">
-                                <p class="fs-5 mb-4">Prosesor intel core generasi 12, menghadirkan performa superior dimanapun anda membutuhkannya. Dengan hadirnya dari prosesor intel core generasi ke-12 anda akan mendapatkan performa yang dibutuhkan, dimanapun anda membutuhkannya baik anda seorang gamer, kreator, streamer, atau pengguna harian. Apapun kegemaran Anda, Lakukan lebih banyak, dimana pun Anda menginginkannya.</p>
-                                <p class="fs-5 mb-4">Prosesor Intel® Core™ Generasi ke-12—generasi yang berbeda dari sebelumnya. Dengan arsitektur hibrida performa baru yang belum pernah ada sebelumnya, prosesor Intel® Core™ Generasi ke-12 menawarkan kombinasi unik inti Performa dan Efisien P-core dan E-core. Ini artinya performa nyata dapat secara intuitif diskalakan untuk menyesuaikan dengan apa pun pekerjaan Anda.</p>
-                                <p class="fs-5 mb-4">Inti Performa adalah inti CPU Intel dengan performa tertinggi. Dan inti ini dirancang untuk memaksimalkan performa dan responsivitas thread tunggal untuk beban kerja intensif komputasi seperti gaming dan desain 3D. Inti Efisien menghadirkan performa multithread untuk tugas yang dapat dijalankan secara paralel seperti render gambar, beserta pembongkaran efisien tugas latar belakang untuk multitugas modern.</p>
-                                <p class="fs-5 mb-4">Agar Performance-core dan Efficient-core dapat bekerja secara lancar dengan sistem operasi, Intel membangun Intel® Thread Director tepat di dalam perangkat keras3. Secara otomatis memantau dan menganalisis secara langsung, Intel® Thread Director memandu sistem operasi, membantunya menempatkan thread yang tepat pada inti yang tepat, di saat yang tepat. Dan semuanya dilakukan secara dinamis, menyesuaikan panduan penjadwalan berdasarkan pada kebutuhan komputasi, tidak berdasarkan aturan statis.</p>
-                                <p class="fs-5 mb-4">Dengan prosesor Intel® Core™ Generasi ke-12, fitur standar dan bawaan memungkinkan kemampuan seperti peredam kebisingan, pembingkaian otomatis, dan optimasi untuk bandwidth dan resolusi video saat bermain 4game. Hal ini menghemat waktu Anda dan memungkinkan Anda untuk melakukan multitugas dengan cara yang hanya dapat Anda impikan—sampai sekarang.</p>
+                                <p class="fs-5 mb-4">Meskipun baru populer belakangan ini, metaverse sejatinya adalah sebuah istilah yang sudah lama diciptakan.</p>
+                                <p class="fs-5 mb-4">Ia pertama kali digunakan pada tahun 1992 oleh Neal Stephenson dalam novelnya yang bertajuk “Snow Crash”.</p>
+                                <p class="fs-5 mb-4">Nah, sebagai dunia virtual, metaverse adalah sebuah lingkungan yang menyediakan banyak opsi kegiatan bagi penggunanya.</p>
+                                <h2 class="fw-bolder mb-4 mt-5">Apa Itu Metaverse?</h2>
+                                <p class="fs-5 mb-4">Seperti yang sudah diketahui, Metaverse merupakan dunia virtual 3D yang diciptakan menggunakan teknologi augmented reality, virtual reality, dan video, yang mana pengguna dapat merasakan hidup dalam dunia virtual. Tujuan dari diciptakannya Metaverse ini bukan lain untuk menjadi platform komunikasi yang modern dan mempermudah setiap orang untuk melakukan aktivitas sehari-hari seperti bekerja, bermain, bersosialisasi, bahkan konser secara virtual. </p>
+                                <p class="fs-5 mb-4">Intinya Metaverse adalah gabungan antara teknologi penggabungan virtual reality dan augmented reality yang memberikan pengalaman baru dan unik bagi para penggunanya. Bagi kamu yang ikut meramaikan NFT, tentu kamu membutuhkan web untuk minting bukan? Kamu bisa menggunakan layanan cloud hosting di Dewaweb yang cepat, aman, dan dapat diandalkan untuk proyek NFT kamu.</p>
                             </section>
                         </article>
                     </div>
@@ -93,9 +94,9 @@
                         </div>
                     </div>
                     <div class="col-auto ms-auto">
-                        <a class="link-light" href="https://www.instagram.com/rivaann_/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a class="link-light btn btn-outline-secondary" href="https://www.instagram.com/rivaann_/" target="_blank"><i class="bi bi-instagram"></i></a>
                         <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light" href="https://github.com/rivaannn" target="_blank"><i class="bi bi-github"></i></a>
+                        <a class="link-light btn btn-outline-secondary" href="https://github.com/rivaannn" target="_blank"><i class="bi bi-github"></i></a>
                     </div>
                 </div>
             </div>
@@ -104,7 +105,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
         <!-- Core theme JS-->
-        <script src="assets/js/scripts.js"></script>
+        <script src="../assets/js/scripts.js"></script>
 </body>
 
 </html>

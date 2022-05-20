@@ -8,13 +8,13 @@
     <meta name="author" content="" />
     <title>VAN TECH</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo.png" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo.png" />
 
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
     <!-- Bootstrap Core-->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Css saya -->
 </head>
@@ -24,21 +24,21 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
             <div class="container px-5">
-                <img src="assets/img/logo.png" alt="" width="40" height="40" />
-                <a class="navbar-brand" href="index.php">VAN TECHNOLOGY</a>
+                <img src="../assets/img/logo.png" alt="" width="40" height="40" />
+                <a class="navbar-brand" href="../index.php">VAN TECHNOLOGY</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">Home</a>
+                            <a class="nav-link" href="../index.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Perpustakaan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.php">Blog</a>
+                            <a class="nav-link" href="#">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Galeri</a>
@@ -61,9 +61,9 @@
                             <div class="col-lg-6 col-xl-5 py-lg-5">
                                 <div class="p-4 p-md-5">
                                     <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
-                                    <div class="h2 fw-bolder">Intel Prosesor generasi 12th</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique delectus ab doloremque, qui doloribus ea officiis...</p>
-                                    <a class="stretched-link text-decoration-none" href="postblog2.php">
+                                    <div class="h2 fw-bolder">Apa sih metaverse itu?</div>
+                                    <p>Intinya, metaverse adalah konsep dunia virtual yang akan menjadi masa depan dari kemutakhiran internet, ia digadang-gadang akan menjadi dunia digital utama di masa mendatang dan akan segera rilis pada awal tahun 2022 ini.</p>
+                                    <a class="stretched-link text-decoration-none" href="../postblog/postblog.php">
                                         Read more
                                         <i class="bi bi-arrow-right"></i>
                                     </a>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="col-lg-6 col-xl-7">
                                 <div class="bg-featured-blog me-5">
-                                    <img src="assets/img/blog2.jpg" alt="" height="420px">
+                                    <img src="../assets/img/blog1.jpg" alt="" height="455px">
                                 </div>
                             </div>
                         </div>
@@ -88,41 +88,50 @@
                 <div class="row gx-5">
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="assets/img/artikel4.jpg" alt="..." />
+                            <img class="card-img-top" src="../assets/img/artikel1.jpg" alt="..." />
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
-                                <a class="text-decoration-none link-dark stretched-link" href="artikel4.php">
-                                    <div class="h5 card-title mb-3">Apple Dikabarkan Uji Coba Iphone dengan port USB-C</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="../artikel/artikel.php">
+                                    <div class="h5 card-title mb-3">Seberapa cepat chipset snapdragon gen-1</div>
                                 </a>
-                                <p class="card-text mb-0">Apple dikabarkan sedang menguji coba iPhone dengan konektor port USB-C sebagai pengganti Lightning. Perubahan ini bakal terlihat paling cepat pada 2023.</p>
+                                <p class="card-text mb-0">Chipset terbaru smartphone membawa performa yang sangat gahar.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="assets/img/artikel5.jpg" alt="..." />
+                            <img class="card-img-top" src="../assets/img/artikel2.jpg" alt="..." />
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
-                                <a class="text-decoration-none link-dark stretched-link" href="artikel5.php">
-                                    <div class="h5 card-title mb-3">Instagram Bakal Uji Coba Fitur NFT</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="../artikel/artikel2.php">
+                                    <div class="h5 card-title mb-3">GPU Nvidia Gerforce RTX 3090</div>
                                 </a>
-                                <p class="card-text mb-0">Kabar baik untuk kreator dan kolektor Non Fungible Token NFT. Instagram kini sedang berupaya menghadirkan NFT di dalam platform.</p>
+                                <p class="card-text mb-0">Rangkaian Geforce RTX 3090 The BFGPU.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="assets/img/artikel6.jpg" alt="..." />
+                            <img class="card-img-top" src="../assets/img/artikel3.jpg" alt="..." />
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
-                                <a class="text-decoration-none link-dark stretched-link" href="artikel6.php">
-                                    <div class="h5 card-title mb-3">Cara Melindungi HP Dari Serangan Hacker</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="../artikel/artikel3.php">
+                                    <div class="h5 card-title mb-3">Oppo A16k ponsel ramping Rp2 Jutaan Diluncurkan di RI</div>
                                 </a>
-                                <p class="card-text mb-0">Era digital ini juga membuat pelaku kejahatan juga semakin berkembang pesat termasuk ancaman keamanan pada smartphone.</p>
+                                <p class="card-text mb-0">
+                                    Sambutan yang baik pada ponsel Oppo A16 dan A16e membuat Oppo kembali menelurkan ponsel baru Oppo A16k untuk melengkapi seri ponsel ini.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="text-end mb-5 mb-xl-0">
+                    <a class="text-decoration-none btn btn-info" href="../blog/blog2.php">
+                        More Blog
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
         </section>
         <!-- End Artikel -->
 
@@ -136,9 +145,9 @@
                         </div>
                     </div>
                     <div class="col-auto ms-auto">
-                        <a class="link-light" href="https://www.instagram.com/rivaann_/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a class="link-light btn btn-outline-secondary" href="https://www.instagram.com/rivaann_/" target="_blank"><i class="bi bi-instagram"></i></a>
                         <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light" href="https://github.com/rivaannn" target="_blank"><i class="bi bi-github"></i></a>
+                        <a class="link-light btn btn-outline-secondary" href="https://github.com/rivaannn" target="_blank"><i class="bi bi-github"></i></a>
                     </div>
                 </div>
             </div>
@@ -147,7 +156,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
         <!-- Core theme JS-->
-        <script src="assets/js/scripts.js"></script>
+        <script src="../assets/js/scripts.js"></script>
 </body>
 
 </html>

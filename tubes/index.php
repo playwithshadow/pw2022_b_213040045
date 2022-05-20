@@ -17,6 +17,7 @@
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Css saya -->
+  <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -25,7 +26,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
       <div class="container px-5">
         <img src="assets/img/logo.png" alt="" width="40" height="40" />
-        <a class="navbar-brand" href="index.html">VAN TECHNOLOGY</a>
+        <a class="navbar-brand" href="index.php">VAN TECHNOLOGY</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,15 +39,14 @@
               <a class="nav-link" href="#">Perpustakaan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.php">Blog</a>
+              <a class="nav-link" href="blog/blog.php">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Galeri</a>
+              <a class="nav-link" href="galeri/galeri.php">Galeri</a>
             </li>
           </ul>
           <div class="col-md-3 text-end">
-            <a class="btn btn-outline-primary me-2" href="login/login.html">Login</a>
-            <a class="btn btn-outline-primary" href="#">Daftar</a>
+            <a class="btn btn-outline-primary me-2" href="#">Login</a>
           </div>
         </div>
       </div>
@@ -57,11 +57,11 @@
         <div class="row gx-5 align-items-center justify-content-center">
           <div class="col-lg-8 col-xl-7 col-xxl-6">
             <div class="my-5 text-center text-xl-start">
-              <h1 class="display-5 fw-bolder text-white mb-4">
+              <h1 class="display-5 fw-bolder text-white mb-6">
                 Selamat Datang di Perpustakaan Berbasis Online Van Technology
               </h1>
               <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#">Get Started</a>
+                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#">Daftar</a>
               </div>
             </div>
           </div>
@@ -160,9 +160,9 @@
           </div>
         </div>
         <div class="col-auto ms-auto">
-          <a class="link-light" href="https://www.instagram.com/rivaann_/" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a class="link-light btn btn-outline-secondary" href="https://www.instagram.com/rivaann_/" target="_blank"><i class="bi bi-instagram"></i></a>
           <span class="text-white mx-1">&middot;</span>
-          <a class="link-light" href="https://github.com/rivaannn" target="_blank"><i class="bi bi-github"></i></a>
+          <a class="link-light btn btn-outline-secondary" href="https://github.com/rivaannn" target="_blank"><i class="bi bi-github"></i></a>
         </div>
       </div>
     </div>
