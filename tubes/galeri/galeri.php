@@ -52,32 +52,38 @@
             </div>
         </nav>
         <!-- Galeri -->
-        <div class="container">
-            <div class="row">
-                <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                    <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
-                </a>
-                <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                    <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
-                </a>
-                <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                    <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid my-3">
-                </a>
+        <section class="py-5">
+            <div class="container px-5 my-5">
+                <div class="row">
+                    <div class="text-center mb-5">
+                        <h1 class="fw-bolder">Galeri Van Techlogy</h1>
+                        <p class="lead fw-normal text-muted mb-0">Kumpulan Gambar Tentang Teknologi</p>
+                    </div>
+                    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                        <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
+                    </a>
+                    <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                        <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
+                    </a>
+                    <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                        <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid my-3">
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                    <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
-                </a>
-                <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                    <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
-                </a>
-                <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                    <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid my-3">
-                </a>
+            <div class="container">
+                <div class="row">
+                    <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                        <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
+                    </a>
+                    <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                        <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
+                    </a>
+                    <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                        <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid my-3">
+                    </a>
+                </div>
             </div>
-        </div>
+        </section>
         <!-- Akhir Galeri -->
 
         <!-- Footer-->
