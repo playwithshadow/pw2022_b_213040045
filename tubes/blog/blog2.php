@@ -17,6 +17,7 @@
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Css saya -->
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -35,26 +36,25 @@
                             <a class="nav-link" href="../index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Perpustakaan</a>
+                            <a class="nav-link" href="../perpus/perpus.php">Perpustakaan</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="blog.php">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Galeri</a>
+                            <a class="nav-link" href="../galeri/galeri.php">Galeri</a>
                         </li>
                     </ul>
                     <div class="col-md-3 text-end">
                         <a class="btn btn-outline-primary me-2" href="#">Login</a>
-                        <a class="btn btn-outline-primary" href="#">Daftar</a>
                     </div>
                 </div>
             </div>
         </nav>
         <!-- Blog -->
         <section class="py-5 ">
-            <div class="container px-5 mt-lg-4">
-                <h1 class="fw-bolder fs-5 mb-5">Van Technology Blog</h1>
+            <div class="container px-5 mt-lg-4 py-5">
+                <p class="text-center fw-bolder fs-2 mb-5 py-5">Van Technology Blog</p>
                 <div class="card border-0 shadow rounded-3 overflow-hidden">
                     <div class="card-body p-0">
                         <div class="row gx-0">
@@ -92,7 +92,7 @@
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
                                 <a class="text-decoration-none link-dark stretched-link" href="../artikel/artikel4.php">
-                                    <div class="h5 card-title mb-3">Apple Dikabarkan Uji Coba Iphone dengan port USB-C</div>
+                                    <div class="h5 card-title mb-3 fw-bold">Apple Dikabarkan Uji Coba Iphone dengan port USB-C</div>
                                 </a>
                                 <p class="card-text mb-0">Apple dikabarkan sedang menguji coba iPhone dengan konektor port USB-C sebagai pengganti Lightning. Perubahan ini bakal terlihat paling cepat pada 2023.</p>
                             </div>
@@ -104,7 +104,7 @@
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
                                 <a class="text-decoration-none link-dark stretched-link" href="../artikel/artikel5.php">
-                                    <div class="h5 card-title mb-3">Instagram Bakal Uji Coba Fitur NFT</div>
+                                    <div class="h5 card-title mb-3 fw-bold">Instagram Bakal Uji Coba Fitur NFT</div>
                                 </a>
                                 <p class="card-text mb-0">Kabar baik untuk kreator dan kolektor Non Fungible Token NFT. Instagram kini sedang berupaya menghadirkan NFT di dalam platform.</p>
                             </div>
@@ -116,7 +116,7 @@
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
                                 <a class="text-decoration-none link-dark stretched-link" href="../artikel/artikel6.php">
-                                    <div class="h5 card-title mb-3">Cara Melindungi HP Dari Serangan Hacker</div>
+                                    <div class="h5 card-title mb-3 fw-bold">Cara Melindungi HP Dari Serangan Hacker</div>
                                 </a>
                                 <p class="card-text mb-0">Era digital ini juga membuat pelaku kejahatan juga semakin berkembang pesat termasuk ancaman keamanan pada smartphone.</p>
                             </div>

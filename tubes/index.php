@@ -23,7 +23,7 @@
 <body class="d-flex flex-column h-100">
   <main class="flex-shrink-0">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-5-strong">
       <div class="container px-5">
         <img src="assets/img/logo.png" alt="" width="40" height="40" />
         <a class="navbar-brand" href="index.php">VAN TECHNOLOGY</a>
@@ -36,7 +36,7 @@
               <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Perpustakaan</a>
+              <a class="nav-link" href="perpus/perpus.php">Perpustakaan</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="blog/blog.php">Blog</a>
@@ -46,7 +46,7 @@
             </li>
           </ul>
           <div class="col-md-3 text-end">
-            <a class="btn btn-outline-primary me-2" href="#">Login</a>
+            <a class="btn btn-outline-primary me-2" href="login/login.php">Login</a>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@
           <div class="col-lg-8 col-xl-7 col-xxl-6">
             <div class="my-5 text-center text-xl-start">
               <h1 class="display-5 fw-bolder text-white mb-6">
-                Selamat Datang di Perpustakaan Berbasis Online Van Technology
+                Selamat Datang di Van Technology
               </h1>
               <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                 <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#">Daftar</a>

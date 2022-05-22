@@ -17,6 +17,7 @@
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Css saya -->
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -35,26 +36,25 @@
                             <a class="nav-link" href="../index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Perpustakaan</a>
+                            <a class="nav-link" href="../perpus/perpus.php">Perpustakaan</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Galeri</a>
+                            <a class="nav-link" href="../galeri/galeri.php">Galeri</a>
                         </li>
                     </ul>
                     <div class="col-md-3 text-end">
                         <a class="btn btn-outline-primary me-2" href="#">Login</a>
-                        <a class="btn btn-outline-primary" href="#">Daftar</a>
                     </div>
                 </div>
             </div>
         </nav>
         <!-- Blog -->
-        <section class="py-5 ">
-            <div class="container px-5 mt-lg-4">
-                <h1 class="fw-bolder fs-5 mb-5">Van Technology Blog</h1>
+        <section class="py-5">
+            <div class="container px-5 mt-lg-4 py-5">
+                <h1 class="fw-bolder fs-2 mb-5 text-center py-5">Van Technology Blog</h1>
                 <div class="card border-0 shadow rounded-3 overflow-hidden">
                     <div class="card-body p-0">
                         <div class="row gx-0">
@@ -71,7 +71,7 @@
                             </div>
                             <div class="col-lg-6 col-xl-7">
                                 <div class="bg-featured-blog me-5">
-                                    <img src="../assets/img/blog1.jpg" alt="" height="455px">
+                                    <img src="../assets/img/blog1.jpg" alt="" height="550px">
                                 </div>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
                                 <a class="text-decoration-none link-dark stretched-link" href="../artikel/artikel.php">
-                                    <div class="h5 card-title mb-3">Seberapa cepat chipset snapdragon gen-1</div>
+                                    <div class="h5 card-title mb-3 fw-bold">Seberapa cepat chipset snapdragon gen-1</div>
                                 </a>
                                 <p class="card-text mb-0">Chipset terbaru smartphone membawa performa yang sangat gahar.</p>
                             </div>
@@ -104,7 +104,7 @@
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
                                 <a class="text-decoration-none link-dark stretched-link" href="../artikel/artikel2.php">
-                                    <div class="h5 card-title mb-3">GPU Nvidia Gerforce RTX 3090</div>
+                                    <div class="h5 card-title mb-3 fw-bold">GPU Nvidia Gerforce RTX 3090</div>
                                 </a>
                                 <p class="card-text mb-0">Rangkaian Geforce RTX 3090 The BFGPU.</p>
                             </div>
@@ -116,10 +116,10 @@
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
                                 <a class="text-decoration-none link-dark stretched-link" href="../artikel/artikel3.php">
-                                    <div class="h5 card-title mb-3">Oppo A16k ponsel ramping Rp2 Jutaan Diluncurkan di RI</div>
+                                    <div class="h5 card-title mb-3 fw-bold">Oppo A16k ponsel ramping Rp2 Jutaan Diluncurkan di RI</div>
                                 </a>
-                                <p class="card-text mb-0">
-                                    Sambutan yang baik pada ponsel Oppo A16 dan A16e membuat Oppo kembali menelurkan ponsel baru Oppo A16k untuk melengkapi seri ponsel ini.
+                                <p class="card-text mb-0 ">
+                                    Oppo A16 dan A16e membuat Oppo kembali menelurkan ponsel baru Oppo A16k untuk melengkapi seri ponsel ini.
                                 </p>
                             </div>
                         </div>

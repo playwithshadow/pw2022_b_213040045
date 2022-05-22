@@ -35,13 +35,13 @@
                             <a class="nav-link" href="../index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Perpustakaan</a>
+                            <a class="nav-link" href="../perpus/perpus.php">Perpustakaan</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../blog/blog.php">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Galeri</a>
+                            <a class="nav-link" href="../galeri/galeri.php">Galeri</a>
                         </li>
                     </ul>
                     <div class="col-md-3 text-end">

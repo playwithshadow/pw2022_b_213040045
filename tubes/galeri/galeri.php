@@ -17,7 +17,12 @@
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Css saya -->
-    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="css/lightbox.css" rel="stylesheet" />
+
+    <!-- Lighbox Fitur -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -36,7 +41,7 @@
                             <a class="nav-link" href="../index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Perpustakaan</a>
+                            <a class="nav-link" href="../perpus/perpus.php">Perpustakaan</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../blog/blog.php">Blog</a>
@@ -52,39 +57,97 @@
             </div>
         </nav>
         <!-- Galeri -->
-        <section class="py-5">
-            <div class="container px-5 my-5">
-                <div class="row">
-                    <div class="text-center mb-5">
-                        <h1 class="fw-bolder">Galeri Van Techlogy</h1>
-                        <p class="lead fw-normal text-muted mb-0">Kumpulan Gambar Tentang Teknologi</p>
+        <div class="photo-gallery">
+            <div class="container py-5">
+                <div class="intro pt-lg-5">
+                    <h2 class="display-5 text-center">Galeri VanTech</h2>
+                    <p class="text-center">Kumpulan foto -foto tentang teknologi. </p>
+                </div>
+                <div class="row photos">
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/laptop1.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/laptop1.jpg">
+                        </a>
                     </div>
-                    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                        <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
-                    </a>
-                    <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                        <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
-                    </a>
-                    <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                        <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid my-3">
-                    </a>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/laptop2.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/laptop2.jpg">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/laptop3.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/laptop3.jpg">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/laptop4.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/laptop4.jpg">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/hp1.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/hp1.jpg">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/hp2.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/hp2.jpg">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/hp3.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/hp3.jpg">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/hp4.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/hp4.jpg">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/keyboard1.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/keyboard1.jpg">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/keyboard2.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/keyboard2.jpg">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/keyboard3.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/keyboard3.jpg">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/keyboard4.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/keyboard4.jpg">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/cam1.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/cam1.jpg">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/cam2.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/cam2.jpg">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/cam3.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/cam3.jpg">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="img/cam4.jpg" data-lightbox="photos">
+                            <img class="img-fluid shadow-lg" src="img/cam4.jpg">
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                        <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
-                    </a>
-                    <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                        <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
-                    </a>
-                    <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                        <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid my-3">
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!-- Akhir Galeri -->
+        </div>
+        <!-- Akrhir Galeri -->
 
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">
@@ -107,11 +170,11 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Core theme JS-->
-        <script src="assets/js/scripts.js"></script>
+        <!-- Script JS Lightbox -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 
-        <!-- Js Lightbox -->
-        <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.0/dist/index.bundle.min.js"></script>
 </body>
 
 </html>
