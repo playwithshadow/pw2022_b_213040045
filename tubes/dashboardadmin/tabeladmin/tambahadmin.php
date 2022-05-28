@@ -1,3 +1,28 @@
+<?php
+require '../../config/functions.php';
+
+$level = query("SELECT * FROM tbl_level");
+
+// cek apakah tombol tambah sudah ditekan
+if (isset($_POST["tambah"])) {
+    if (tambahdata($_POST) > 0) {
+        echo "
+            <script>
+                alert('data berhasil ditambahkan!');
+                document.location.href = 'tabeladmin.php';
+            </script>
+        ";
+    } else {
+        echo "
+            <script>
+                alert('data gagal ditambahkan!');
+                document.location.href = 'tabeladmin.php';
+            </script>
+        ";
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,30 +30,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Registrasi - VAN TECH</title>
+    <title>Form Tambah Admin - VAN TECH</title>
 
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="../assets/img/logo.png" />
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo.png" />
 
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
     <!-- Bootstrap Core-->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Css saya -->
-    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href="../../assets/css/style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Form login center  -->
+    <!-- Form Registrasi center  -->
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 py-5">
                 <div class="card shadow-lg">
-                    <div class="fw-bolder fs-4 card-header text-center bg-primary text-light">Form Registrasi - VAN TECH</div>
+                    <div class="fw-bolder fs-4 card-header text-center bg-primary text-light">Form Tambah Admin - VAN TECH</div>
                     <div class="card-body">
-                        <form action="#" method="post">
+                        <form action="" method="post" enctype="multipart/form-data">
                             <div class="form-group row mb-3">
                                 <label for="nama" class="col-md-4 col-form-label text-md-right">Nama</label>
                                 <div class="col-md-8">
@@ -48,9 +73,9 @@
                                 </div>
                             </div>
                             <div class="form-group row mb-3">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
+                                <label for="password2" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
                                 <div class="col-md-8">
-                                    <input type="password" id="password" class="form-control" name="password" placeholder="masukkan password" required>
+                                    <input type="password" id="password2" class="form-control" name="password2" placeholder="masukkan confirm password" required>
                                 </div>
                             </div>
                             <div class="form-group row mb-3">
@@ -62,28 +87,25 @@
                             <div class="form-group row mb-3">
                                 <label for="gambar" class="col-md-4 col-form-label text-md-right">Gambar</label>
                                 <div class="col-md-8">
-                                    <input type="file" id="gambar" class="form-control" name="gambar" required>
+                                    <input type="file" id="gambar" class="form-control" name="gambar">
                                 </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Remember Me
-                                </label>
-                                <div class="d-grid gap-2 col-6 mx-auto py-3">
-                                    <button class="btn btn-primary" type="submit">Registrasi</button>
-                                </div>
+                            <input type="hidden" name="level" value="1">
+                            <div class="d-grid gap-2 col-6 mx-auto py-3">
+                                <button class="btn btn-primary" name="tambah">Tambah Data Admin</button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core theme JS-->
-<script src="assets/js/scripts.js"></script>
+<script src="../../assets/js/scripts.js"></script>
 
 </html>

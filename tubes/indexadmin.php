@@ -44,21 +44,12 @@
             <li class="nav-item">
               <a class="nav-link" href="galeri/galeri.php">Galeri</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboardadmin/dashboard.php">Dashboard</a>
+            </li>
           </ul>
-          <div class="col-md-auto me-5 text-end">
-            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Login
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li><a class="dropdown-item" href="login/loginadmin.php">Login Admin</a></li>
-                    <li><a class="dropdown-item" href="login/loginanggota.php">Login Anggota</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
+          <div class="col-md-3 text-end">
+            <a class="btn btn-outline-primary me-2" href="#">Logout</a>
           </div>
         </div>
       </div>
@@ -72,9 +63,6 @@
               <h1 class="display-5 fw-bolder text-white mb-6">
                 Selamat Datang di Van Technology
               </h1>
-              <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="register/registrasianggota.php">Daftar</a>
-              </div>
             </div>
           </div>
           <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">

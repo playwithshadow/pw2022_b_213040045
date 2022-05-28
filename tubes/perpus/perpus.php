@@ -30,7 +30,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
             <div class="container px-5">
                 <img src="../assets/img/logo.png" alt="" width="40" height="40" />
-                <a class="navbar-brand" href="index.php">VAN TECHNOLOGY</a>
+                <a class="navbar-brand" href="../index.php">VAN TECHNOLOGY</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -81,43 +81,73 @@
                 <div class="col-lg-8">
                     <!-- Nested row for non-featured blog posts-->
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                             <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                            <div class="card mb-3" style="max-width: 750px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="img/bukuwebdesign1.png" class="img-fluid mt-4" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">Web UI Design Patterns</h5>
+                                            <p class="card-text">Buku ini membahas secara lengkap beberapa aplikasi web yang terkenal serta website seperti Amazon dan Airbnb, menganalisa tampilan website mereka untuk melihat bagaimana dan mengapa mereka bisa bekerja dengan sukses.</p>
+                                            <p class="card-text">
+                                                <small class="text-muted">Last updated 3 mins ago</small>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                            <div class="card mb-3" style="max-width: 750px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="img/bukuhtml1.jpg" class="img-fluid mt-3 ms-4" width="200" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">HTML Uncover</h5>
+                                            <p class="card-text">Buku HTML Uncover berisi pembahasan tentang HTML mulai dari dasar hingga fitur terbaru dari HTML5. Buku ini cocok untuk rekan-rekan yang baru pertama kali bersentuhan dengan HTML hingga yang sudah cukup paham tentang HTML tapi ingin mendalami HTML5.</p>
+                                            <p class="card-text">
+                                                <small class="text-muted">Last updated 3 mins ago</small>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                            <div class="card mb-3" style="max-width: 750px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="img/bukubootstrap1.jpg" class="img-fluid mt-3 ms-4" width="200" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">Bootstrap 5 Uncover</h5>
+                                            <p class="card-text">buku Bootstrap 5 Uncover ini kita akan membahas cara penggunaan Bootstrap 5, mulai dari grid system yang menjadi fondasi paling penting, utility class, puluhan komponen Bootstrap seperti navbar, list group, button, form, card, hingga carousel slider.</p>
+                                            <p class="card-text">
+                                                <small class="text-muted">Last updated 3 mins ago</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Blog post-->
+                            <div class="card mb-3" style="max-width: 750px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="img/bukucss1.jpg" class="img-fluid mt-3 ms-4" width="200" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">CSS Uncover</h5>
+                                            <p class="card-text">Buku CSS Uncover ditujukan bagi rekan-rekan yang ingin mempelajari CSS mulai dari dasar hingga perkembangan terbaru CSS3.</p>
+                                            <p class="card-text">
+                                                <small class="text-muted">Last updated 3 mins ago</small>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -126,13 +156,10 @@
                     <nav aria-label="Pagination">
                         <hr class="my-0" />
                         <ul class="pagination justify-content-center my-4">
-                            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
                             <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
                             <li class="page-item"><a class="page-link" href="#!">2</a></li>
                             <li class="page-item"><a class="page-link" href="#!">3</a></li>
-                            <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
-                            <li class="page-item"><a class="page-link" href="#!">15</a></li>
-                            <li class="page-item"><a class="page-link" href="#!">Older</a></li>
+                            <li class="page-item"><a class="page-link" href="#!">Next</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -146,15 +173,13 @@
                                 <div class="col-sm-auto">
                                     <ul class="list-unstyled mb-0">
                                         <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href=" #!" class="text-light text-decoration-none">Web Design</a></li>
-                                        <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href="#!" class="text-light text-decoration-none">HTML</a></li>
                                         <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href="#!" class="text-light text-decoration-none">Bootstrap</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-sm-6">
                                     <ul class="list-unstyled mb-0">
-                                        <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href="#!" class="text-light text-decoration-none">JavaScript</a></li>
+                                        <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href="#!" class="text-light text-decoration-none">HTML</a></li>
                                         <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href="#!" class="text-light text-decoration-none">CSS</a></li>
-                                        <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href="#!" class="text-light text-decoration-none">Tutorials Programming</a></li>
                                     </ul>
                                 </div>
                             </div>

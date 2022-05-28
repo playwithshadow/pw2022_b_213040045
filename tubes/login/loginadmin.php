@@ -1,3 +1,32 @@
+<?php
+require '../config/functions.php';
+
+
+if (isset($_POST["login"])) {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    $result = mysqli_query(koneksi(), "SELECT * FROM tbl_login WHERE username = '$username'");
+
+    // cek username
+    if (mysqli_num_rows($result) === 1) {
+        // cek password
+        $row = mysqli_fetch_assoc($result);
+        if (password_verify($password, $row["password"])) {
+            echo "
+            <script>
+                alert('Berhasil Login Sebagai Admin!!!');
+                document.location.href = '../indexadmin.php';
+            </script>
+        ";
+            exit;
+        }
+    }
+
+    $error = true;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +34,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Login - VAN TECH</title>
+    <title>Form Login Admin - VAN TECH</title>
 
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="../assets/img/logo.png" />
@@ -26,9 +55,9 @@
         <div class="row justify-content-center">
             <div class="col-md-6 py-5">
                 <div class="card shadow-lg">
-                    <div class="fw-bolder fs-4 card-header text-center bg-primary text-white">Form Login - VAN TECH</div>
+                    <div class="fw-bolder fs-4 card-header text-center bg-primary text-white">Form Login Admin - VAN TECH</div>
                     <div class="card-body">
-                        <form action="#" method="post">
+                        <form action="" method="post">
                             <div class="form-group row mb-3">
                                 <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
                                 <div class="col-md-6">
@@ -47,17 +76,18 @@
                                     Remember Me
                                 </label>
                                 <div class="d-grid gap-2 col-6 mx-auto py-3">
-                                    <button class="btn btn-primary" type="submit">Login</button>
+                                    <button class="btn btn-primary" type="submit" name="login">Login</button>
                                 </div>
                                 <div class="fw-light text-center">
                                     <span class="text-center"> Belum punya akun? </span>
-                                    <a href="registrasi.php"> Daftar Sekarang </a>
+                                    <a href="../register/registrasiadmin.php"> Daftar Sekarang </a>
                                 </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 
 <!-- Bootstrap core JS-->
