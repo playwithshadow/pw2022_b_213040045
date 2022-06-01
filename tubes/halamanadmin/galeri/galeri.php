@@ -8,16 +8,16 @@
     <meta name="author" content="" />
     <title>VAN TECH</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="../assets/img/logo.png" />
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo.png" />
 
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
     <!-- Bootstrap Core-->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Css saya -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <link href="css/lightbox.css" rel="stylesheet" />
 
     <!-- Lighbox Fitur -->
@@ -30,15 +30,15 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
             <div class="container px-5">
-                <img src="../assets/img/logo.png" alt="" width="40" height="40" />
-                <a class="navbar-brand" href="../index.php">VAN TECHNOLOGY</a>
+                <img src="../../assets/img/logo.png" alt="" width="40" height="40" />
+                <a class="navbar-brand" href="../indexadmin.php">VAN TECHNOLOGY</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.php">Home</a>
+                            <a class="nav-link" href="../../indexadmin.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../perpus/perpus.php">Perpustakaan</a>
@@ -49,9 +49,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Galeri</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../dashboardadmin/index.php">Dashboard</a>
+                        </li>
                     </ul>
                     <div class="col-md-3 text-end">
-                        <a class="btn btn-outline-primary me-2" href="#">Login</a>
+                        <a class="btn btn-outline-primary me-2" href="../../login/logout.php">Keluar</a>
                     </div>
                 </div>
             </div>

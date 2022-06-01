@@ -8,13 +8,13 @@
     <meta name="author" content="" />
     <title>VAN TECH</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="../assets/img/logo.png" />
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo.png" />
 
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
     <!-- Bootstrap Core-->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Css saya -->
 </head>
@@ -24,15 +24,15 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
             <div class="container px-5">
-                <img src="../assets/img/logo.png" alt="" width="40" height="40" />
-                <a class="navbar-brand" href="../index.php">VAN TECHNOLOGY</a>
+                <img src="../../assets/img/logo.png" alt="" width="40" height="40" />
+                <a class="navbar-brand" href="../../indexanggota.php">VAN TECHNOLOGY</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.php">Home</a>
+                            <a class="nav-link" href="../../indexanggota.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../perpus/perpus.php">Perpustakaan</a>
@@ -45,8 +45,7 @@
                         </li>
                     </ul>
                     <div class="col-md-3 text-end">
-                        <a class="btn btn-outline-primary me-2" href="#">Login</a>
-                        <a class="btn btn-outline-primary" href="#">Daftar</a>
+                        <a class="btn btn-outline-primary me-2" href="../../login/logout.php">Keluar</a>
                     </div>
                 </div>
             </div>
@@ -61,23 +60,31 @@
                             <!-- Post header-->
                             <header class="mb-4">
                                 <!-- Post title-->
-                                <h1 class="fw-bolder mb-1">GPU Nvidia Gerforce RTX 3090</h1>
+                                <h1 class="fw-bolder mb-1">Cara Melindungi HP Dari Serangan Hacker</h1>
                                 <!-- Post meta content-->
-                                <div class="text-muted fst-italic mb-2">Maret 20, 2022</div>
+                                <div class="text-muted fst-italic mb-2">April 01, 2021</div>
                             </header>
                             <!-- Preview image figure-->
-                            <figure class="mb-4"><img class="img-fluid rounded" src="../assets/img/artikel2-more.jpg" alt="..." /></figure>
+                            <figure class="mb-4"><img class="img-fluid rounded" src="../../assets/img/artikel6-more.jpg" alt="..." /></figure>
                             <!-- Post content-->
                             <section class="mb-5">
-                                <p class="fs-5 mb-4">GeForce RTX 3090 Ti dan 3090 adalah big ferocious GPU (BFGPU) dengan performa kelas TITAN. Didukung oleh Ampere, arsitektur RTX generasi ke-2 NVIDIA, yang menggandakan performa ray tracing dan AI dengan Ray Tracing Core, Tensor Core, dan multiprosesor streaming baru yang disempurnakan. Selain itu, perangkat ini dilengkapi memori G6X 24 GB andal, semuanya untuk menghadirkan pengalaman terbaik bagi penggemar game dan pembuat konten.</p>
-                                <h2 class="fw-bolder mb-4 mt-5">Game HDR 8K</h2>
-                                <p class="fs-5 mb-4">Sambung, mainkan, rekam, dan tonton dalam HDR yang brilian dengan resolusi hingga 8K dengan GeForce RTX 3090 Ti atau RTX 3090. Ambil rekaman hingga 8K HDR dengan fitur GeForce Experience™ ShadowPlay™ dan putar kembali secara lancar dengan dekode AV1.
+                                <p class="fs-5 mb-4">Sebagai pengguna smartphone harus bersiap-siap dengan kemungkinan ini. Kamu harus melakukan sejumlah cara pengamanan agar ponse terhindar dari serangan para peretas.</p>
+                                <p class="fs-5 mb-4">Berikut cara untuk mengamankan ponsel kamu dari para peretas, dikutip laman Lembaga Teknologi Singapura, Kamis (1/4/2021).</p>
                                 </p>
-                                <h2 class="fw-bolder mb-4 mt-5">Kemenangan Ditentukan Dalam Hitungan Milidetik</h2>
-                                <p class="fs-5 mb-4">NVIDIA Reflex menghadirkan keunggulan kompetitif terbaik. Latensi terendah. Responsivitas terbaik. Didukung oleh Seri GPU GeForce RTX 30 dan Monitor NVIDIA® G-SYNC® dengan Reflex. Kunci target lebih cepat, bereaksi secepat kilat, dan tingkatkan ketepatan bidikan melalui rangkaian teknologi revolusioner yang dibuat untuk mengurangi dan mengukur latensi sistem pada game kompetitif.
+                                <h2 class="fw-bolder mb-4 mt-5">Aktifkan Anti Malware</h2>
+                                <p class="fs-5 mb-4">Kita tidak pernah tahu kapan menjadi korban malware-malware jahat ini. Apalagi menurut laporan di tahun 2019 saja, ditemukan ratusan aplikasi yang berisi malware DresCode di Google Play Store. DresCode dikabarkan telah menginfeksi hingga 400an aplikasi. Artinya kita tidak bisa mempercayai bahwa ada tempat yang benar-benar aman.
                                 </p>
-                                <h2 class="fw-bolder mb-4 mt-5">Driver Siap Game dan Pemngalam Terbaik Untuk Setiap Game</h2>
-                                <p class="fs-5 mb-4">Driver Game Ready GeForce menghadirkan pengalaman terbaik untuk game favorit Anda. Driver ini disetel dengan baik dalam kolaborasi dengan pengembang dan diuji secara ekstensif di ribuan konfigurasi perangkat keras untuk performa dan keandalan maksimum. Driver Game Ready juga memungkinkan Anda mengoptimalkan pengaturan game dengan sekali klik dan memberdayakan Anda dengan teknologi NVIDIA terbaru. Itulah yang kami sebut Game Ready.
+                                <p class="fs-5 mb-4">Sebagai langkah pencegahan, sebaiknya aktifkan anti-malware misalnya Google Play Protect. Caranya memindai aplikasi sebelum akhirnya diunduh, serta melakukan pembaruan sebelum melakukan penginstallan.
+                                </p>
+                                <h2 class="fw-bolder mb-4 mt-5">Pastikan OS Mendapatkan Pembaruan</h2>
+                                <p class="fs-5 mb-4">Selain menyiapkan aplikasi yang aman, sistem operasi atau OS juga harus dipastikan selalu diperbarui. Tujuannya untuk ponsel memiliki tambalan keamanan untuk melawan resiko kerentanan pada ponsel.
+                                </p>
+                                <h2 class="fw-bolder mb-4 mt-5">Jangan Lakukan 'root' atau 'jailbreak' Ponsel</h2>
+                                <p class="fs-5 mb-4">Jailbreak memang ide paling bagus untuk menghilangkan banyak peraturan keamanan yang ketat. Jadi ponsel bisa menginstall apapun seperti yang di sisi lain.
+                                </p>
+                                <p class="fs-5 mb-4">Adapun dompet digital yang akan didukung Instagram pada tahap awal meliputi Rainbow, MetaMask, dan Trust Wallet. Dompet digital pihak ketiga lainnya yang disebut akan menyusul yaitu Coinbase, Dapper, dan Phantom.
+                                </p>
+                                <p class="fs-5 mb-4">Namun dengan peraturan keamanan yang dihapus, berarti hilang juga keamanan pada ponsel. Resiko untuk diserang pun semakin tinggi. Maka sebaiknya tidak melakukan Jailbreak dengan alasan apapun.
                                 </p>
                             </section>
                         </article>
@@ -109,7 +116,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
         <!-- Core theme JS-->
-        <script src="../assets/js/scripts.js"></script>
+        <script src="../../assets/js/scripts.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,15 @@
 <?php
 session_start();
 
+if (!isset($_SESSION["login"])) {
+    echo "<script>
+            alert('Login Terlebih Dahulu');
+            document.location.href = '../login/login.php';
+        </script>
+        ";
+    exit;
+}
+
 require '../config/functions.php';
 
 
@@ -9,8 +18,6 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id   = '
 
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -105,15 +112,15 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id   = '
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
-                                <i class="align-middle" data-feather="chevron-down"></i>
+                                <i class="align-middle" data-feather="settings"></i>
                             </a>
 
-                            <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle d-sm-inline-block" href="#" data-bs-toggle="dropdown">
                                 <img src="img/<?= $tbladmin['gambar']; ?>" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
                                 <span class="text-dark"><?= $tbladmin['nama']; ?></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="profile.php">
+                                <a class="dropdown-item" href="profileadmin.php">
                                     <i class="align-middle me-1" data-feather="user"></i>Profile
                                 </a>
                                 <div class="dropdown-divider"></div>

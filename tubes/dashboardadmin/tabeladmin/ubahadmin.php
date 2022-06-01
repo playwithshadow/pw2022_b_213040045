@@ -1,4 +1,16 @@
 <?php
+session_start();
+
+if (!isset($_SESSION["login"])) {
+    echo "<script>
+            alert('Login Terlebih Dahulu');
+            document.location.href = '../../login/login.php';
+        </script>
+        ";
+    exit;
+}
+
+
 require '../../config/functions.php';
 
 // ambil data di URL

@@ -151,17 +151,17 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id   = '
                             <div class="row gx-3">
                               <div class="col-lg-12  mb-3">
                                 <label class="form-label">Username</label>
-                                <input class="form-control" type="text" placeholder="Admin" value="<?= $tbladmin['username']; ?>">
+                                <input class="form-control" type="text" placeholder="Admin" value="<?= $tbladmin['username']; ?>" readonly>
                               </div>
 
                               <div class="col-lg-12  mb-3">
                                 <label class="form-label">Email</label>
-                                <input class="form-control" type="text" placeholder="Admin@gmail.com" value="<?= $tbladmin['email']; ?>">
+                                <input class="form-control" type="text" placeholder="Admin@gmail.com" value="<?= $tbladmin['email']; ?>" readonly>
                               </div>
 
                               <div class="col-lg-12  mb-3">
                                 <label class="form-label">Level</label>
-                                <input class="form-control" type="text" placeholder="Admin@gmail.com" value="<?= $tbladmin['level']; ?>">
+                                <input class="form-control" type="text" placeholder="Admin@gmail.com" value="<?= $tbladmin['level']; ?>" readonly>
                               </div>
                             </div>
                           </div>

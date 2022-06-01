@@ -8,16 +8,16 @@
     <meta name="author" content="" />
     <title>VAN TECH</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="../assets/img/logo.png" />
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo.png" />
 
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
     <!-- Bootstrap Core-->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Css saya -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -25,45 +25,48 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
             <div class="container px-5">
-                <img src="../assets/img/logo.png" alt="" width="40" height="40" />
-                <a class="navbar-brand" href="../index.php">VAN TECHNOLOGY</a>
+                <img src="../../assets/img/logo.png" alt="" width="40" height="40" />
+                <a class="navbar-brand" href="../indexadmin.php">VAN TECHNOLOGY</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.php">Home</a>
+                            <a class="nav-link" href="../../indexadmin.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../perpus/perpus.php">Perpustakaan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.php">Blog</a>
+                            <a class="nav-link" href="#">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../galeri/galeri.php">Galeri</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../dashboardadmin/index.php">Dashboard</a>
+                        </li>
                     </ul>
                     <div class="col-md-3 text-end">
-                        <a class="btn btn-outline-primary me-2" href="#">Login</a>
+                        <a class="btn btn-outline-primary me-2" href="../../login/logout.php">Keluar</a>
                     </div>
                 </div>
             </div>
         </nav>
         <!-- Blog -->
-        <section class="py-5 ">
+        <section class="py-5">
             <div class="container px-5 mt-lg-4 py-5">
-                <p class="text-center fw-bolder fs-2 mb-5 py-5">Van Technology Blog</p>
+                <h1 class="fw-bolder fs-2 mb-5 text-center py-5">Van Technology Blog</h1>
                 <div class="card border-0 shadow rounded-3 overflow-hidden">
                     <div class="card-body p-0">
                         <div class="row gx-0">
                             <div class="col-lg-6 col-xl-5 py-lg-5">
                                 <div class="p-4 p-md-5">
                                     <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
-                                    <div class="h2 fw-bolder">Intel Prosesor generasi 12th</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique delectus ab doloremque, qui doloribus ea officiis...</p>
-                                    <a class="stretched-link text-decoration-none" href="../postblog/postblog2.php">
+                                    <div class="h2 fw-bolder">Apa sih metaverse itu?</div>
+                                    <p>Intinya, metaverse adalah konsep dunia virtual yang akan menjadi masa depan dari kemutakhiran internet, ia digadang-gadang akan menjadi dunia digital utama di masa mendatang dan akan segera rilis pada awal tahun 2022 ini.</p>
+                                    <a class="stretched-link text-decoration-none" href="../postblog/postblog.php">
                                         Read more
                                         <i class="bi bi-arrow-right"></i>
                                     </a>
@@ -71,7 +74,7 @@
                             </div>
                             <div class="col-lg-6 col-xl-7">
                                 <div class="bg-featured-blog me-5">
-                                    <img src="../assets/img/blog2.jpg" alt="" height="420px">
+                                    <img src="../../assets/img/blog1.jpg" alt="" height="550px">
                                 </div>
                             </div>
                         </div>
@@ -88,41 +91,50 @@
                 <div class="row gx-5">
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="../assets/img/artikel4.jpg" alt="..." />
+                            <img class="card-img-top" src="../../assets/img/artikel1.jpg" alt="..." />
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
-                                <a class="text-decoration-none link-dark stretched-link" href="../artikel/artikel4.php">
-                                    <div class="h5 card-title mb-3 fw-bold">Apple Dikabarkan Uji Coba Iphone dengan port USB-C</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="../artikel/artikel.php">
+                                    <div class="h5 card-title mb-3 fw-bold">Seberapa cepat chipset snapdragon gen-1</div>
                                 </a>
-                                <p class="card-text mb-0">Apple dikabarkan sedang menguji coba iPhone dengan konektor port USB-C sebagai pengganti Lightning. Perubahan ini bakal terlihat paling cepat pada 2023.</p>
+                                <p class="card-text mb-0">Chipset terbaru smartphone membawa performa yang sangat gahar.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="../assets/img/artikel5.jpg" alt="..." />
+                            <img class="card-img-top" src="../../assets/img/artikel2.jpg" alt="..." />
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
-                                <a class="text-decoration-none link-dark stretched-link" href="../artikel/artikel5.php">
-                                    <div class="h5 card-title mb-3 fw-bold">Instagram Bakal Uji Coba Fitur NFT</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="../artikel/artikel2.php">
+                                    <div class="h5 card-title mb-3 fw-bold">GPU Nvidia Gerforce RTX 3090</div>
                                 </a>
-                                <p class="card-text mb-0">Kabar baik untuk kreator dan kolektor Non Fungible Token NFT. Instagram kini sedang berupaya menghadirkan NFT di dalam platform.</p>
+                                <p class="card-text mb-0">Rangkaian Geforce RTX 3090 The BFGPU.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="../assets/img/artikel6.jpg" alt="..." />
+                            <img class="card-img-top" src="../../assets/img/artikel3.jpg" alt="..." />
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">Berita</div>
-                                <a class="text-decoration-none link-dark stretched-link" href="../artikel/artikel6.php">
-                                    <div class="h5 card-title mb-3 fw-bold">Cara Melindungi HP Dari Serangan Hacker</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="../artikel/artikel3.php">
+                                    <div class="h5 card-title mb-3 fw-bold">Oppo A16k ponsel ramping Rp2 Jutaan Diluncurkan di RI</div>
                                 </a>
-                                <p class="card-text mb-0">Era digital ini juga membuat pelaku kejahatan juga semakin berkembang pesat termasuk ancaman keamanan pada smartphone.</p>
+                                <p class="card-text mb-0 ">
+                                    Oppo A16 dan A16e membuat Oppo kembali menelurkan ponsel baru Oppo A16k untuk melengkapi seri ponsel ini.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="text-end mb-5 mb-xl-0">
+                    <a class="text-decoration-none btn btn-info" href="../blog/blog2.php">
+                        More Blog
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
         </section>
         <!-- End Artikel -->
 
@@ -147,7 +159,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
         <!-- Core theme JS-->
-        <script src="../assets/js/scripts.js"></script>
+        <script src="../../assets/js/scripts.js"></script>
 </body>
 
 </html>

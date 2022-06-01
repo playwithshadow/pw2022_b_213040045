@@ -1,6 +1,26 @@
 <?php
 session_start();
 
+require '../config/functions.php';
+
+// cek cookie
+if (isset($_COOKIE['id']) && isset($_COOKIE['key'])) {
+    $id = $_COOKIE['id'];
+    $key = $_COOKIE['key'];
+
+    // ambil username berdasarkan id
+    $result = mysqli_query(koneksi(), "SELECT * FROM tbl_login WHERE id = '$id'");
+    $row = mysqli_fetch_assoc($result);
+
+    // cek cookie dan username
+    if ($key === hash('sha256', $row['username'])) {
+        $_SESSION['login'] = true;
+        $_SESSION['id_level'] = $row["id_level"];
+        $_SESSION['id'] = $row["id"];
+    }
+}
+
+
 // cek apakah user sudah login
 if (isset($_SESSION["login"]) && $_SESSION["id_level"] == 1) {
     echo "<script>
@@ -16,9 +36,9 @@ if (isset($_SESSION["login"]) && $_SESSION["id_level"] == 1) {
     exit;
 }
 
-require '../config/functions.php';
 
 
+// cek tombol login
 if (isset($_POST["login"])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -40,8 +60,8 @@ if (isset($_POST["login"])) {
                 isset($_POST['remember'])
             ) {
                 // buat cookie
-                setcookie('id', $row['id'], time() + 60);
-                setcookie('key', hash('sha256', $row['username']), time() + 60);
+                setcookie('id', $row['id'], time() + 600);
+                setcookie('key', hash('sha256', $row['username']), time() + 600);
             }
 
             if ($row['id_level'] == 1) {
@@ -111,7 +131,7 @@ if (isset($_POST["login"])) {
                                 </div>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <input class="form-check-input" name="remember" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Ingatkan Saya
                                 </label>
