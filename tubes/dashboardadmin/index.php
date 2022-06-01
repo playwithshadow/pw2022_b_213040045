@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+require '../config/functions.php';
+
+
+$id = $_SESSION['id'];
+$tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id   = '$id'")[0];
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +43,7 @@
     <div class="wrapper">
         <nav id="sidebar" class="sidebar js-sidebar">
             <div class="sidebar-content js-simplebar">
-                <a class="sidebar-brand" style="text-decoration: none" href="#">
+                <a class="sidebar-brand" style="text-decoration: none" href="../indexadmin.php">
                     <span class="align-middle">Van Technology</span>
                 </a>
 
@@ -44,16 +58,9 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="profile.php">
+                        <a class="sidebar-link" href="profileadmin.php">
                             <i class="align-middle" data-feather="user"></i>
                             <span class="align-middle">Profile</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="">
-                            <i class="align-middle" data-feather="book"></i>
-                            <span class="align-middle">Blank</span>
                         </a>
                     </li>
 
@@ -67,7 +74,7 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="tabelanggota.php">
+                        <a class="sidebar-link" href="tabelanggota/tabelanggota.php">
                             <i class="align-middle" data-feather="database"></i>
                             <span class="align-middle">Tabel Anggota</span>
                         </a>
@@ -102,15 +109,15 @@
                             </a>
 
                             <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                                <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
-                                <span class="text-dark">Charles Hall</span>
+                                <img src="img/<?= $tbladmin['gambar']; ?>" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
+                                <span class="text-dark"><?= $tbladmin['nama']; ?></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a class="dropdown-item" href="profile.php">
                                     <i class="align-middle me-1" data-feather="user"></i>Profile
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Log out</a>
+                                <a class="dropdown-item" href="../login/logout.php">Log out</a>
                             </div>
                         </li>
                     </ul>
@@ -120,7 +127,7 @@
             <!-- Main Content -->
             <main class="content">
                 <div class="container-fluid p-0">
-                    <h1 class="h3 mb-3">Dashboard</h1>
+                    <h1 class="h3 mb-3">Selamat Datang, <?= $tbladmin['nama']; ?></h1>
                 </div>
             </main>
 

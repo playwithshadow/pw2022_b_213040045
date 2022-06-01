@@ -12,7 +12,7 @@ if (isset($_POST["ubah"])) {
 
     // cek apakah data berhasil diubah atau tidak
 
-    if (ubahadmin($_POST) > 0) {
+    if (ubah($_POST) > 0) {
         echo "
             <script>
                 alert('data berhasil diubah!');

@@ -1,4 +1,21 @@
 <?php
+session_start();
+
+// cek apakah user sudah login
+if (isset($_SESSION["login"]) && $_SESSION["id_level"] == 1) {
+    echo "<script>
+            alert('Anda sudah login!');
+            document.location.href = '../indexadmin.php';
+        </script>";
+    exit;
+} else if (isset($_SESSION["login"]) && $_SESSION["id_level"] == 2) {
+    echo "<script>
+            alert('Anda sudah login!');
+            document.location.href = '../indexanggota.php';
+        </script>";
+    exit;
+}
+
 require '../config/functions.php';
 
 
@@ -9,16 +26,39 @@ if (isset($_POST["login"])) {
     $result = mysqli_query(koneksi(), "SELECT * FROM tbl_login WHERE username = '$username'");
 
     // cek username
+
     if (mysqli_num_rows($result) === 1) {
         // cek password
         $row = mysqli_fetch_assoc($result);
         if (password_verify($password, $row["password"])) {
-            echo "
-            <script>
-                alert('Berhasil Login Sebagai Admin!!!');
-                document.location.href = '../indexadmin.php';
-            </script>
-        ";
+            // set session
+            $_SESSION["login"] = true;
+            $_SESSION['id_level'] = $row["id_level"];
+            $_SESSION['id'] = $row["id"];
+            // cek remember me
+            if (
+                isset($_POST['remember'])
+            ) {
+                // buat cookie
+                setcookie('id', $row['id'], time() + 60);
+                setcookie('key', hash('sha256', $row['username']), time() + 60);
+            }
+
+            if ($row['id_level'] == 1) {
+                echo "
+                <script>
+                    alert('Berhasil Login Sebagai Admin!!!');
+                    document.location.href = '../dashboardadmin/index.php';
+                </script>
+            ";
+            } elseif ($row['id_level'] == 2) {
+                echo "
+                <script>
+                    alert('Berhasil Login Sebagai Anggota!!!');
+                    document.location.href = '../indexanggota.php';
+                </script>
+            ";
+            }
             exit;
         }
     }
@@ -73,14 +113,14 @@ if (isset($_POST["login"])) {
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label" for="flexCheckDefault">
-                                    Remember Me
+                                    Ingatkan Saya
                                 </label>
                                 <div class="d-grid gap-2 col-6 mx-auto py-3">
                                     <button class="btn btn-primary" type="submit" name="login">Login</button>
                                 </div>
                                 <div class="fw-light text-center">
                                     <span class="text-center"> Belum punya akun? </span>
-                                    <a href="../register/registrasiadmin.php"> Daftar Sekarang </a>
+                                    <a href="../register/registrasianggota.php"> Daftar Sekarang </a>
                                 </div>
                         </form>
                     </div>

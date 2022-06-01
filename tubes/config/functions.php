@@ -24,7 +24,7 @@ function query($query)
 
 
 // function tambah untuk menambahkan data ke database
-function tambahdata($data)
+function tambah($data)
 {
     $conn = koneksi();
 
@@ -76,7 +76,7 @@ function tambahdata($data)
 
 
 // function hapus untuk menghapus data dari database
-function hapusadmin($id)
+function hapus($id)
 {
     $conn = koneksi();
 
@@ -132,7 +132,7 @@ function upload()
 }
 
 // function ubah untuk mengubah data dari database
-function ubahadmin($data)
+function ubah($data)
 {
     $conn = koneksi();
 

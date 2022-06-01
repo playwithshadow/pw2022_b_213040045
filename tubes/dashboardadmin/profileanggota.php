@@ -1,3 +1,13 @@
+<?php
+session_start();
+require '../config/functions.php';
+
+$id = $_SESSION['id'];
+$tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id   = '$id'")[0];
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +22,7 @@
   <!-- Fav Icon -->
   <link rel="shortcut icon" href="../assets/img/logo.png" />
 
-  <title>Profile - Admin</title>
+  <title>Profile Anggota - Admin</title>
 
   <!-- Core CSS -->
   <link href="css/app.css" rel="stylesheet" />
@@ -32,7 +42,7 @@
   <div class="wrapper">
     <nav id="sidebar" class="sidebar js-sidebar">
       <div class="sidebar-content js-simplebar">
-        <a class="sidebar-brand" style="text-decoration: none" href="#">
+        <a class="sidebar-brand" style="text-decoration: none" href="../indexadmin.php">
           <span class="align-middle">Van Technology</span>
         </a>
 
@@ -40,37 +50,30 @@
           <li class="sidebar-header">Pages</li>
 
           <li class="sidebar-item active">
-            <a class="sidebar-link" href="dashboard.php">
+            <a class="sidebar-link" href="index.php">
               <i class="align-middle" data-feather="home"></i>
               <span class="align-middle">Dashboard</span>
             </a>
           </li>
 
           <li class="sidebar-item">
-            <a class="sidebar-link" href="profile.php">
+            <a class="sidebar-link" href="">
               <i class="align-middle" data-feather="user"></i>
               <span class="align-middle">Profile</span>
-            </a>
-          </li>
-
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="#">
-              <i class="align-middle" data-feather="book"></i>
-              <span class="align-middle">Blank</span>
             </a>
           </li>
 
           <li class="sidebar-header">Tabel</li>
 
           <li class="sidebar-item">
-            <a class="sidebar-link" href="tabeladmin/tabeladmin.php">
+            <a class="sidebar-link" href="../tabeladmin/tabeladmin.php">
               <i class="align-middle" data-feather="database"></i>
               <span class="align-middle">Tabel Admin</span>
             </a>
           </li>
 
           <li class="sidebar-item">
-            <a class="sidebar-link" href="tabelanggota.php">
+            <a class="sidebar-link" href="tabelanggota/tabelanggota.php">
               <i class="align-middle" data-feather="database"></i>
               <span class="align-middle">Tabel Anggota</span>
             </a>
@@ -105,8 +108,8 @@
               </a>
 
               <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
-                <span class="text-dark">Charles Hall</span>
+                <img src="img/<?= $tbladmin['gambar']; ?>" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
+                <span class="text-dark"><?= $tbladmin['nama']; ?></span>
               </a>
               <div class="dropdown-menu dropdown-menu-end">
                 <a class="dropdown-item" href="profile.php">
@@ -124,61 +127,72 @@
       <main class="content">
         <div class="container-fluid p-0">
           <h1 class="h3 mb-3">Profile</h1>
-          <div class="row justify-content-center">
-            <div class="col-md-6 py-2">
-              <div class="card shadow-lg">
-                <div class="fw-bolder fs-4 card-header text-center bg-primary text-light">
-                  Form - Profile
-                </div>
-                <div class="card-body">
-                  <form action="" method="post">
-                    <div class="form-group row mb-3">
-                      <label for="nama" class="col-md-4 col-form-label text-md-right">Nama</label>
-                      <div class="col-md-8">
-                        <input type="text" id="nama" class="form-control" name="nama" placeholder="masukkan nama" required autofocus />
+          <section class="padding-y bg-light">
+            <div class="container">
+
+              <div class="row">
+                <aside class="col-lg-3 col-xl-3">
+                  <!--  COMPONENT MENU LIST  -->
+                  <nav class="nav flex-lg-column nav-pills mb-4">
+                    <a class="nav-link active" href="#">Profil</a>
+                    <a class="nav-link" href="logout.php">Keluar</a>
+                  </nav>
+                  <!--   COMPONENT MENU LIST END .//   -->
+                </aside>
+                <main class="col-lg-9">
+                  <article class="card">
+                    <div class="card-body">
+
+                      <form>
+                        <div class="row">
+                          <div class="col-lg-8">
+                            <div class="row gx-3">
+                              <div class="col-lg-12  mb-3">
+                                <label class="form-label">Username</label>
+                                <input class="form-control" type="text" placeholder="Admin" value="<?= $tbladmin['username']; ?>">
+                              </div>
+
+                              <div class="col-lg-12  mb-3">
+                                <label class="form-label">Email</label>
+                                <input class="form-control" type="text" placeholder="Admin@gmail.com" value="<?= $tbladmin['email']; ?>">
+                              </div>
+
+                              <div class="col-lg-12  mb-3">
+                                <label class="form-label">Level</label>
+                                <input class="form-control" type="text" placeholder="Admin@gmail.com" value="<?= $tbladmin['level']; ?>">
+                              </div>
+                            </div>
+                          </div>
+                          <aside class="col-lg-4">
+                            <figure class="text-lg-center">
+                              <h6>Foto</h6>
+                              <img class="img-lg img-avatar" src="img/<?= $tbladmin['gambar']; ?>" alt="User Photo">
+                            </figure>
+                          </aside>
+                        </div>
+                      </form>
+
+                      <hr class="my-4">
+
+                      <div class="row" style="max-width:920px">
+                        <div class="col-md">
+                          <article class="box mb-3">
+                            <a class="btn float-end btn btn-info btn-sm" href="#">Ganti Disini</a>
+                            <p class="title mb-0">Ganti Password</p>
+                          </article>
+                        </div>
                       </div>
+
+
                     </div>
-                    <div class="form-group row mb-3">
-                      <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
-                      <div class="col-md-8">
-                        <input type="text" id="username" class="form-control" name="username" placeholder="masukkan username" required autofocus />
-                      </div>
-                    </div>
-                    <div class="form-group row mb-3">
-                      <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
-                      <div class="col-md-8">
-                        <input type="password" id="password" class="form-control" name="password" placeholder="masukkan password" required />
-                      </div>
-                    </div>
-                    <div class="form-group row mb-3">
-                      <label for="password" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
-                      <div class="col-md-8">
-                        <input type="password" id="password" class="form-control" name="password2" placeholder="masukkan password" required />
-                      </div>
-                    </div>
-                    <div class="form-group row mb-3">
-                      <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
-                      <div class="col-md-8">
-                        <input type="email" id="email" class="form-control" name="email" placeholder="masukkan email" required />
-                      </div>
-                    </div>
-                    <div class="form-group row mb-3">
-                      <label for="gambar" class="col-md-4 col-form-label text-md-right">Gambar</label>
-                      <div class="col-md-8">
-                        <input type="file" id="gambar" class="form-control" name="gambar" />
-                      </div>
-                    </div>
-                    <input type="hidden" name="level" value="1" />
-                    <div class="d-grid gap-2 col-6 mx-auto py-3">
-                      <button class="btn btn-primary" name="ubah">
-                        Ubah Data
-                      </button>
-                    </div>
-                  </form>
-                </div>
+                  </article>
+                </main>
               </div>
+
+              <br><br>
+
             </div>
-          </div>
+          </section>
         </div>
       </main>
 

@@ -1,8 +1,13 @@
 <?php
+session_start();
+
 require '../../config/functions.php';
 
+$id = $_SESSION['id'];
 
-$tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'admin'");
+$tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id = '$id'")[0];
+
+$tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'admin'");
 
 ?>
 
@@ -44,30 +49,23 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 
                 <ul class="sidebar-nav">
                     <li class="sidebar-header">Pages</li>
 
-                    <li class="sidebar-item active">
-                        <a class="sidebar-link" href="dashboard.php">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="../index.php">
                             <i class="align-middle" data-feather="home"></i>
                             <span class="align-middle">Dashboard</span>
                         </a>
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="profile.php">
+                        <a class="sidebar-link" href="../profileadmin.php">
                             <i class="align-middle" data-feather="user"></i>
                             <span class="align-middle">Profile</span>
                         </a>
                     </li>
 
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">
-                            <i class="align-middle" data-feather="book"></i>
-                            <span class="align-middle">Blank</span>
-                        </a>
-                    </li>
-
                     <li class="sidebar-header">Tabel</li>
 
-                    <li class="sidebar-item">
+                    <li class="sidebar-item active">
                         <a class="sidebar-link" href="tabeladmin.php">
                             <i class="align-middle" data-feather="database"></i>
                             <span class="align-middle">Tabel Admin</span>
@@ -75,7 +73,7 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="../tabelanggota.php">
+                        <a class="sidebar-link" href="../tabelanggota/tabelanggota.php">
                             <i class="align-middle" data-feather="database"></i>
                             <span class="align-middle">Tabel Anggota</span>
                         </a>
@@ -110,15 +108,15 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 
                             </a>
 
                             <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                                <img src="../img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
-                                <span class="text-dark">Charles Hall</span>
+                                <img src="../img/<?= $tbladmin['gambar']; ?>" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
+                                <span class="text-dark"><?= $tbladmin['nama']; ?></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a class="dropdown-item" href="profile.php">
                                     <i class="align-middle me-1" data-feather="user"></i>Profile
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Log out</a>
+                                <a class="dropdown-item" href="../../login/logout.php">Log out</a>
                             </div>
                         </li>
                     </ul>
@@ -145,7 +143,7 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 
                     </thead>
                     <tbody>
                         <?php $no = 1; ?>
-                        <?php foreach ($tbladmin as $admin) : ?>
+                        <?php foreach ($tabeladmin as $admin) : ?>
                             <tr class="align-middle">
                                 <th scope="row"><?= $no++; ?></th>
                                 <td><?= $admin["nama"]; ?></td>

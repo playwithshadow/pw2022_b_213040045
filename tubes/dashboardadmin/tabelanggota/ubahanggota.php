@@ -1,22 +1,29 @@
 <?php
 require '../../config/functions.php';
 
-$level = query("SELECT * FROM tbl_level");
+// ambil data di URL
+$id = $_GET["id"];
 
-// cek apakah tombol tambah sudah ditekan
-if (isset($_POST["tambah"])) {
-    if (tambah($_POST) > 0) {
+// query data login berdasarkan id
+$adm = query("SELECT * FROM tbl_login WHERE id = $id")[0];
+// print_r($adm);
+// cek apakah tombol submit sudah ditekan atau belum
+if (isset($_POST["ubah"])) {
+
+    // cek apakah data berhasil diubah atau tidak
+
+    if (ubah($_POST) > 0) {
         echo "
             <script>
-                alert('data berhasil ditambahkan!');
-                document.location.href = 'tabeladmin.php';
+                alert('data berhasil diubah!');
+                document.location.href = 'tabelanggota.php';
             </script>
         ";
     } else {
         echo "
             <script>
-                alert('data gagal ditambahkan!');
-                document.location.href = 'tabeladmin.php';
+                alert('data gagal diubah!');
+                document.location.href = 'tabelanggota.php';
             </script>
         ";
     }
@@ -30,7 +37,7 @@ if (isset($_POST["tambah"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Tambah Admin - VAN TECH</title>
+    <title>Form Ubah Admin - VAN TECH</title>
 
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="../../assets/img/logo.png" />
@@ -51,48 +58,38 @@ if (isset($_POST["tambah"])) {
         <div class="row justify-content-center">
             <div class="col-md-6 py-5">
                 <div class="card shadow-lg">
-                    <div class="fw-bolder fs-4 card-header text-center bg-primary text-light">Form Tambah Admin - VAN TECH</div>
+                    <div class="fw-bolder fs-4 card-header text-center bg-primary text-light">Form Ubah - VAN TECH</div>
                     <div class="card-body">
                         <form action="" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="id" value="<?= $adm["id"]; ?>">
+                            <input type="hidden" name="gambarLama" value="<?= $adm["gambar"]; ?>">
                             <div class="form-group row mb-3">
                                 <label for="nama" class="col-md-4 col-form-label text-md-right">Nama</label>
                                 <div class="col-md-8">
-                                    <input type="text" id="nama" class="form-control" name="nama" placeholder="masukkan nama" required autofocus>
+                                    <input type="text" id="nama" class="form-control" name="nama" placeholder="masukkan nama" required autofocus value="<?= $adm['nama']; ?>">
                                 </div>
                             </div>
                             <div class="form-group row mb-3">
                                 <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
                                 <div class="col-md-8">
-                                    <input type="text" id="username" class="form-control" name="username" placeholder="masukkan username" required autofocus>
-                                </div>
-                            </div>
-                            <div class="form-group row mb-3">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
-                                <div class="col-md-8">
-                                    <input type="password" id="password" class="form-control" name="password" placeholder="masukkan password" required>
-                                </div>
-                            </div>
-                            <div class="form-group row mb-3">
-                                <label for="password2" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
-                                <div class="col-md-8">
-                                    <input type="password" id="password2" class="form-control" name="password2" placeholder="masukkan confirm password" required>
+                                    <input type="text" id="username" class="form-control" name="username" placeholder="masukkan username" required autofocus value="<?= $adm['username']; ?>">
                                 </div>
                             </div>
                             <div class="form-group row mb-3">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
                                 <div class="col-md-8">
-                                    <input type="email" id="email" class="form-control" name="email" placeholder="masukkan email" required>
+                                    <input type="email" id="email" class="form-control" name="email" placeholder="masukkan email" required value="<?= $adm['email']; ?>">
                                 </div>
                             </div>
                             <div class="form-group row mb-3">
                                 <label for="gambar" class="col-md-4 col-form-label text-md-right">Gambar</label>
                                 <div class="col-md-8">
-                                    <input type="file" id="gambar" class="form-control" name="gambar">
+                                    <img class="mb-2" src="../img/<?= $adm['gambar']; ?>" alt="" width="100px">
+                                    <input type="file" id="gambar" class="form-control" name="gambar" value="<?= $adm['gambar']; ?>">
                                 </div>
                             </div>
-                            <input type="hidden" name="level" value="1">
                             <div class="d-grid gap-2 col-6 mx-auto py-3">
-                                <button class="btn btn-primary" name="tambah">Tambah Data Admin</button>
+                                <button class="btn btn-primary" name="ubah">Ubah Data Admin</button>
                             </div>
                         </form>
                     </div>

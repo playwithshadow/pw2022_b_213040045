@@ -9,14 +9,14 @@ if (isset($_POST["tambah"])) {
         echo "
             <script>
                 alert('data berhasil ditambahkan!');
-                document.location.href = 'tabeladmin.php';
+                document.location.href = 'tabelanggota.php';
             </script>
         ";
     } else {
         echo "
             <script>
                 alert('data gagal ditambahkan!');
-                document.location.href = 'tabeladmin.php';
+                document.location.href = 'tabelanggota.php';
             </script>
         ";
     }
@@ -90,9 +90,9 @@ if (isset($_POST["tambah"])) {
                                     <input type="file" id="gambar" class="form-control" name="gambar">
                                 </div>
                             </div>
-                            <input type="hidden" name="level" value="1">
+                            <input type="hidden" name="level" value="2">
                             <div class="d-grid gap-2 col-6 mx-auto py-3">
-                                <button class="btn btn-primary" name="tambah">Tambah Data Admin</button>
+                                <button class="btn btn-primary" name="tambah">Tambah Data Anggota</button>
                             </div>
                         </form>
                     </div>

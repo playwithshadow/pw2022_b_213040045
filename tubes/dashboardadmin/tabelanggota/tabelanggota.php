@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+require '../../config/functions.php';
+
+$id = $_SESSION['id'];
+
+$tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id = '$id'")[0];
+
+$tabelanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'anggota'");
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,12 +21,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Fav Icon -->
-    <link rel="shortcut icon" href="../assets/img/logo.png" />
+    <link rel="shortcut icon" href="../../assets/img/logo.png" />
 
     <title>Tabel Anggota - Admin</title>
 
     <!-- Core CSS -->
-    <link href="css/app.css" rel="stylesheet" />
+    <link href="../css/app.css" rel="stylesheet" />
 
     <!-- Font Google -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
@@ -21,7 +35,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
     <!-- Boostrap 5 -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
 </head>
 
 <body>
@@ -36,37 +50,30 @@
                 <ul class="sidebar-nav">
                     <li class="sidebar-header">Pages</li>
 
-                    <li class="sidebar-item active">
-                        <a class="sidebar-link" href="dashboard.php">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="../index.php">
                             <i class="align-middle" data-feather="home"></i>
                             <span class="align-middle">Dashboard</span>
                         </a>
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="profile.php">
+                        <a class="sidebar-link" href="../profileanggota.php">
                             <i class="align-middle" data-feather="user"></i>
                             <span class="align-middle">Profile</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">
-                            <i class="align-middle" data-feather="book"></i>
-                            <span class="align-middle">Blank</span>
                         </a>
                     </li>
 
                     <li class="sidebar-header">Tabel</li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="tabeladmin/tabeladmin.php">
+                        <a class="sidebar-link" href="../tabeladmin/tabeladmin.php">
                             <i class="align-middle" data-feather="database"></i>
                             <span class="align-middle">Tabel Admin</span>
                         </a>
                     </li>
 
-                    <li class="sidebar-item">
+                    <li class="sidebar-item active">
                         <a class="sidebar-link" href="tabelanggota.php">
                             <i class="align-middle" data-feather="database"></i>
                             <span class="align-middle">Tabel Anggota</span>
@@ -102,15 +109,15 @@
                             </a>
 
                             <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                                <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
-                                <span class="text-dark">Charles Hall</span>
+                                <img src="../img/<?= $tblanggota['gambar']; ?>" class=" avatar img-fluid rounded me-1" alt="Charles Hall" />
+                                <span class="text-dark"><?= $tblanggota['nama']; ?></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a class="dropdown-item" href="profile.php">
                                     <i class="align-middle me-1" data-feather="user"></i>Profile
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Log out</a>
+                                <a class="dropdown-item" href="../../login/logout.php">Log out</a>
                             </div>
                         </li>
                     </ul>
@@ -120,7 +127,8 @@
             <!-- Main Content -->
             <main class="content">
                 <div class="container-fluid p-0">
-                    <h1 class="h3 mb-3">Dashboard</h1>
+                    <h1 class="h3 mb-3">Tabel Anggota</h1>
+                    <a href="tambahanggota.php" class="btn btn-primary">[+]Tambah Data Anggota</a>
                 </div>
                 <table class="table">
                     <thead>
@@ -135,20 +143,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="align-middle">
-                            <th scope="row">No</th>
-                            <td>Nama</td>
-                            <td>Username</td>
-                            <td>Email</td>
-                            <td>
-                                <img src="#" width="50px" class="rounded-circle" />Gambar1
-                            </td>
-                            <td>Level</td>
-                            <td>
-                                <a href="" class="btn badge bg-primary">Ubah</a>
-                                <a href="" class="btn badge bg-danger">Delete</a>
-                            </td>
-                        </tr>
+                        <?php $no = 1; ?>
+                        <?php foreach ($tabelanggota as $anggota) : ?>
+                            <tr class="align-middle">
+                                <th scope="row"><?= $no++; ?></th>
+                                <td><?= $anggota["nama"]; ?></td>
+                                <td><?= $anggota["username"]; ?></td>
+                                <td><?= $anggota["email"]; ?></td>
+                                <td><img src="../img/<?= $anggota['gambar']; ?>" width="75px" class="rounded-circle"></td>
+                                <td><?= $anggota["level"]; ?></td>
+                                <td>
+                                    <a href="ubahanggota.php?id=<?= $anggota['id']; ?>" class="btn badge bg-primary">Ubah</a>
+                                    <a href="hapusanggota.php?id=<?= $anggota["id"]; ?>" onclick="return confirm('Apakah data ini benar akan dihapus?')" class="btn badge bg-danger">Delete</a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </main>
@@ -173,7 +182,7 @@
         </div>
     </div>
 
-    <script src="js/app.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 
 </html>

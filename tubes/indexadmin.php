@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["login"])) {
+  header("Location: login/login.php");
+  exit;
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +37,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-5-strong">
       <div class="container px-5">
         <img src="assets/img/logo.png" alt="" width="40" height="40" />
-        <a class="navbar-brand" href="index.php">VAN TECHNOLOGY</a>
+        <a class="navbar-brand" href="indexadmin.php">VAN TECHNOLOGY</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -45,11 +56,11 @@
               <a class="nav-link" href="galeri/galeri.php">Galeri</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="dashboardadmin/dashboard.php">Dashboard</a>
+              <a class="nav-link" href="dashboardadmin/index.php">Dashboard</a>
             </li>
           </ul>
           <div class="col-md-3 text-end">
-            <a class="btn btn-outline-primary me-2" href="#">Logout</a>
+            <a class="btn btn-outline-primary me-2" href="login/logout.php">Keluar</a>
           </div>
         </div>
       </div>
@@ -65,7 +76,7 @@
               </h1>
             </div>
           </div>
-          <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+          <div class="col-xl-5 col-xxl-6 d-xl-block text-center">
             <img class="img-fluid rounded-3 my-5" src="assets/img/vantechblack.png" alt="..." />
           </div>
         </div>
