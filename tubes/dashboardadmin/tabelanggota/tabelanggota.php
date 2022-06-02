@@ -15,9 +15,17 @@ require '../../config/functions.php';
 
 $id = $_SESSION['id'];
 
-$tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id = '$id'")[0];
+$tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id = '$id'")[0];
 
-$tabelanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'anggota'");
+$tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'anggota'");
+
+// jika tombol cari ditekan 
+if (isset($_POST["cari"])) {
+    $keyword = $_POST["keyword"];
+    $tabeladmin = cari($keyword);
+} else {
+    $tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'anggota'");
+}
 
 ?>
 
@@ -46,6 +54,9 @@ $tabelanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE leve
 
     <!-- Boostrap 5 -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+    <!-- Css saya -->
+    <link rel="stylesheet" href="../css/search.css">
 </head>
 
 <body>
@@ -53,7 +64,7 @@ $tabelanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE leve
     <div class="wrapper">
         <nav id="sidebar" class="sidebar js-sidebar">
             <div class="sidebar-content js-simplebar">
-                <a class="sidebar-brand" style="text-decoration: none" href="#">
+                <a class="sidebar-brand" style="text-decoration: none" href="../../indexadmin.php">
                     <span class="align-middle">Van Technology</span>
                 </a>
 
@@ -68,7 +79,7 @@ $tabelanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE leve
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="../profileanggota.php">
+                        <a class="sidebar-link" href="../profileadmin.php">
                             <i class="align-middle" data-feather="user"></i>
                             <span class="align-middle">Profile</span>
                         </a>
@@ -114,20 +125,19 @@ $tabelanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE leve
                             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown"></div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
-                                <i class="align-middle" data-feather="settings"></i>
-                            </a>
-
-                            <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                                <img src="../img/<?= $tblanggota['gambar']; ?>" class=" avatar img-fluid rounded me-1" alt="Charles Hall" />
-                                <span class="text-dark"><?= $tblanggota['nama']; ?></span>
+                            <a class="nav-link d-sm-inline-block " href="#" data-bs-toggle="dropdown">
+                                <img src="../img/<?= $tbladmin['gambar']; ?>" class="avatar img-fluid rounded-circle me-1 mx-1" />
+                                <span class="text-dark"><?= $tbladmin['nama']; ?></span>
+                                <i class="align-end" data-feather="settings"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="profile.php">
+                                <a class="dropdown-item" href="../profileadmin.php">
                                     <i class="align-middle me-1" data-feather="user"></i>Profile
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../../login/logout.php">Log out</a>
+                                <a class="dropdown-item" href="../../login/logout.php">
+                                    <i class="align-middle me-1" data-feather="log-out"></i>Logout
+                                </a>
                             </div>
                         </li>
                     </ul>
@@ -137,10 +147,22 @@ $tabelanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE leve
             <!-- Main Content -->
             <main class="content">
                 <div class="container-fluid p-0">
-                    <h1 class="h3 mb-3">Tabel Anggota</h1>
-                    <a href="tambahanggota.php" class="btn btn-primary">[+]Tambah Data Anggota</a>
+                    <h1 class="h3 mb-4">Tabel Anggota - <?= $tbladmin['nama']; ?></h1>
+                    <a href="tambahanggota.php" class="btn btn-primary mb-4">[+]Tambah Data Anggota</a>
                 </div>
-                <table class="table">
+                <!-- Search widget-->
+                <div class="card col-5">
+                    <form action="" method="post">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search..." name="keyword">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit" name="cari">Cari</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <table class="table table-bordered text-center">
                     <thead>
                         <tr>
                             <th scope="col">No</th>
@@ -148,29 +170,52 @@ $tabelanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE leve
                             <th scope="col">Username</th>
                             <th scope="col">Email</th>
                             <th scope="col">Gambar</th>
-                            <th scope="col">Level</th>
+                            <!-- <th scope="col">Level</th> -->
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php $no = 1; ?>
-                        <?php foreach ($tabelanggota as $anggota) : ?>
+                        <?php foreach ($tabeladmin as $admin) : ?>
                             <tr class="align-middle">
                                 <th scope="row"><?= $no++; ?></th>
-                                <td><?= $anggota["nama"]; ?></td>
-                                <td><?= $anggota["username"]; ?></td>
-                                <td><?= $anggota["email"]; ?></td>
-                                <td><img src="../img/<?= $anggota['gambar']; ?>" width="75px" class="rounded-circle"></td>
-                                <td><?= $anggota["level"]; ?></td>
+                                <td><?= $admin["nama"]; ?></td>
+                                <td><?= $admin["username"]; ?></td>
+                                <td><?= $admin["email"]; ?></td>
+                                <td><img src="../img/<?= $admin['gambar']; ?>" width="75px" class="rounded-circle"></td>
+                                <!-- <td><?= $admin["level"]; ?></td> -->
                                 <td>
-                                    <a href="ubahanggota.php?id=<?= $anggota['id']; ?>" class="btn badge bg-primary">Ubah</a>
-                                    <a href="hapusanggota.php?id=<?= $anggota["id"]; ?>" onclick="return confirm('Apakah data ini benar akan dihapus?')" class="btn badge bg-danger">Delete</a>
+                                    <a href="ubahanggota.php?id=<?= $admin['id']; ?>" class="btn badge bg-primary">Ubah</a>
+                                    <a href="hapusanggota.php?id=<?= $admin["id"]; ?>" onclick="return confirm('Apakah data ini benar akan dihapus?')" class="btn badge bg-danger">Delete</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
             </main>
+
+            <!-- pagination -->
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
 
             <!-- Footer -->
             <footer class="footer">
@@ -191,6 +236,10 @@ $tabelanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE leve
             </footer>
         </div>
     </div>
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="../js/app.js"></script>
 </body>

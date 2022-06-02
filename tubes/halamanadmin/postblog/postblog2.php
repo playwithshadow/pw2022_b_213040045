@@ -48,7 +48,7 @@
                         </li>
                     </ul>
                     <div class="col-md-3 text-end">
-                        <a class="btn btn-outline-primary me-2" href="../login/logout.php">Keluar</a>
+                        <a class="btn btn-outline-primary me-2" href="../../login/logout.php">Keluar</a>
                     </div>
                 </div>
             </div>

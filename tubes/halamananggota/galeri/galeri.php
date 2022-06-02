@@ -1,3 +1,23 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["login"])) {
+    echo "<script>
+            alert('Anda login terlebih dahulu!');
+            document.location.href = '../../index.php';
+        </script>";
+    exit;
+} elseif ($_SESSION["login"] != true) {
+    echo "<script>
+            alert('Anda login terlebih dahulu!');
+            document.location.href = '../../indexanggota.php';
+        </script>";
+    exit;
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,6 +68,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Galeri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../dashboardanggota/index.php">Dashboard</a>
                         </li>
                     </ul>
                     <div class="col-md-3 text-end">

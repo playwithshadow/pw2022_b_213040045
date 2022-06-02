@@ -87,10 +87,6 @@ if (isset($_POST["register"])) {
                             </div>
                             <input type="hidden" name="level" value="1">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Remember Me
-                                </label>
                                 <div class="d-grid gap-2 col-6 mx-auto py-3">
                                     <button class="btn btn-primary" name="register">Registrasi</button>
                                 </div>

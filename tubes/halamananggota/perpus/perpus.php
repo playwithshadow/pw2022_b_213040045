@@ -69,9 +69,12 @@ if (!isset($_SESSION["login"])) {
                         <li class="nav-item">
                             <a class="nav-link" href="../galeri/galeri.php">Galeri</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../dashboardanggota/index.php">Dashboard</a>
+                        </li>
                     </ul>
                     <div class="col-md-3 text-end">
-                        <a class="btn btn-outline-primary me-2" href="../login/logout.php">Keluar</a>
+                        <a class="btn btn-outline-primary me-2" href="../../login/logout.php">Keluar</a>
                     </div>
                 </div>
             </div>
@@ -195,10 +198,6 @@ if (!isset($_SESSION["login"])) {
                                     <ul class="list-unstyled mb-0">
                                         <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href=" #!" class="text-light text-decoration-none">Web Design</a></li>
                                         <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href="#!" class="text-light text-decoration-none">Bootstrap</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
                                         <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href="#!" class="text-light text-decoration-none">HTML</a></li>
                                         <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href="#!" class="text-light text-decoration-none">CSS</a></li>
                                     </ul>

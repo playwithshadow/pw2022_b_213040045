@@ -18,6 +18,14 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id = '$i
 
 $tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'admin'");
 
+// jika tombol cari ditekan
+if (isset($_POST["cari"])) {
+    $keyword = $_POST["keyword"];
+    $tabeladmin = cari($keyword);
+} else {
+    $tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'admin'");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -112,20 +120,19 @@ $tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level 
                             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown"></div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
-                                <i class="align-middle" data-feather="settings"></i>
-                            </a>
-
-                            <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                                <img src="../img/<?= $tbladmin['gambar']; ?>" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
+                            <a class="nav-link d-sm-inline-block " href="#" data-bs-toggle="dropdown">
+                                <img src="../img/<?= $tbladmin['gambar']; ?>" class="avatar img-fluid rounded-circle me-1 mx-1" />
                                 <span class="text-dark"><?= $tbladmin['nama']; ?></span>
+                                <i class="align-end" data-feather="settings"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="profile.php">
+                                <a class="dropdown-item" href="../profileadmin.php">
                                     <i class="align-middle me-1" data-feather="user"></i>Profile
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../../login/logout.php">Log out</a>
+                                <a class="dropdown-item" href="../../login/logout.php">
+                                    <i class="align-middle me-1" data-feather="log-out"></i>Logout
+                                </a>
                             </div>
                         </li>
                     </ul>
@@ -135,10 +142,23 @@ $tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level 
             <!-- Main Content -->
             <main class="content">
                 <div class="container-fluid p-0">
-                    <h1 class="h3 mb-3">Tabel Admin</h1>
-                    <a href="tambahadmin.php" class="btn btn-primary">[+]Tambah Data Admin</a>
+                    <h1 class="h3 mb-3">Tabel Admin - <?= $tbladmin['nama']; ?></h1>
+                    <a href="tambahadmin.php" class="btn btn-primary mb-3">[+]Tambah Data Admin</a>
                 </div>
-                <table class="table">
+
+                <!-- Search widget-->
+                <div class="card col-5">
+                    <form action="" method="post">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search..." name="keyword">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit" name="cari">Cari</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <table class="table table-bordered text-center">
                     <thead>
                         <tr>
                             <th scope="col">No</th>
@@ -146,7 +166,7 @@ $tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level 
                             <th scope="col">Username</th>
                             <th scope="col">Email</th>
                             <th scope="col">Gambar</th>
-                            <th scope="col">Level</th>
+                            <!-- <th scope="col">Level</th> -->
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
@@ -159,7 +179,7 @@ $tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level 
                                 <td><?= $admin["username"]; ?></td>
                                 <td><?= $admin["email"]; ?></td>
                                 <td><img src="../img/<?= $admin['gambar']; ?>" width="75px" class="rounded-circle"></td>
-                                <td><?= $admin["level"]; ?></td>
+                                <!-- <td><?= $admin["level"]; ?></td> -->
                                 <td>
                                     <a href="ubahadmin.php?id=<?= $admin['id']; ?>" class="btn badge bg-primary">Ubah</a>
                                     <a href="hapusadmin.php?id=<?= $admin["id"]; ?>" onclick="return confirm('Apakah data ini benar akan dihapus?')" class="btn badge bg-danger">Delete</a>

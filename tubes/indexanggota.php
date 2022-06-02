@@ -58,6 +58,9 @@ if (!isset($_SESSION["login"])) {
             <li class="nav-item">
               <a class="nav-link" href="halamananggota/galeri/galeri.php">Galeri</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboardanggota/index.php">Dashboard</a>
+            </li>
           </ul>
           <div class="col-md-3 text-end">
             <a class="btn btn-outline-primary me-2" href="login/logout.php">Keluar</a>

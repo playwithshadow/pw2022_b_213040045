@@ -164,6 +164,28 @@ function ubah($data)
     // return mysqli_error($conn);
 }
 
+// function untuk cari data dari database
+function cari($keyword)
+{
+    $conn = koneksi();
+
+    $query = "SELECT * FROM tbl_login NATURAL JOIN tbl_level 
+                WHERE 
+                nama LIKE '%$keyword%' OR 
+                username LIKE '%$keyword%' OR 
+                email LIKE '%$keyword%'
+                ";
+
+
+    $result = mysqli_query($conn, $query);
+
+    $rows = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $rows[] = $row;
+    }
+
+    return $rows;
+}
 
 
 

@@ -111,20 +111,19 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id   = '
                             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown"></div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
-                                <i class="align-middle" data-feather="settings"></i>
-                            </a>
-
-                            <a class="nav-link dropdown-toggle d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                                <img src="img/<?= $tbladmin['gambar']; ?>" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
+                            <a class="nav-link d-sm-inline-block " href="#" data-bs-toggle="dropdown">
+                                <img src="img/<?= $tbladmin['gambar']; ?>" class="avatar img-fluid rounded-circle me-1 mx-1" />
                                 <span class="text-dark"><?= $tbladmin['nama']; ?></span>
+                                <i class="align-end" data-feather="settings"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a class="dropdown-item" href="profileadmin.php">
                                     <i class="align-middle me-1" data-feather="user"></i>Profile
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../login/logout.php">Log out</a>
+                                <a class="dropdown-item" href="../login/logout.php">
+                                    <i class="align-middle me-1" data-feather="log-out"></i>Logout
+                                </a>
                             </div>
                         </li>
                     </ul>
