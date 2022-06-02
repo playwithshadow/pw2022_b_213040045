@@ -2,7 +2,10 @@
 session_start();
 
 if (!isset($_SESSION["login"])) {
-  header("Location: login/login.php");
+  echo "<script>
+            alert('Loginlah Terlebih Dahulu!');
+            document.location.href = 'login/login.php';
+        </script>";
   exit;
 }
 

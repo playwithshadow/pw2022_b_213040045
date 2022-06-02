@@ -1,17 +1,3 @@
-<?php
-session_start();
-
-if (!isset($_SESSION["login"])) {
-  echo "<script>
-            alert('Loginlah Terlebih Dahulu!');
-            document.location.href = 'login/login.php';
-        </script>";
-  exit;
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,14 +26,14 @@ if (!isset($_SESSION["login"])) {
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-5-strong">
       <div class="container px-5">
         <img src="assets/img/logo.png" alt="" width="40" height="40" />
-        <a class="navbar-brand" href="indexanggota.php">VAN TECHNOLOGY</a>
+        <a class="navbar-brand" href="index.php">VAN TECHNOLOGY</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="halamananggota/perpus/perpus.php">Perpustakaan</a>
@@ -60,7 +46,7 @@ if (!isset($_SESSION["login"])) {
             </li>
           </ul>
           <div class="col-md-3 text-end">
-            <a class="btn btn-outline-primary me-2" href="login/logout.php">Keluar</a>
+            <a class="btn btn-outline-primary me-2" href="login/login.php">Masuk</a>
           </div>
         </div>
       </div>
@@ -75,6 +61,7 @@ if (!isset($_SESSION["login"])) {
                 Selamat Datang di Van Technology
               </h1>
             </div>
+            <a class="btn btn-primary mb-3" href="register/registrasianggota.php">Daftar Sekarang</a>
           </div>
           <div class="col-xl-5 col-xxl-6 d-xl-block text-center">
             <img class="img-fluid rounded-3 my-5" src="assets/img/vantechblack.png" alt="..." />
