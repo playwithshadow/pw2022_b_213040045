@@ -116,39 +116,44 @@ if (isset($_POST["login"])) {
             <div class="col-md-6 py-5">
                 <div class="card shadow-lg">
                     <div class="fw-bolder fs-4 card-header text-center bg-primary text-white">Form Login Admin - VAN TECH</div>
-                    <div class="card-body">
-                        <form action="" method="post">
-                            <div class="form-group row mb-3">
-                                <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
-                                <div class="col-md-6">
-                                    <input type="text" id="username" class="form-control" name="username" placeholder="masukkan username" required autofocus>
+                    <?php if (isset($error)) : ?>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <p class="text-start fw-bold">Username atau Password salah!</p>
+                        <?php endif; ?>
+                        <div class="card-body">
+                            <form action="" method="post">
+                                <div class="form-group row mb-3">
+                                    <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="username" class="form-control" name="username" placeholder="masukkan username" required autofocus>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group row mb-3">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
-                                <div class="col-md-6">
-                                    <input type="password" id="password" class="form-control" name="password" placeholder="masukkan password" required>
+                                <div class="form-group row mb-3">
+                                    <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                                    <div class="col-md-6">
+                                        <input type="password" id="password" class="form-control" name="password" placeholder="masukkan password" required>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name="remember" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Ingatkan Saya
-                                </label>
-                                <div class="d-grid gap-2 col-6 mx-auto py-3">
-                                    <button class="btn btn-primary" type="submit" name="login">Login</button>
-                                </div>
-                                <div class="fw-light text-center">
-                                    <span class="text-center"> Belum punya akun? </span>
-                                    <a href="../register/registrasianggota.php"> Daftar Sekarang </a>
-                                </div>
-                        </form>
-                    </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="remember" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Ingatkan Saya
+                                    </label>
+                                    <div class="d-grid gap-2 col-6 mx-auto py-3">
+                                        <button class="btn btn-primary" type="submit" name="login">Login</button>
+                                    </div>
+                                    <div class="fw-light text-center">
+                                        <span class="text-center"> Belum punya akun? </span>
+                                        <a href="../register/registrasianggota.php"> Daftar Sekarang </a>
+                                    </div>
+                            </form>
+                        </div>
+                        </div>
                 </div>
             </div>
         </div>
-    </div>
 </body>
+
 
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

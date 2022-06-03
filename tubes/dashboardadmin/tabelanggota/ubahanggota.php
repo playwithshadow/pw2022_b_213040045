@@ -100,7 +100,7 @@ if (isset($_POST["ubah"])) {
                                 </div>
                             </div>
                             <div class="d-grid gap-2 col-6 mx-auto py-3">
-                                <button class="btn btn-primary" name="ubah">Ubah Data Admin</button>
+                                <button class="btn btn-primary" name="ubah">Ubah Data Anggota</button>
                             </div>
                         </form>
                     </div>

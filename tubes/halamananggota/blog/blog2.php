@@ -3,13 +3,13 @@ session_start();
 
 if (!isset($_SESSION["login"])) {
     echo "<script>
-            alert('Anda login terlebih dahulu!');
+            alert('Anda harus login terlebih dahulu!');
             document.location.href = '../../index.php';
         </script>";
     exit;
 } elseif ($_SESSION["login"] != true) {
     echo "<script>
-            alert('Anda login terlebih dahulu!');
+            alert('Anda harus login terlebih dahulu!');
             document.location.href = '../../indexanggota.php';
         </script>";
     exit;

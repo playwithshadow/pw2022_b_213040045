@@ -13,11 +13,21 @@ if (!isset($_SESSION["login"])) {
 
 require '../../config/functions.php';
 
+// pagination
+// konfigurasi
+$jumlahDataPerHalaman = 5;
+$jumlahData = count(query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'anggota'"));
+$jumlahHalaman = ceil($jumlahData / $jumlahDataPerHalaman);
+$halamanAktif = (isset($_GET["halaman"])) ? $_GET["halaman"] : 1;
+$awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
+
 $id = $_SESSION['id'];
 
 $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id = '$id'")[0];
 
-$tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'anggota'");
+$tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'anggota' LIMIT $awalData, $jumlahDataPerHalaman");
+
+
 
 // jika tombol cari ditekan 
 if (isset($_POST["cari"])) {
@@ -170,7 +180,7 @@ if (isset($_POST["cari"])) {
                             <th scope="col">Username</th>
                             <th scope="col">Email</th>
                             <th scope="col">Gambar</th>
-                            <!-- <th scope="col">Level</th> -->
+                            <th scope="col">Level</th>
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
@@ -183,7 +193,7 @@ if (isset($_POST["cari"])) {
                                 <td><?= $admin["username"]; ?></td>
                                 <td><?= $admin["email"]; ?></td>
                                 <td><img src="../img/<?= $admin['gambar']; ?>" width="75px" class="rounded-circle"></td>
-                                <!-- <td><?= $admin["level"]; ?></td> -->
+                                <td><?= $admin["level"]; ?></td>
                                 <td>
                                     <a href="ubahanggota.php?id=<?= $admin['id']; ?>" class="btn badge bg-primary">Ubah</a>
                                     <a href="hapusanggota.php?id=<?= $admin["id"]; ?>" onclick="return confirm('Apakah data ini benar akan dihapus?')" class="btn badge bg-danger">Delete</a>
@@ -194,28 +204,34 @@ if (isset($_POST["cari"])) {
                 </table>
             </main>
 
-            <!-- pagination -->
+            <!-- navigasi pagination -->
             <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </li>
+                <ul class="pagination justify-content-center pb-5">
+                    <?php if ($halamanAktif > 1) : ?>
+                        <li class="page-item">
+                            <a class="page-link text-decoration-none" href="?halaman=<?= $halamanAktif - 1; ?>" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    <?php endif; ?>
+
+                    <?php for ($i = 1; $i <= $jumlahHalaman; $i++) : ?>
+                        <?php if ($i == $halamanAktif) : ?>
+                            <li class="page-item active"><a class="page-link text-decoration-none" href="?halaman=<?= $i; ?>"><?= $i; ?></a></li>
+                        <?php else : ?>
+                            <li class="page-item"><a class="page-link text-decoration-none" href="?halaman=<?= $i; ?>"><?= $i; ?></a></li>
+                        <?php endif; ?>
+                    <?php endfor; ?>
+
+                    <?php if ($halamanAktif < $jumlahHalaman) : ?>
+                        <li class="page-item">
+                            <a class="page-link text-decoration-none" href="?halaman=<?= $halamanAktif + 1; ?>" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </nav>
-
-
 
             <!-- Footer -->
             <footer class="footer">
