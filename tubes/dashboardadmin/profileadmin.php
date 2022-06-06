@@ -82,7 +82,7 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id   = '
           </li>
 
           <li class="sidebar-item">
-            <a class="sidebar-link" href="#">
+            <a class="sidebar-link" href="tabelbuku/tabelbuku.php">
               <i class="align-middle" data-feather="database"></i>
               <span class="align-middle">Tabel Buku</span>
             </a>

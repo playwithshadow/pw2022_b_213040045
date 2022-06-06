@@ -10,6 +10,6 @@ setcookie('key', '', time() - 3600);
 
 echo "<script>
             alert('Anda sudah logout!');
-            document.location.href = 'login.php';
+            document.location.href = '../index.php';
         </script>";
 exit;

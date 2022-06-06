@@ -25,16 +25,12 @@ $id = $_SESSION['id'];
 
 $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id = '$id'")[0];
 
-$tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'anggota' LIMIT $awalData, $jumlahDataPerHalaman");
-
-
-
 // jika tombol cari ditekan 
-if (isset($_POST["cari"])) {
+if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
     $keyword = $_POST["keyword"];
     $tabeladmin = cari($keyword);
 } else {
-    $tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'anggota'");
+    $tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'anggota' LIMIT $awalData, $jumlahDataPerHalaman");
 }
 
 ?>
@@ -65,8 +61,6 @@ if (isset($_POST["cari"])) {
     <!-- Boostrap 5 -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
 
-    <!-- Css saya -->
-    <link rel="stylesheet" href="../css/search.css">
 </head>
 
 <body>
@@ -112,7 +106,7 @@ if (isset($_POST["cari"])) {
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">
+                        <a class="sidebar-link" href="../tabelbuku/tabelbuku.php">
                             <i class="align-middle" data-feather="database"></i>
                             <span class="align-middle">Tabel Buku</span>
                         </a>
@@ -164,44 +158,47 @@ if (isset($_POST["cari"])) {
                 <div class="card col-5">
                     <form action="" method="post">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search..." name="keyword">
+                            <input type="text" class="form-control" placeholder="Search..." name="keyword" id="keyword">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="submit" name="cari">Cari</button>
+                                <button class="btn btn-primary" type="submit" name="cari" id="tombol-cari">Cari</button>
                             </div>
                         </div>
                     </form>
                 </div>
 
-                <table class="table table-bordered text-center">
-                    <thead>
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Nama</th>
-                            <th scope="col">Username</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Gambar</th>
-                            <th scope="col">Level</th>
-                            <th scope="col">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php $no = 1; ?>
-                        <?php foreach ($tabeladmin as $admin) : ?>
-                            <tr class="align-middle">
-                                <th scope="row"><?= $no++; ?></th>
-                                <td><?= $admin["nama"]; ?></td>
-                                <td><?= $admin["username"]; ?></td>
-                                <td><?= $admin["email"]; ?></td>
-                                <td><img src="../img/<?= $admin['gambar']; ?>" width="75px" class="rounded-circle"></td>
-                                <td><?= $admin["level"]; ?></td>
-                                <td>
-                                    <a href="ubahanggota.php?id=<?= $admin['id']; ?>" class="btn badge bg-primary">Ubah</a>
-                                    <a href="hapusanggota.php?id=<?= $admin["id"]; ?>" onclick="return confirm('Apakah data ini benar akan dihapus?')" class="btn badge bg-danger">Delete</a>
-                                </td>
+
+                <div id="container">
+                    <table class="table table-bordered text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Nama</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Gambar</th>
+                                <th scope="col">Level</th>
+                                <th scope="col">Aksi</th>
                             </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            <?php $no = 1; ?>
+                            <?php foreach ($tabeladmin as $admin) : ?>
+                                <tr class="align-middle">
+                                    <th scope="row"><?= $no++; ?></th>
+                                    <td><?= $admin["nama"]; ?></td>
+                                    <td><?= $admin["username"]; ?></td>
+                                    <td><?= $admin["email"]; ?></td>
+                                    <td><img src="../img/<?= $admin['gambar']; ?>" width="75px" class="rounded-circle"></td>
+                                    <td><?= $admin["level"]; ?></td>
+                                    <td>
+                                        <a href="ubahanggota.php?id=<?= $admin['id']; ?>" class="btn badge bg-primary">Ubah</a>
+                                        <a href="hapusanggota.php?id=<?= $admin["id"]; ?>" onclick="return confirm('Apakah data ini benar akan dihapus?')" class="btn badge bg-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
             </main>
 
             <!-- navigasi pagination -->
@@ -254,10 +251,11 @@ if (isset($_POST["cari"])) {
     </div>
 
 
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JS
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
 
     <script src="../js/app.js"></script>
+    <script src="../js/ajax.js"></script>
 </body>
 
 </html>

@@ -91,6 +91,13 @@ if (!isset($_SESSION["login"])) {
                         </div>
                     </div>
                 </div>
+                <div class="row mt-4 pt-5">
+                    <div class="col-md-12">
+                        <div class="text-start">
+                            <a href="#" class="btn btn-primary">[+]Tambah Data Buku</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
         <!-- Page content-->
@@ -110,9 +117,7 @@ if (!isset($_SESSION["login"])) {
                                         <div class="card-body">
                                             <h5 class="card-title fw-bold">Web UI Design Patterns</h5>
                                             <p class="card-text">Buku ini membahas secara lengkap beberapa aplikasi web yang terkenal serta website seperti Amazon dan Airbnb, menganalisa tampilan website mereka untuk melihat bagaimana dan mengapa mereka bisa bekerja dengan sukses.</p>
-                                            <p class="card-text">
-                                                <small class="text-muted">Last updated 3 mins ago</small>
-                                            </p>
+                                            <a href="" class="btn btn-primary badge">Unduh PDF disini</a>
                                         </div>
                                     </div>
                                 </div>
@@ -127,9 +132,7 @@ if (!isset($_SESSION["login"])) {
                                         <div class="card-body">
                                             <h5 class="card-title fw-bold">HTML Uncover</h5>
                                             <p class="card-text">Buku HTML Uncover berisi pembahasan tentang HTML mulai dari dasar hingga fitur terbaru dari HTML5. Buku ini cocok untuk rekan-rekan yang baru pertama kali bersentuhan dengan HTML hingga yang sudah cukup paham tentang HTML tapi ingin mendalami HTML5.</p>
-                                            <p class="card-text">
-                                                <small class="text-muted">Last updated 3 mins ago</small>
-                                            </p>
+                                            <a href="" class="btn btn-primary badge">Unduh PDF disini</a>
                                         </div>
                                     </div>
                                 </div>
@@ -144,9 +147,7 @@ if (!isset($_SESSION["login"])) {
                                         <div class="card-body">
                                             <h5 class="card-title fw-bold">Bootstrap 5 Uncover</h5>
                                             <p class="card-text">buku Bootstrap 5 Uncover ini kita akan membahas cara penggunaan Bootstrap 5, mulai dari grid system yang menjadi fondasi paling penting, utility class, puluhan komponen Bootstrap seperti navbar, list group, button, form, card, hingga carousel slider.</p>
-                                            <p class="card-text">
-                                                <small class="text-muted">Last updated 3 mins ago</small>
-                                            </p>
+                                            <a href="" class="btn btn-primary badge">Unduh PDF disini</a>
                                         </div>
                                     </div>
                                 </div>
@@ -161,9 +162,7 @@ if (!isset($_SESSION["login"])) {
                                         <div class="card-body">
                                             <h5 class="card-title fw-bold">CSS Uncover</h5>
                                             <p class="card-text">Buku CSS Uncover ditujukan bagi rekan-rekan yang ingin mempelajari CSS mulai dari dasar hingga perkembangan terbaru CSS3.</p>
-                                            <p class="card-text">
-                                                <small class="text-muted">Last updated 3 mins ago</small>
-                                            </p>
+                                            <a href="" class="btn btn-primary badge">Unduh PDF disini</a>
                                         </div>
                                     </div>
                                 </div>

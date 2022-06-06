@@ -35,10 +35,17 @@ function tambah($data)
     $email = strtolower(stripslashes($data["email"]));
     $level = $data['level'];
 
-    // upload gambar
-    $gambar = upload();
-    if (!$gambar) {
-        return false;
+    // cek apakah user tidak menguploud gambar
+    if ($_FILES['gambar']['error'] === 4) {
+        // pilih gambar default
+        $gambar = 'nophoto.jpg';
+    } else {
+        // jalankan fungsi uploud
+        $gambar = uploud();
+        // cek jika upload gagal
+        if (!$gambar) {
+            return false;
+        }
     }
 
     // cek username sudah ada atau belum
@@ -80,55 +87,51 @@ function hapus($id)
 {
     $conn = koneksi();
 
+    // query mahasiswa berdasarkan id
+    $adm = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id = $id")[0];
+
+    // cek jika gambar default
+    if ($adm['gambar'] != 'nophoto.jpg') {
+        // hapus gambar
+        unlink('../../dashboardadmin/img/' . $adm['gambar']);
+    }
+
     mysqli_query($conn, "DELETE FROM tbl_login WHERE id = $id") or die(mysqli_error($conn));
 
     return mysqli_affected_rows($conn);
 }
 
 // function uploud untuk mengupload gambar
-function upload()
+function uploud()
 {
-    $namaFile = $_FILES['gambar']['name'];
-    $ukuranFile = $_FILES['gambar']['size'];
-    $error = $_FILES['gambar']['error'];
-    $tmpName = $_FILES['gambar']['tmp_name'];
+    // siapkan data gambar
+    $filename = $_FILES['gambar']['name'];
+    $filetmpname = $_FILES['gambar']['tmp_name'];
+    $filesize = $_FILES['gambar']['size'];
+    $filetype = pathinfo($filename, PATHINFO_EXTENSION);
+    $allowedtype = ['jpg', 'jpeg', 'png'];
 
-    // cek apakah tidak ada gambar yang diupload
-    if ($error === 4) {
+    // cek apakah file yang diupload bukan gambar
+    if (!in_array(strtolower($filetype), $allowedtype)) {
         echo "<script>
-                alert('pilih gambar terlebih dahulu!');
+                alert('Yang anda upload bukan gambar!');
             </script>";
         return false;
     }
 
-    // cek apakah yang diupload adalah gambar
-    $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
-    $ekstensiGambar = explode('.', $namaFile);
-    $ekstensiGambar = strtolower(end($ekstensiGambar));
-    if (!in_array($ekstensiGambar, $ekstensiGambarValid)) {
+    // cek apakah gambar terlalu besar
+    if ($filesize > 10000000) {
         echo "<script>
-                alert('yang anda upload bukan gambar!');
+                alert('Ukuran gambar terlalu besar!');
             </script>";
         return false;
     }
 
-    // cek jika ukuran gambar terlalu besar
-    if ($ukuranFile > 10000000) {
-        echo "<script>
-                alert('ukuran gambar terlalu besar!');
-            </script>";
-        return false;
-    }
+    // proses uploud gambar
+    $newfilename = uniqid() . '.' . $filetype;
+    move_uploaded_file($filetmpname, '../../dashboardadmin/img/' . $newfilename);
 
-    // lolos pengecekan, gambar siap diupload
-    // generate nama gambar baru
-    $namaFileBaru = uniqid();
-    $namaFileBaru .= '.';
-    $namaFileBaru .= $ekstensiGambar;
-
-    move_uploaded_file($tmpName, '../../dashboardadmin/img/' . $namaFileBaru);
-
-    return $namaFileBaru;
+    return $newfilename;
 }
 
 // function ubah untuk mengubah data dari database
@@ -146,7 +149,7 @@ function ubah($data)
     if ($_FILES['gambar']['error'] === 4) {
         $gambar = $gambarLama;
     } else {
-        $gambar = upload();
+        $gambar = uploud();
     }
 
 

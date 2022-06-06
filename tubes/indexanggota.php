@@ -95,6 +95,7 @@ if (!isset($_SESSION["login"])) {
         <div class="col-lg-8 col-xxl-6">
           <div class="text-center my-5">
             <h1 class="fw-bolder mb-3">Tentang Kami</h1>
+            <img class="img-fluid rounded-3 my-5" src="assets/img/vantechwhite.png" alt="..." />
             <p class="lead fw-normal text-muted mb-4">
               Van Technology adalah sebuah website perpustakaan online yang
               menyediakan buku tentang perkembangan teknologi, dan menyediakan
@@ -157,6 +158,12 @@ if (!isset($_SESSION["login"])) {
           <p class="lead fw-normal text-muted mb-0">
             Menyediakan beberapa foto - foto tentang dunia teknologi seperti smartphone, komputer, laptop dan sebagainya.
           </p>
+        </div>
+        <!-- tombol back top top -->
+        <div class="col-12 text-end mt-5 pt-5">
+          <a href="#" class="btn btn-primary btn-lg" id="back-to-top">
+            <i class="bi bi-arrow-up-square-fill"></i>
+          </a>
         </div>
       </div>
     </div>

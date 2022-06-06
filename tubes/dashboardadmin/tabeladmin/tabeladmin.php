@@ -14,12 +14,21 @@ require '../../config/functions.php';
 
 $id = $_SESSION['id'];
 
+// pagination
+// konfigurasi
+$jumlahDataPerHalaman = 5;
+$jumlahData = count(query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'admin'"));
+$jumlahHalaman = ceil($jumlahData / $jumlahDataPerHalaman);
+$halamanAktif = (isset($_GET["halaman"])) ? $_GET["halaman"] : 1;
+$awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
+
+$id = $_SESSION['id'];
+
 $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id = '$id'")[0];
 
-$tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'admin'");
 
 // jika tombol cari ditekan
-if (isset($_POST["cari"])) {
+if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
     $keyword = $_POST["keyword"];
     $tabeladmin = cari($keyword);
 } else {
@@ -97,7 +106,7 @@ if (isset($_POST["cari"])) {
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">
+                        <a class="sidebar-link" href="../tabelbuku/tabelbuku.php">
                             <i class="align-middle" data-feather="database"></i>
                             <span class="align-middle">Tabel Buku</span>
                         </a>
@@ -150,9 +159,9 @@ if (isset($_POST["cari"])) {
                 <div class="card col-5">
                     <form action="" method="post">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search..." name="keyword">
+                            <input type="text" class="form-control" placeholder="Search..." name="keyword" id="keyword">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="submit" name="cari">Cari</button>
+                                <button class="btn btn-primary" type="submit" name="cari" id="tombol-cari">Cari</button>
                             </div>
                         </div>
                     </form>
@@ -166,7 +175,7 @@ if (isset($_POST["cari"])) {
                             <th scope="col">Username</th>
                             <th scope="col">Email</th>
                             <th scope="col">Gambar</th>
-                            <!-- <th scope="col">Level</th> -->
+                            <th scope="col">Level</th>
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
@@ -179,7 +188,7 @@ if (isset($_POST["cari"])) {
                                 <td><?= $admin["username"]; ?></td>
                                 <td><?= $admin["email"]; ?></td>
                                 <td><img src="../img/<?= $admin['gambar']; ?>" width="75px" class="rounded-circle"></td>
-                                <!-- <td><?= $admin["level"]; ?></td> -->
+                                <td><?= $admin["level"]; ?></td>
                                 <td>
                                     <a href="ubahadmin.php?id=<?= $admin['id']; ?>" class="btn badge bg-primary">Ubah</a>
                                     <a href="hapusadmin.php?id=<?= $admin["id"]; ?>" onclick="return confirm('Apakah data ini benar akan dihapus?')" class="btn badge bg-danger">Delete</a>
@@ -189,6 +198,35 @@ if (isset($_POST["cari"])) {
                     </tbody>
                 </table>
             </main>
+
+            <!-- navigasi pagination -->
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center pb-5">
+                    <?php if ($halamanAktif > 1) : ?>
+                        <li class="page-item">
+                            <a class="page-link text-decoration-none" href="?halaman=<?= $halamanAktif - 1; ?>" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    <?php endif; ?>
+
+                    <?php for ($i = 1; $i <= $jumlahHalaman; $i++) : ?>
+                        <?php if ($i == $halamanAktif) : ?>
+                            <li class="page-item active"><a class="page-link text-decoration-none" href="?halaman=<?= $i; ?>"><?= $i; ?></a></li>
+                        <?php else : ?>
+                            <li class="page-item"><a class="page-link text-decoration-none" href="?halaman=<?= $i; ?>"><?= $i; ?></a></li>
+                        <?php endif; ?>
+                    <?php endfor; ?>
+
+                    <?php if ($halamanAktif < $jumlahHalaman) : ?>
+                        <li class="page-item">
+                            <a class="page-link text-decoration-none" href="?halaman=<?= $halamanAktif + 1; ?>" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    <?php endif; ?>
+                </ul>
+            </nav>
 
             <!-- Footer -->
             <footer class="footer">
@@ -211,6 +249,7 @@ if (isset($_POST["cari"])) {
     </div>
 
     <script src="../js/app.js"></script>
+    <script src="../js/ajax2.js"></script>
 </body>
 
 </html>

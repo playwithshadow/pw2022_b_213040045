@@ -96,7 +96,10 @@ if (isset($_POST["ubah"])) {
                                 <label for="gambar" class="col-md-4 col-form-label text-md-right">Gambar</label>
                                 <div class="col-md-8">
                                     <img class="mb-2" src="../img/<?= $adm['gambar']; ?>" alt="" width="100px">
-                                    <input type="file" id="gambar" class="form-control" name="gambar" value="<?= $adm['gambar']; ?>">
+                                    <br><br>
+                                    <p>Gambar Yang Baru Di Uploud :</p>
+                                    <img src="" class="img-thumbnail" style="width: 120px; display: none; margin-bottom: 25px;" id="img-preview">
+                                    <input type="file" id="gambar" class="form-control" name="gambar" onchange="previewImage();" value="<?= $adm['gambar']; ?>">
                                 </div>
                             </div>
                             <div class="d-grid gap-2 col-6 mx-auto py-3">
@@ -115,5 +118,6 @@ if (isset($_POST["ubah"])) {
 
 <!-- Core theme JS-->
 <script src="../../assets/js/scripts.js"></script>
+<script src="../../assets/js/previewimg.js"></script>
 
 </html>

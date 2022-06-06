@@ -64,7 +64,7 @@ if (isset($_POST["tambah"])) {
                 <div class="card shadow-lg">
                     <div class="fw-bolder fs-4 card-header text-center bg-primary text-light">Form Tambah Admin - VAN TECH</div>
                     <div class="card-body">
-                        <form action="" method="post" enctype="multipart/form-data">
+                        <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
                             <div class="form-group row mb-3">
                                 <label for="nama" class="col-md-4 col-form-label text-md-right">Nama</label>
                                 <div class="col-md-8">
@@ -97,8 +97,9 @@ if (isset($_POST["tambah"])) {
                             </div>
                             <div class="form-group row mb-3">
                                 <label for="gambar" class="col-md-4 col-form-label text-md-right">Gambar</label>
+                                <img src="" class="img-thumbnail" style="width: 150px; display: none; margin-bottom: 25px;" id="img-preview">
                                 <div class="col-md-8">
-                                    <input type="file" id="gambar" class="form-control" name="gambar">
+                                    <input type="file" id="gambar" class="form-control" name="gambar" onchange="previewImage();">
                                 </div>
                             </div>
                             <input type="hidden" name="level" value="1">
@@ -118,5 +119,6 @@ if (isset($_POST["tambah"])) {
 
 <!-- Core theme JS-->
 <script src="../../assets/js/scripts.js"></script>
+<script src="../../assets/js/previewimg.js"></script>
 
 </html>
