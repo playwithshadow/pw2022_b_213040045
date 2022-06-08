@@ -154,6 +154,14 @@ if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
                     <h1 class="h3 mb-4">Tabel Anggota - <?= $tbladmin['nama']; ?></h1>
                     <a href="tambahanggota.php" class="btn btn-primary mb-4">[+]Tambah Data Anggota</a>
                 </div>
+
+                <!-- tombol untuk pdf -->
+                <div class="container-fluid p-0">
+                    <a href="#" class="btn btn-danger mb-3">
+                        <i class="bi bi-journal-plus">Cetak PDF</i>
+                    </a>
+                </div>
+
                 <!-- Search widget-->
                 <div class="card col-5">
                     <form action="" method="post">

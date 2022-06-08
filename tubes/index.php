@@ -21,12 +21,6 @@
 </head>
 
 <body class="d-flex flex-column h-100">
-  <!-- loader spinner  -->
-  <div class="lds-facebook">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
   <main class="flex-shrink-0">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-5-strong">

@@ -17,7 +17,7 @@ $id = $_SESSION['id'];
 // pagination
 // konfigurasi
 $jumlahDataPerHalaman = 5;
-$jumlahData = count(query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'admin'"));
+$jumlahData = count(query("SELECT * FROM tbl_buku NATURAL JOIN tbl_kategori"));
 $jumlahHalaman = ceil($jumlahData / $jumlahDataPerHalaman);
 $halamanAktif = (isset($_GET["halaman"])) ? $_GET["halaman"] : 1;
 $awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
@@ -26,13 +26,12 @@ $id = $_SESSION['id'];
 
 $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id = '$id'")[0];
 
-
 // jika tombol cari ditekan
 if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
     $keyword = $_POST["keyword"];
-    $tabeladmin = cari($keyword);
+    $tabelbuku = caribuku($keyword);
 } else {
-    $tabeladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'admin'");
+    $tabelbuku = query("SELECT * FROM tbl_buku NATURAL JOIN tbl_kategori LIMIT $awalData, $jumlahDataPerHalaman");
 }
 
 ?>
@@ -48,7 +47,7 @@ if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
     <!-- Fav Icon -->
     <link rel="shortcut icon" href="../../assets/img/logo.png" />
 
-    <title>Tabel Admin - Admin</title>
+    <title>Tabel Buku - Admin</title>
 
     <!-- Core CSS -->
     <link href="../css/app.css" rel="stylesheet" />
@@ -68,7 +67,7 @@ if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
     <div class="wrapper">
         <nav id="sidebar" class="sidebar js-sidebar">
             <div class="sidebar-content js-simplebar">
-                <a class="sidebar-brand" style="text-decoration: none" href="#">
+                <a class="sidebar-brand" style="text-decoration: none" href="../../indexadmin.php">
                     <span class="align-middle">Van Technology</span>
                 </a>
 
@@ -91,8 +90,8 @@ if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
 
                     <li class="sidebar-header">Tabel</li>
 
-                    <li class="sidebar-item active">
-                        <a class="sidebar-link" href="tabeladmin.php">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="../tabeladmin/tabeladmin.php">
                             <i class="align-middle" data-feather="database"></i>
                             <span class="align-middle">Tabel Admin</span>
                         </a>
@@ -105,8 +104,8 @@ if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
                         </a>
                     </li>
 
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="../tabelbuku/tabelbuku.php">
+                    <li class="sidebar-item active">
+                        <a class="sidebar-link" href="#">
                             <i class="align-middle" data-feather="database"></i>
                             <span class="align-middle">Tabel Buku</span>
                         </a>
@@ -152,7 +151,7 @@ if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
             <main class="content">
                 <div class="container-fluid p-0">
                     <h1 class="h3 mb-3">Tabel Admin - <?= $tbladmin['nama']; ?></h1>
-                    <a href="tambahadmin.php" class="btn btn-primary mb-3">[+]Tambah Data Admin</a>
+                    <a href="tambahbuku.php" class="btn btn-primary mb-3">[+]Tambah Data Buku</a>
                 </div>
 
                 <!-- tombol untuk pdf -->
@@ -179,27 +178,25 @@ if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Nama</th>
-                                <th scope="col">Username</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Gambar</th>
-                                <th scope="col">Level</th>
+                                <th scope="col">Nama Buku</th>
+                                <th scope="col">Isi Buku</th>
+                                <th scope="col">Gambar Buku</th>
+                                <th scope="col">Kategori</th>
                                 <th scope="col">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php $no = 1; ?>
-                            <?php foreach ($tabeladmin as $admin) : ?>
+                            <?php foreach ($tabelbuku as $buku) : ?>
                                 <tr class="align-middle">
                                     <th scope="row"><?= $no++; ?></th>
-                                    <td><?= $admin["nama"]; ?></td>
-                                    <td><?= $admin["username"]; ?></td>
-                                    <td><?= $admin["email"]; ?></td>
-                                    <td><img src="../img/<?= $admin['gambar']; ?>" width="75px" class="rounded-circle"></td>
-                                    <td><?= $admin["level"]; ?></td>
+                                    <td><?= $buku["nama_buku"]; ?></td>
+                                    <td><?= $buku["body_buku"]; ?></td>
+                                    <td><img src="../img/<?= $buku['gambar']; ?>" width="75px"></td>
+                                    <td><?= $buku["nama_kategori"]; ?></td>
                                     <td>
-                                        <a href="ubahadmin.php?id=<?= $admin['id']; ?>" class="btn badge bg-primary">Ubah</a>
-                                        <a href="hapusadmin.php?id=<?= $admin["id"]; ?>" onclick="return confirm('Apakah data ini benar akan dihapus?')" class="btn badge bg-danger">Delete</a>
+                                        <a href="ubahbuku.php?id=<?= $buku['id_buku']; ?>" class="btn badge bg-primary">Ubah</a>
+                                        <a href="hapusbuku.php?id=<?= $buku["id_buku"]; ?>" onclick="return confirm('Apakah data ini benar akan dihapus?')" class="btn badge bg-danger">Delete</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
@@ -258,7 +255,7 @@ if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
     </div>
 
     <script src="../js/app.js"></script>
-    <script src="../js/ajax2.js"></script>
+    <script src="../js/ajax3.js"></script>
 </body>
 
 </html>

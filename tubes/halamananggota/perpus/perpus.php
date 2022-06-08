@@ -3,17 +3,49 @@ session_start();
 
 if (!isset($_SESSION["login"])) {
     echo "<script>
-            alert('Anda harus login terlebih dahulu!');
+            alert('Anda login terlebih dahulu!');
             document.location.href = '../../index.php';
         </script>";
     exit;
-} elseif ($_SESSION["login"] != true) {
-    echo "<script>
-            alert('Anda harus login terlebih dahulu!');
-            document.location.href = '../../indexanggota.php';
-        </script>";
-    exit;
 }
+
+require '../../config/functions.php';
+
+$kategori = query("SELECT * FROM tbl_kategori");
+
+$id = $_SESSION['id'];
+
+// jika tombol kategori ditekan
+if (isset($_GET['id']) != "") {
+    $jumlahDataPerHalaman = 1;
+    $jumlahData = count(query("SELECT * FROM tbl_buku NATURAL JOIN tbl_kategori WHERE id_kategori = '$_GET[id]'"));
+    $jumlahHalaman = ceil($jumlahData / $jumlahDataPerHalaman);
+    $halamanAktif = (isset($_GET["halaman"])) ? $_GET["halaman"] : 1;
+    $awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
+
+    $tabelbuku = query("SELECT * FROM tbl_buku NATURAL JOIN tbl_kategori WHERE id_kategori = '$_GET[id]' LIMIT $awalData, $jumlahDataPerHalaman");
+} else {
+    $jumlahDataPerHalaman = 2;
+    $jumlahData = count(query("SELECT * FROM tbl_buku NATURAL JOIN tbl_kategori"));
+    $jumlahHalaman = ceil($jumlahData / $jumlahDataPerHalaman);
+    $halamanAktif = (isset($_GET["halaman"])) ? $_GET["halaman"] : 1;
+    $awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
+
+    $tabelbuku = query("SELECT * FROM tbl_buku NATURAL JOIN tbl_kategori LIMIT $awalData, $jumlahDataPerHalaman");
+}
+
+
+
+$id = $_SESSION['id'];
+
+// jika tombol cari ditekan
+if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
+    $keyword = $_POST["keyword"];
+    $tabelbuku = caribuku($keyword);
+}
+// else {
+//     $tabelbuku = query("SELECT * FROM tbl_buku NATURAL JOIN tbl_kategori LIMIT $awalData, $jumlahDataPerHalaman");
+// }
 
 
 ?>
@@ -51,7 +83,7 @@ if (!isset($_SESSION["login"])) {
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
             <div class="container px-5">
                 <img src="../../assets/img/logo.png" alt="" width="40" height="40" />
-                <a class="navbar-brand" href="../indexanggota.php">VAN TECHNOLOGY</a>
+                <a class="navbar-brand" href="../indexadmin.php">VAN TECHNOLOGY</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -88,15 +120,17 @@ if (!isset($_SESSION["login"])) {
                     <p class="lead mb-0">Menyediakan Kumpulan Buku - Buku Terkait Dunia Teknologi.</p>
                 </div>
                 <!-- Search widget-->
-                <div class="row height d-flex justify-content-center align-items-center">
-                    <div class="col-md-5">
-                        <div class="search">
-                            <i class="fa fa-search"></i>
-                            <input type="text" class="form-control" placeholder="mau cari buku apa ?...">
-                            <button class="btn btn-primary">Search</button>
+                <form action="" method="post">
+                    <div class="row height d-flex justify-content-center align-items-center">
+                        <div class="col-md-5">
+                            <div class="search">
+                                <i class="fa fa-search"></i>
+                                <input type="text" class="form-control" placeholder="mau cari buku apa ?..." id="keyword" name="keyword">
+                                <button class="btn btn-primary" type="submit" name="cari" id="tombol-cari">Cari</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </header>
         <!-- Page content-->
@@ -107,83 +141,51 @@ if (!isset($_SESSION["login"])) {
                     <div class="row">
                         <div class="col-lg-12">
                             <!-- Blog post-->
-                            <div class="card mb-3" style="max-width: 750px;">
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <img src="img/bukuwebdesign1.png" class="img-fluid mt-4" alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title fw-bold">Web UI Design Patterns</h5>
-                                            <p class="card-text">Buku ini membahas secara lengkap beberapa aplikasi web yang terkenal serta website seperti Amazon dan Airbnb, menganalisa tampilan website mereka untuk melihat bagaimana dan mengapa mereka bisa bekerja dengan sukses.</p>
-                                            <p class="card-text">
-                                                <small class="text-muted">Last updated 3 mins ago</small>
-                                            </p>
+                            <?php foreach ($tabelbuku as $buku) : ?>
+                                <div class="card mb-3" style="max-width: 750px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="../../dashboardadmin/img/<?= $buku['gambar']; ?>" class="img-fluid mt-4" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title fw-bold"><?= $buku['nama_buku']; ?></h5>
+                                                <p class="card-text"><?= $buku['body_buku']; ?></p>
+                                                <a href="" class="btn btn-primary badge">Unduh PDF disini</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Blog post-->
-                            <div class="card mb-3" style="max-width: 750px;">
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <img src="img/bukuhtml1.jpg" class="img-fluid mt-3 ms-4" width="200" alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title fw-bold">HTML Uncover</h5>
-                                            <p class="card-text">Buku HTML Uncover berisi pembahasan tentang HTML mulai dari dasar hingga fitur terbaru dari HTML5. Buku ini cocok untuk rekan-rekan yang baru pertama kali bersentuhan dengan HTML hingga yang sudah cukup paham tentang HTML tapi ingin mendalami HTML5.</p>
-                                            <p class="card-text">
-                                                <small class="text-muted">Last updated 3 mins ago</small>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Blog post-->
-                            <div class="card mb-3" style="max-width: 750px;">
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <img src="img/bukubootstrap1.jpg" class="img-fluid mt-3 ms-4" width="200" alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title fw-bold">Bootstrap 5 Uncover</h5>
-                                            <p class="card-text">buku Bootstrap 5 Uncover ini kita akan membahas cara penggunaan Bootstrap 5, mulai dari grid system yang menjadi fondasi paling penting, utility class, puluhan komponen Bootstrap seperti navbar, list group, button, form, card, hingga carousel slider.</p>
-                                            <p class="card-text">
-                                                <small class="text-muted">Last updated 3 mins ago</small>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Blog post-->
-                            <div class="card mb-3" style="max-width: 750px;">
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <img src="img/bukucss1.jpg" class="img-fluid mt-3 ms-4" width="200" alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title fw-bold">CSS Uncover</h5>
-                                            <p class="card-text">Buku CSS Uncover ditujukan bagi rekan-rekan yang ingin mempelajari CSS mulai dari dasar hingga perkembangan terbaru CSS3.</p>
-                                            <p class="card-text">
-                                                <small class="text-muted">Last updated 3 mins ago</small>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                     <!-- Pagination-->
-                    <nav aria-label="Pagination">
-                        <hr class="my-0" />
-                        <ul class="pagination justify-content-center my-4">
-                            <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#!">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#!">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#!">Next</a></li>
+                    <!-- navigasi pagination -->
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center pb-5">
+                            <?php if ($halamanAktif > 1) : ?>
+                                <li class="page-item">
+                                    <a class="page-link text-decoration-none" href="?halaman=<?= $halamanAktif - 1; ?>" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                            <?php endif; ?>
+
+                            <?php for ($i = 1; $i <= $jumlahHalaman; $i++) : ?>
+                                <?php if ($i == $halamanAktif) : ?>
+                                    <li class="page-item active"><a class="page-link text-decoration-none" href="?halaman=<?= $i; ?>"><?= $i; ?></a></li>
+                                <?php else : ?>
+                                    <li class="page-item"><a class="page-link text-decoration-none" href="?halaman=<?= $i; ?>"><?= $i; ?></a></li>
+                                <?php endif; ?>
+                            <?php endfor; ?>
+
+                            <?php if ($halamanAktif < $jumlahHalaman) : ?>
+                                <li class="page-item">
+                                    <a class="page-link text-decoration-none" href="?halaman=<?= $halamanAktif + 1; ?>" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            <?php endif; ?>
                         </ul>
                     </nav>
                 </div>
@@ -196,10 +198,10 @@ if (!isset($_SESSION["login"])) {
                             <div class="row">
                                 <div class="col-sm-auto">
                                     <ul class="list-unstyled mb-0">
-                                        <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href=" #!" class="text-light text-decoration-none">Web Design</a></li>
-                                        <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href="#!" class="text-light text-decoration-none">Bootstrap</a></li>
-                                        <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href="#!" class="text-light text-decoration-none">HTML</a></li>
-                                        <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href="#!" class="text-light text-decoration-none">CSS</a></li>
+                                        <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href="perpus.php" class="text-light text-decoration-none">Semua</a></li>
+                                        <?php foreach ($kategori as $k) : ?>
+                                            <li class="badge bg-primary bg-gradient rounded-pill mb-2"><a href="perpus.php?id=<?= $k['id_kategori']; ?>" class="text-light text-decoration-none"><?= $k['nama_kategori']; ?></a></li>
+                                        <?php endforeach; ?>
                                     </ul>
                                 </div>
                             </div>

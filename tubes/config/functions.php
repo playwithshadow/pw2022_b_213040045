@@ -235,3 +235,151 @@ function registrasi($data)
 
     return mysqli_affected_rows($conn);
 }
+
+// function untuk menambah data buku
+function tambahbuku($data)
+{
+    $conn = koneksi();
+
+    $nama_buku = strtolower(stripslashes($data["nama_buku"]));
+    $body_buku = strtolower(stripslashes($data["body_buku"]));
+    $kategori = strtolower(stripslashes($data["kategori"]));
+
+    // cek apakah user tidak menguploud gambar
+    if ($_FILES['gambar']['error'] === 4) {
+        // pilih gambar default
+        $gambar = 'nophoto.jpg';
+    } else {
+        // jalankan fungsi uploud
+        $gambar = uploudbuku();
+        // cek jika upload gagal
+        if (!$gambar) {
+            return false;
+        }
+    }
+
+    // query insert data
+    $query = "INSERT INTO tbl_buku
+                VALUES
+                ('', '$nama_buku', '$body_buku', '$gambar', '$kategori')
+                ";
+    mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn);
+}
+
+// function untuk menghapus data buku
+function hapusbuku($id)
+{
+    $conn = koneksi();
+
+    // query mahasiswa berdasarkan id
+    $bk = query("SELECT * FROM tbl_buku NATURAL JOIN tbl_kategori WHERE id_buku = $id")[0];
+
+    // cek jika gambar default
+    if ($bk['gambar'] != 'nophoto.jpg') {
+        // hapus gambar
+        unlink('../../dashboardadmin/img/' . $bk['gambar']);
+    }
+
+    mysqli_query($conn, "DELETE FROM tbl_buku WHERE id_buku = $id") or die(mysqli_error($conn));
+
+    return mysqli_affected_rows($conn);
+}
+
+// function untuk mengubah data buku
+function ubahbuku($data)
+{
+    $conn = koneksi();
+
+    $id = $data["id_buku"];
+    $nama_buku = strtolower(stripslashes($data["nama_buku"]));
+    $body_buku = strtolower(stripslashes($data["body_buku"]));
+    $gambarLama = strtolower(stripslashes($data["gambarLama"]));
+    $kategori = $data['kategori'];
+
+    // cek apakah user pilih gambar baru atau tidak
+    if ($_FILES['gambar']['error'] === 4) {
+        $gambar = $gambarLama;
+    } else {
+        $gambar = uploud();
+    }
+
+    // query update data
+    $query = "UPDATE tbl_buku SET 
+                nama_buku = '$nama_buku',
+                body_buku = '$body_buku',
+                gambar = '$gambar',
+                id_kategori = '$kategori'
+                WHERE id_buku = $id
+                ";
+    mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn);
+}
+
+// function untuk uploud buku
+function uploudbuku()
+{
+    $namaFile = $_FILES['gambar']['name'];
+    $ukuranFile = $_FILES['gambar']['size'];
+    $error = $_FILES['gambar']['error'];
+    $tmpName = $_FILES['gambar']['tmp_name'];
+
+    // cek apakah tidak ada gambar yang diupload
+    if ($error === 4) {
+        echo "<script>
+                alert('pilih gambar terlebih dahulu!');
+            </script>";
+        return false;
+    }
+
+    // cek apakah yang diupload adalah gambar
+    $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
+    $ekstensiGambar = explode('.', $namaFile);
+    $ekstensiGambar = strtolower(end($ekstensiGambar));
+    if (!in_array($ekstensiGambar, $ekstensiGambarValid)) {
+        echo "<script>
+                alert('yang anda upload bukan gambar!');
+            </script>";
+        return false;
+    }
+
+    // cek jika ukuran gambar terlalu besar
+    if ($ukuranFile > 1000000) {
+        echo "<script>
+                alert('ukuran gambar terlalu besar!');
+            </script>";
+        return false;
+    }
+
+    // lolos pengecekan, gambar siap diupload
+    // generate nama gambar baru
+    $namaFileBaru = uniqid();
+    $namaFileBaru .= '.';
+    $namaFileBaru .= $ekstensiGambar;
+
+    move_uploaded_file($tmpName, '../../dashboardadmin/img/' . $namaFileBaru);
+
+    return $namaFileBaru;
+}
+
+// function untuk cari data buku
+function caribuku($keyword)
+{
+    $conn = koneksi();
+
+    $query = "SELECT * FROM tbl_buku NATURAL JOIN tbl_kategori
+                WHERE
+                nama_buku LIKE '%$keyword%' OR
+                body_buku LIKE '%$keyword%'
+                ";
+    $result = mysqli_query($conn, $query);
+
+    $rows = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $rows[] = $row;
+    }
+
+    return $rows;
+}

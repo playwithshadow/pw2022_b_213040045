@@ -62,15 +62,6 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
               <span class="align-middle">Profile</span>
             </a>
           </li>
-
-          <li class="sidebar-header">Tabel</li>
-
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="#">
-              <i class="align-middle" data-feather="database"></i>
-              <span class="align-middle">Tabel Buku</span>
-            </a>
-          </li>
         </ul>
       </div>
     </nav>
@@ -90,7 +81,7 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link d-sm-inline-block " href="#" data-bs-toggle="dropdown">
-                <img src="img/<?= $tblanggota['gambar']; ?>" class="avatar img-fluid rounded-circle me-1 mx-1" />
+                <img src="../dashboardadmin/img/<?= $tblanggota['gambar']; ?>" class="avatar img-fluid rounded-circle me-1 mx-1" />
                 <span class="text-dark"><?= $tblanggota['nama']; ?></span>
                 <i class="align-end" data-feather="settings"></i>
               </a>
@@ -151,7 +142,7 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
                           <aside class="col-lg-4">
                             <figure class="text-lg-center">
                               <h6>Foto</h6>
-                              <img class="img-lg img-avatar" src="img/<?= $tblanggota['gambar']; ?>" width="75px" alt="User Photo">
+                              <img class="img-lg img-avatar" src="../dashboardadmin/img/<?= $tblanggota['gambar']; ?>" width="75px" alt="User Photo">
                             </figure>
                           </aside>
                         </div>
