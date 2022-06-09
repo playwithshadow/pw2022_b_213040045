@@ -71,7 +71,10 @@ if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
 <body onload="window.print()">
     <div class="container">
         <button class="hidden btn btn-danger mt-3" onclick="window.print()">
-            <i class="bi bi-journal-plus">Cetak PDF</i>
+            <i class="bi bi-journal-plus"> Cetak PDF</i>
+        </button>
+        <button class="hidden btn btn-info mt-3 text-white" onclick="window.close()">
+            <i class="bi bi-x-circle"> Keluar</i>
         </button>
         <h1 class="display-4 fw-bold mb-3">Data Buku</h1>
         <table class="table table-bordered text-center">

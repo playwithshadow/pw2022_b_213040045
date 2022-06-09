@@ -70,10 +70,10 @@ if (!isset($_SESSION["login"])) {
                             <a class="nav-link" href="#">Galeri</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../dashboardanggota/index.php">Dashboard</a>
+                            <a class="nav-link" href="../../dashboardadmin/dashboardanggota/index.php">Dashboard</a>
                         </li>
                     </ul>
-                    <div class="col-md-3 text-end">
+                    <div class=" col-md-3 text-end">
                         <a class="btn btn-outline-primary me-2" href="../../login/logout.php">Keluar</a>
                     </div>
                 </div>
