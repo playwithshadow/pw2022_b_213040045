@@ -26,7 +26,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
             <div class="container px-5">
                 <img src="../../assets/img/logo.png" alt="" width="40" height="40" />
-                <a class="navbar-brand" href="../indexadmin.php">VAN TECHNOLOGY</a>
+                <a class="navbar-brand" href="../../indexadmin.php">VAN TECHNOLOGY</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -132,6 +132,12 @@
                     <a class="text-decoration-none btn btn-info" href="../blog/blog2.php">
                         More Blog
                         <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- tombol back top top -->
+                <div class="col-12 text-end mt-3 pt-3">
+                    <a href="#" class="btn btn-primary btn-lg" id="back-to-top">
+                        <i class="bi bi-arrow-up-square-fill"></i>
                     </a>
                 </div>
             </div>

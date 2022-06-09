@@ -83,7 +83,7 @@ if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
             <div class="container px-5">
                 <img src="../../assets/img/logo.png" alt="" width="40" height="40" />
-                <a class="navbar-brand" href="../indexadmin.php">VAN TECHNOLOGY</a>
+                <a class="navbar-brand" href="../../indexanggota.php">VAN TECHNOLOGY</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -151,7 +151,7 @@ if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
                                             <div class="card-body">
                                                 <h5 class="card-title fw-bold"><?= $buku['nama_buku']; ?></h5>
                                                 <p class="card-text"><?= $buku['body_buku']; ?></p>
-                                                <a href="" class="btn btn-primary badge">Unduh PDF disini</a>
+                                                <a href="https://drive.google.com/drive/folders/15bYjqnemUzXtagUC7oiFirtCmfktPQc-?usp=sharing" target="blank" class="btn btn-primary badge">Unduh PDF disini</a>
                                             </div>
                                         </div>
                                     </div>
@@ -207,6 +207,12 @@ if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
                             </div>
                         </div>
                     </div>
+                </div>
+                <!-- tombol back top top -->
+                <div class="col-12 text-end mb-3 pb-3">
+                    <a href="#" class="btn btn-primary btn-lg" id="back-to-top">
+                        <i class="bi bi-arrow-up-square-fill"></i>
+                    </a>
                 </div>
             </div>
         </div>

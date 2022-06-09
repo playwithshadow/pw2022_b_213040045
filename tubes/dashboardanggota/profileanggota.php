@@ -125,17 +125,17 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
                             <div class="row gx-3">
                               <div class="col-lg-12  mb-3">
                                 <label class="form-label">Username</label>
-                                <input class="form-control" type="text" placeholder="Admin" value="<?= $tblanggota['username']; ?>">
+                                <input class="form-control" type="text" placeholder="Admin" value="<?= $tblanggota['username']; ?>" readonly>
                               </div>
 
                               <div class="col-lg-12  mb-3">
                                 <label class="form-label">Email</label>
-                                <input class="form-control" type="text" placeholder="Admin@gmail.com" value="<?= $tblanggota['email']; ?>">
+                                <input class="form-control" type="text" placeholder="Admin@gmail.com" value="<?= $tblanggota['email']; ?>" readonly>
                               </div>
 
                               <div class="col-lg-12  mb-3">
                                 <label class="form-label">Level</label>
-                                <input class="form-control" type="text" placeholder="Admin@gmail.com" value="<?= $tblanggota['level']; ?>">
+                                <input class="form-control" type="text" placeholder="Admin@gmail.com" value="<?= $tblanggota['level']; ?>" readonly>
                               </div>
                             </div>
                           </div>

@@ -156,7 +156,7 @@ if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
 
                 <!-- tombol untuk pdf -->
                 <div class="container-fluid p-0">
-                    <a href="#" class="btn btn-danger mb-3">
+                    <a href="print.php" class="btn btn-danger mb-4" target="_blank">
                         <i class="bi bi-journal-plus">Cetak PDF</i>
                     </a>
                 </div>
