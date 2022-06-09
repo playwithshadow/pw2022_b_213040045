@@ -50,7 +50,7 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
     <div class="wrapper">
         <nav id="sidebar" class="sidebar js-sidebar">
             <div class="sidebar-content js-simplebar">
-                <a class="sidebar-brand" style="text-decoration: none" href="../indexanggota.php">
+                <a class="sidebar-brand" style="text-decoration: none" href="../../indexanggota.php">
                     <span class="align-middle">Van Technology</span>
                 </a>
 

@@ -58,7 +58,7 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id   = '
                     <li class="sidebar-header">Pages</li>
 
                     <li class="sidebar-item active">
-                        <a class="sidebar-link" href="dashboard.php">
+                        <a class="sidebar-link" href="index.php">
                             <i class="align-middle" data-feather="home"></i>
                             <span class="align-middle">Dashboard</span>
                         </a>

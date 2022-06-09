@@ -129,7 +129,7 @@ function uploud()
 
     // proses uploud gambar
     $newfilename = uniqid() . '.' . $filetype;
-    move_uploaded_file($filetmpname, '../dashboardadmin/img/' . $newfilename);
+    move_uploaded_file($filetmpname, '../img/' . $newfilename);
 
     return $newfilename;
 }
