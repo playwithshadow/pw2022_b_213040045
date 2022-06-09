@@ -1,8 +1,10 @@
 <?php
 session_start();
-require '../config/functions.php';
+
+require '../../config/functions.php';
 
 $id = $_SESSION['id_level'];
+
 $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_level   = '$id'")[0];
 
 
@@ -81,7 +83,7 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link d-sm-inline-block " href="#" data-bs-toggle="dropdown">
-                <img src="../dashboardadmin/img/<?= $tblanggota['gambar']; ?>" class="avatar img-fluid rounded-circle me-1 mx-1" />
+                <img src="../img/<?= $tblanggota['gambar']; ?>" class="avatar img-fluid rounded-circle me-1 mx-1" />
                 <span class="text-dark"><?= $tblanggota['nama']; ?></span>
                 <i class="align-end" data-feather="settings"></i>
               </a>
@@ -90,7 +92,7 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
                   <i class="align-middle me-1" data-feather="user"></i>Profile
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../login/logout.php">
+                <a class="dropdown-item" href="../../login/logout.php">
                   <i class="align-middle me-1" data-feather="log-out"></i>Logout
                 </a>
               </div>
@@ -111,7 +113,7 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
                   <!--  COMPONENT MENU LIST  -->
                   <nav class="nav flex-lg-column nav-pills mb-4">
                     <a class="nav-link active" href="profileanggota.php">Profil</a>
-                    <a class="nav-link" href="logout.php">Keluar</a>
+                    <a class="nav-link" href="../../login/logout.php">Keluar</a>
                   </nav>
                   <!--   COMPONENT MENU LIST END .//   -->
                 </aside>
@@ -142,7 +144,7 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
                           <aside class="col-lg-4">
                             <figure class="text-lg-center">
                               <h6>Foto</h6>
-                              <img class="img-lg img-avatar" src="../dashboardadmin/img/<?= $tblanggota['gambar']; ?>" width="75px" alt="User Photo">
+                              <img class="img-lg img-avatar" src="../img/<?= $tblanggota['gambar']; ?>" width="75px" alt="User Photo">
                             </figure>
                           </aside>
                         </div>
@@ -153,12 +155,21 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
                       <div class="row" style="max-width:920px">
                         <div class="col-md">
                           <article class="box mb-3">
-                            <a class="btn float-end btn btn-info btn-sm" href="#">Ganti Disini</a>
-                            <p class="title mb-0">Ganti Password</p>
+                            <a class="btn float-end btn btn-info btn-sm" href="ubahanggota.php">Ganti Disini</a>
+                            <p class="title mb-0">Ubah Data</p>
                           </article>
                         </div>
                       </div>
 
+
+                      <div class="row" style="max-width:920px">
+                        <div class="col-md">
+                          <article class="box mb-3">
+                            <a class="btn float-end btn btn-warning btn-sm" href="ubahpassword.php">Ganti Disini</a>
+                            <p class="title mb-0">Ubah Password</p>
+                          </article>
+                        </div>
+                      </div>
 
                     </div>
                   </article>

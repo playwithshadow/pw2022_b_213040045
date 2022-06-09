@@ -135,6 +135,58 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id   = '
                 <div class="container-fluid p-0">
                     <h1 class="h3 mb-3">Selamat Datang, <?= $tbladmin['nama']; ?></h1>
                 </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header bg-black">
+                                    <h3 class="card-title text-white">
+                                        <i class="bi bi-person-fill"> Jumlah Admin :</i>
+                                    </h3>
+                                </div>
+                                <div class="card-body">
+                                    <?php
+                                    $jumlahadmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'admin'");
+                                    $jumlahadmin = count($jumlahadmin);
+                                    ?>
+                                    <h1 class="text-center"><?= $jumlahadmin; ?></h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header bg-black">
+                                    <h3 class="card-title text-white">
+                                        <i class="bi bi-person-square"> Jumlah Anggota :</i>
+                                    </h3>
+                                </div>
+                                <div class="card-body">
+                                    <?php
+                                    $jumlahanggota = query("SELECT * FROM tbl_login NATUAL JOIN tbl_level WHERE level = 'anggota'");
+                                    $jumlahanggota = count($jumlahanggota);
+                                    ?>
+                                    <h1 class="text-center"><?= $jumlahanggota; ?></h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header bg-black">
+                                    <h5 class="card-title text-white">
+                                        <i class="bi bi-journals"> Jumlah Buku :</i>
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <?php
+                                    $jumlahbuku = query("SELECT * FROM tbl_buku");
+                                    $jumlahbuku = count($jumlahbuku);
+                                    ?>
+                                    <h1 class="text-center"><?= $jumlahbuku; ?></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
 
             <!-- Footer -->

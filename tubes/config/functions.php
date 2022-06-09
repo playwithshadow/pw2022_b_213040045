@@ -129,7 +129,7 @@ function uploud()
 
     // proses uploud gambar
     $newfilename = uniqid() . '.' . $filetype;
-    move_uploaded_file($filetmpname, '../../dashboardadmin/img/' . $newfilename);
+    move_uploaded_file($filetmpname, '../dashboardadmin/img/' . $newfilename);
 
     return $newfilename;
 }
@@ -234,6 +234,46 @@ function registrasi($data)
     mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn);
+}
+
+// funtion untuk mengubah password
+function ubahpassword($data)
+{
+    $conn = koneksi();
+
+    $id = $data["id"];
+    $password_lama = mysqli_real_escape_string($conn, $data["password_lama"]);
+    $password_baru = mysqli_real_escape_string($conn, $data["password_baru"]);
+    $konfirm_password = mysqli_real_escape_string($conn, $data["konfirm_password"]);
+
+    $data = query("SELECT * FROM tbl_login WHERE id = $id")[0];
+
+    // cek konfirmasi password
+    if ($password_baru !== $konfirm_password) {
+        echo "<script>
+                alert('konfirmasi password tidak sesuai!');
+            </script>";
+        return false;
+    }
+    if (password_verify($password_lama, $data['password'])) {
+
+        // enkripsi password
+        $password = password_hash($password_baru, PASSWORD_DEFAULT);
+
+        // tambahkan userbaru ke database
+        $query = "UPDATE tbl_login SET 
+                password = '$password'
+                WHERE id = $id
+                ";
+        mysqli_query($conn, $query);
+
+        return mysqli_affected_rows($conn);
+    } else {
+        echo "<script>
+                alert('password lama tidak sesuai!');
+            </script>";
+        return false;
+    }
 }
 
 // function untuk menambah data buku

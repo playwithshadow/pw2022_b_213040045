@@ -61,7 +61,7 @@
                 Selamat Datang di Van Technology
               </h1>
             </div>
-            <a class="btn btn-primary mb-3" href="register/registrasianggota.php">Daftar Sekarang</a>
+            <a class="btn btn-primary mb-3 text-center me-auto" href="register/registrasianggota.php">Daftar Sekarang</a>
           </div>
           <div class="col-xl-5 col-xxl-6 d-xl-block text-center">
             <img class="img-fluid rounded-3 my-5" src="assets/img/vantechblack.png" alt="..." />

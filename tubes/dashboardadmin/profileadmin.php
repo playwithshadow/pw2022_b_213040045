@@ -178,8 +178,18 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id   = '
                       <div class="row" style="max-width:920px">
                         <div class="col-md">
                           <article class="box mb-3">
-                            <a class="btn float-end btn btn-info btn-sm" href="#">Ganti Disini</a>
-                            <p class="title mb-0">Ganti Password</p>
+                            <a class="btn float-end btn btn-info btn-sm" href="ubahadmin.php">Ganti Disini</a>
+                            <p class="title mb-0">Ubah Data</p>
+                          </article>
+                        </div>
+                      </div>
+
+
+                      <div class="row" style="max-width:920px">
+                        <div class="col-md">
+                          <article class="box mb-3">
+                            <a class="btn float-end btn btn-warning btn-sm" href="ubahpassword.php">Ganti Disini</a>
+                            <p class="title mb-0">Ubah Password</p>
                           </article>
                         </div>
                       </div>

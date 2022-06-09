@@ -10,7 +10,7 @@ if (!isset($_SESSION["login"])) {
     exit;
 }
 
-require '../config/functions.php';
+require '../../config/functions.php';
 
 
 $id = $_SESSION['id_level'];
@@ -50,7 +50,7 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
     <div class="wrapper">
         <nav id="sidebar" class="sidebar js-sidebar">
             <div class="sidebar-content js-simplebar">
-                <a class="sidebar-brand" style="text-decoration: none" href="../indexadmin.php">
+                <a class="sidebar-brand" style="text-decoration: none" href="../indexanggota.php">
                     <span class="align-middle">Van Technology</span>
                 </a>
 
@@ -58,7 +58,7 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
                     <li class="sidebar-header">Pages</li>
 
                     <li class="sidebar-item active">
-                        <a class="sidebar-link" href="dashboard.php">
+                        <a class="sidebar-link" href="index.php">
                             <i class="align-middle" data-feather="home"></i>
                             <span class="align-middle">Dashboard</span>
                         </a>
@@ -89,7 +89,7 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link d-sm-inline-block " href="#" data-bs-toggle="dropdown">
-                                <img src="../dashboardadmin/img/<?= $tblanggota['gambar']; ?>" class="avatar img-fluid rounded-circle me-1 mx-1" />
+                                <img src="../img/<?= $tblanggota['gambar']; ?>" class="avatar img-fluid rounded-circle me-1 mx-1" />
                                 <span class="text-dark"><?= $tblanggota['nama']; ?></span>
                                 <i class="align-end" data-feather="settings"></i>
                             </a>
@@ -98,7 +98,7 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
                                     <i class="align-middle me-1" data-feather="user"></i>Profile
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../login/logout.php">
+                                <a class="dropdown-item" href="../../login/logout.php">
                                     <i class="align-middle me-1" data-feather="log-out"></i>Logout
                                 </a>
                             </div>

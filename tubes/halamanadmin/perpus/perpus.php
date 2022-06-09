@@ -17,7 +17,7 @@ $id = $_SESSION['id'];
 
 // jika tombol kategori ditekan
 if (isset($_GET['id']) != "") {
-    $jumlahDataPerHalaman = 1;
+    $jumlahDataPerHalaman = 2;
     $jumlahData = count(query("SELECT * FROM tbl_buku NATURAL JOIN tbl_kategori WHERE id_kategori = '$_GET[id]'"));
     $jumlahHalaman = ceil($jumlahData / $jumlahDataPerHalaman);
     $halamanAktif = (isset($_GET["halaman"])) ? $_GET["halaman"] : 1;
@@ -25,7 +25,7 @@ if (isset($_GET['id']) != "") {
 
     $tabelbuku = query("SELECT * FROM tbl_buku NATURAL JOIN tbl_kategori WHERE id_kategori = '$_GET[id]' LIMIT $awalData, $jumlahDataPerHalaman");
 } else {
-    $jumlahDataPerHalaman = 2;
+    $jumlahDataPerHalaman = 3;
     $jumlahData = count(query("SELECT * FROM tbl_buku NATURAL JOIN tbl_kategori"));
     $jumlahHalaman = ceil($jumlahData / $jumlahDataPerHalaman);
     $halamanAktif = (isset($_GET["halaman"])) ? $_GET["halaman"] : 1;
