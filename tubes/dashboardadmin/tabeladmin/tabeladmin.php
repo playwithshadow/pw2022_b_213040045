@@ -68,7 +68,7 @@ if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
     <div class="wrapper">
         <nav id="sidebar" class="sidebar js-sidebar">
             <div class="sidebar-content js-simplebar">
-                <a class="sidebar-brand" style="text-decoration: none" href="#">
+                <a class="sidebar-brand" style="text-decoration: none" href="../../indexadmin.php">
                     <span class="align-middle">Van Technology</span>
                 </a>
 
