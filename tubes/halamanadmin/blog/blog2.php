@@ -132,6 +132,13 @@
                         </a>
                     </div>
                 </div>
+                <!-- tombol kembali ke blog berada di sebalah kanan -->
+                <div class="col-12 text-end mt-3 pt-3">
+                    <a href="blog.php" class="btn btn-info">
+                        <i class="bi bi-arrow-left-square-fill"></i>
+                        Kembali ke Blog Awal
+                    </a>
+                </div>
         </section>
         <!-- End Artikel -->
 

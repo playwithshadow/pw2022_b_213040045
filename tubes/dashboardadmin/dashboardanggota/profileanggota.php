@@ -22,7 +22,7 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <!-- Fav Icon -->
-  <link rel="shortcut icon" href="../assets/img/logo.png" />
+  <link rel="shortcut icon" href="../../assets/img/logo.png" />
 
   <title>Profile Anggota - Anggota</title>
 
@@ -44,7 +44,7 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
   <div class="wrapper">
     <nav id="sidebar" class="sidebar js-sidebar">
       <div class="sidebar-content js-simplebar">
-        <a class="sidebar-brand" style="text-decoration: none" href="../indexanggota.php">
+        <a class="sidebar-brand" style="text-decoration: none" href="../../indexanggota.php">
           <span class="align-middle">Van Technology</span>
         </a>
 
@@ -64,6 +64,13 @@ $tblanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id_lev
               <span class="align-middle">Profile</span>
             </a>
           </li>
+          <!-- tombol kembali ke halaman index -->
+          <div class="sidebar-footer">
+            <a href="../../indexanggota.php" class="sidebar-link">
+              <i class="align-middle" data-feather="skip-back"></i>
+              <span class="align-middle">Kembali Ke VAN TECH</span>
+            </a>
+          </div>
         </ul>
       </div>
     </nav>

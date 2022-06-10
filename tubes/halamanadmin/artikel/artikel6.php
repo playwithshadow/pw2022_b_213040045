@@ -17,6 +17,7 @@
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Css saya -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -94,6 +95,13 @@
                     </div>
                 </div>
             </div>
+            <!-- tombol kembali ke halaman blog-->
+            <div class="container px-5 my-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-9">
+                        <a class="btn btn-primary me-2" href="../blog/blog2.php">Kembali ke Blog</a>
+                    </div>
+                </div>
         </section>
 
         <!-- End Post Blog -->

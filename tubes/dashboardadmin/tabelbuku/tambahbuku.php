@@ -96,10 +96,14 @@ if (isset($_POST["tambah"])) {
                                     </select>
                                 </div>
 
-                                <div class="d-grid gap-2 col-6 mx-auto py-3">
+                                <div class="d-grid gap-2 col-6 mx-auto py-auto pt-3">
                                     <button class="btn btn-primary" name="tambah">Tambah Data Buku</button>
                                 </div>
                         </form>
+                    </div>
+                    <!-- tombol kembali ke profileadmin -->
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a onclick="history.back()" class="btn btn-danger">Kembali</a>
                     </div>
                 </div>
             </div>

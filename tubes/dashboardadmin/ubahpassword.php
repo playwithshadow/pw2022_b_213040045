@@ -27,14 +27,14 @@ if (isset($_POST["ubah"])) {
     if (ubahpassword($_POST) > 0) {
         echo "
             <script>
-                alert('data berhasil diubah!');
+                alert('password berhasil diubah!');
                 document.location.href = 'profileadmin.php';
             </script>
         ";
     } else {
         echo "
             <script>
-                alert('data gagal diubah!');
+                alert('password gagal diubah!');
                 document.location.href = 'profileadmin.php';
             </script>
         ";
@@ -93,9 +93,13 @@ if (isset($_POST["ubah"])) {
                                 </div>
                             </div>
                             <div class="d-grid gap-2 col-6 mx-auto py-3">
-                                <button class="btn btn-primary" name="ubah">Ubah Password Anggota</button>
+                                <button class="btn btn-primary" name="ubah">Ubah Password Admin</button>
                             </div>
                         </form>
+                        <!-- tombol kembali ke profileadmin -->
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="profileadmin.php" class="btn btn-danger">Kembali</a>
+                        </div>
                     </div>
                 </div>
             </div>

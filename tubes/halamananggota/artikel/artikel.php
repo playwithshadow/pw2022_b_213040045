@@ -37,6 +37,7 @@ if (!isset($_SESSION["login"])) {
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Css saya -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -83,7 +84,7 @@ if (!isset($_SESSION["login"])) {
                             <!-- Post header-->
                             <header class="mb-4">
                                 <!-- Post title-->
-                                <h1 class="fw-bolder mb-1">Seberapa Cepat chipset snapdragon gen-1 ?</h1>
+                                <h1 class="fw-bolder mb-1">Secepat apa chipset snapdragon gen-1 ?</h1>
                                 <!-- Post meta content-->
                                 <div class="text-muted fst-italic mb-2">January 10, 2022</div>
                             </header>
@@ -115,6 +116,13 @@ if (!isset($_SESSION["login"])) {
                     </div>
                 </div>
             </div>
+            <!-- tombol kembali ke halaman blog-->
+            <div class="container px-5 my-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-9">
+                        <a class="btn btn-primary me-2" href="../blog/blog.php">Kembali ke Blog</a>
+                    </div>
+                </div>
         </section>
 
         <!-- End Post Blog -->

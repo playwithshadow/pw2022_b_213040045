@@ -62,7 +62,7 @@ if (isset($_POST["tambah"])) {
         <div class="row justify-content-center">
             <div class="col-md-6 py-5">
                 <div class="card shadow-lg">
-                    <div class="fw-bolder fs-4 card-header text-center bg-primary text-light">Form Tambah Admin - VAN TECH</div>
+                    <div class="fw-bolder fs-4 card-header text-center bg-primary text-light">Form Tambah Anggota - VAN TECH</div>
                     <div class="card-body">
                         <form action="" method="post" enctype="multipart/form-data">
                             <div class="form-group row mb-3">
@@ -107,6 +107,10 @@ if (isset($_POST["tambah"])) {
                                 <button class="btn btn-primary" name="tambah">Tambah Data Anggota</button>
                             </div>
                         </form>
+                        <!-- tombol kembali ke profileadmin -->
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="tabelanggota.php" class="btn btn-danger">Kembali</a>
+                        </div>
                     </div>
                 </div>
             </div>

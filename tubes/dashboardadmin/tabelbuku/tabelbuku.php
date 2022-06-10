@@ -87,6 +87,13 @@ if (isset($_POST["cari"]) && $_POST["keyword"] != "") {
                             <span class="align-middle">Profile</span>
                         </a>
                     </li>
+                    <!-- tombol kembali ke halaman index -->
+                    <div class="sidebar-footer">
+                        <a href="../../indexadmin.php" class="sidebar-link">
+                            <i class="align-middle" data-feather="skip-back"></i>
+                            <span class="align-middle">Kembali Ke VAN TECH</span>
+                        </a>
+                    </div>
 
                     <li class="sidebar-header">Tabel</li>
 

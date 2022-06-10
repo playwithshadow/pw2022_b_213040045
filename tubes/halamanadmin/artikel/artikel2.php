@@ -17,6 +17,7 @@
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Css saya -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -68,7 +69,7 @@
                                 <div class="text-muted fst-italic mb-2">Maret 20, 2022</div>
                             </header>
                             <!-- Preview image figure-->
-                            <figure class="mb-4"><img class="img-fluid rounded" src="../assets/img/artikel2-more.jpg" alt="..." /></figure>
+                            <figure class="mb-4"><img class="img-fluid rounded" src="../../assets/img/artikel2-more.jpg" alt="..." /></figure>
                             <!-- Post content-->
                             <section class="mb-5">
                                 <p class="fs-5 mb-4">GeForce RTX 3090 Ti dan 3090 adalah big ferocious GPU (BFGPU) dengan performa kelas TITAN. Didukung oleh Ampere, arsitektur RTX generasi ke-2 NVIDIA, yang menggandakan performa ray tracing dan AI dengan Ray Tracing Core, Tensor Core, dan multiprosesor streaming baru yang disempurnakan. Selain itu, perangkat ini dilengkapi memori G6X 24 GB andal, semuanya untuk menghadirkan pengalaman terbaik bagi penggemar game dan pembuat konten.</p>
@@ -86,6 +87,13 @@
                     </div>
                 </div>
             </div>
+            <!-- tombol kembali ke halaman blog-->
+            <div class="container px-5 my-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-9">
+                        <a class="btn btn-primary me-2" href="../blog/blog.php">Kembali ke Blog</a>
+                    </div>
+                </div>
         </section>
 
         <!-- End Post Blog -->

@@ -69,7 +69,7 @@ if (isset($_POST["ubah"])) {
         <div class="row justify-content-center">
             <div class="col-md-6 py-5">
                 <div class="card shadow-lg">
-                    <div class="fw-bolder fs-4 card-header text-center bg-primary text-light">Form Ubah - VAN TECH</div>
+                    <div class="fw-bolder fs-4 card-header text-center bg-primary text-light">Form Ubah Anggota - VAN TECH</div>
                     <div class="card-body">
                         <form action="" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="id" value="<?= $adm["id"]; ?>">
@@ -106,6 +106,10 @@ if (isset($_POST["ubah"])) {
                                 <button class="btn btn-primary" name="ubah">Ubah Data Anggota</button>
                             </div>
                         </form>
+                        <!-- tombol kembali ke profileadmin -->
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="tabelanggota.php" class="btn btn-danger">Kembali</a>
+                        </div>
                     </div>
                 </div>
             </div>

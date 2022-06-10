@@ -107,6 +107,10 @@ if (isset($_POST["tambah"])) {
                                 <button class="btn btn-primary" name="tambah">Tambah Data Admin</button>
                             </div>
                         </form>
+                        <!-- tombol kembali ke profileadmin -->
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="tabeladmin.php" class="btn btn-danger">Kembali</a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -64,6 +64,13 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id   = '
               <span class="align-middle">Profile</span>
             </a>
           </li>
+          <!-- tombol kembali ke halaman index -->
+          <div class="sidebar-footer">
+            <a href="../indexadmin.php" class="sidebar-link">
+              <i class="align-middle" data-feather="skip-back"></i>
+              <span class="align-middle">Kembali Ke VAN TECH</span>
+            </a>
+          </div>
 
           <li class="sidebar-header">Tabel</li>
 
@@ -148,6 +155,10 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id   = '
                         <div class="row">
                           <div class="col-lg-8">
                             <div class="row gx-3">
+                              <div class="col-lg-12  mb-3">
+                                <label class="form-label">Nama</label>
+                                <input class="form-control" type="text" placeholder="Admin" value="<?= $tbladmin['nama']; ?>" readonly>
+                              </div>
                               <div class="col-lg-12  mb-3">
                                 <label class="form-label">Username</label>
                                 <input class="form-control" type="text" placeholder="Admin" value="<?= $tbladmin['username']; ?>" readonly>

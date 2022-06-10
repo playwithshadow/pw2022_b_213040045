@@ -96,6 +96,10 @@ if (isset($_POST["ubah"])) {
                                 <button class="btn btn-primary" name="ubah">Ubah Password Anggota</button>
                             </div>
                         </form>
+                        <!-- tombol kembali ke profileadmin -->
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="profileanggota.php" class="btn btn-danger">Kembali</a>
+                        </div>
                     </div>
                 </div>
             </div>
