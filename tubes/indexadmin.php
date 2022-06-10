@@ -118,7 +118,7 @@ if (!isset($_SESSION["login"])) {
           <img class="img-fluid rounded mb-5 mb-lg-0 shadow-lg" src="assets/img/header.jpg" alt="..." />
         </div>
         <div class="col-lg-6">
-          <h2 class="fw-bolder">Perpustkaan Online</h2>
+          <h2 class="fw-bolder">Perpustakaan Online</h2>
           <p class="lead fw-normal text-muted mb-0">
             Menyediakan beberapa buku tentang dunia teknologi, dan disediakan juga berdasarkan kategorinya.
           </p>
