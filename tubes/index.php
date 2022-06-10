@@ -57,11 +57,11 @@
         <div class="row gx-5 align-items-center justify-content-center">
           <div class="col-lg-8 col-xl-7 col-xxl-6">
             <div class="my-5 text-center text-xl-start">
-              <h1 class="display-5 fw-bolder text-white mb-6">
+              <h1 class="display-5 fw-bolder text-white mb-6 text-center">
                 Selamat Datang di Van Technology
               </h1>
             </div>
-            <a class="btn btn-primary mb-3 text-center me-auto" href="register/registrasianggota.php">Daftar Sekarang</a>
+            <a class="btn btn-primary d-flex mx-auto justify-content-center align-items-center fs-5" href="register/registrasianggota.php">Daftar Sekarang</a>
           </div>
           <div class="col-xl-5 col-xxl-6 d-xl-block text-center">
             <img class="img-fluid rounded-3 my-5" src="assets/img/vantechblack.png" alt="..." />
@@ -77,10 +77,10 @@
     <div class="container px-5">
       <div class="row justify-content-center">
         <div class="col-lg-8 col-xxl-6">
-          <div class="text-center my-5">
-            <h1 class="fw-bolder mb-3">Tentang Kami</h1>
+          <div class="text-start my-5">
+            <h1 class="fw-bolder mb-3 text-center">Tentang Kami</h1>
             <img class="img-fluid rounded-3 my-5" src="assets/img/vantechwhite.png" alt="..." />
-            <p class="lead fw-normal text-muted mb-4">
+            <p class="lead fw-normal text-muted align-items-center ms-3 mb-4">
               Van Technology adalah sebuah website perpustakaan online yang
               menyediakan buku tentang perkembangan teknologi, dan menyediakan
               beberapa artikel tentang teknologi yang dikemas melalui blog,
@@ -113,17 +113,17 @@
   <!-- End About section one -->
 
   <!-- About section two-->
-  <section class="py-5 bg-light">
+  <section class="py-5 bg-light" id="scroll-target">
     <div class="container px-5 my-5">
       <div class="row gx-5 align-items-center">
+        <div class="col-lg-6">
+          <img class="img-fluid rounded mb-5 mb-lg-0 shadow-lg" src="assets/img/header2.jpg" alt="..." />
+        </div>
         <div class="col-lg-6">
           <h2 class="fw-bolder">Blog</h2>
           <p class="lead fw-normal text-muted mb-0">
             Menyediakan beberapa artikel terkait berita tentang perkembangan teknologi seperti smartphone, komputer, laptop dan sebagainya.
           </p>
-        </div>
-        <div class="col-lg-6">
-          <img class="img-fluid rounded mb-5 mb-lg-0 shadow-lg" src="assets/img/header2.jpg" alt="..." />
         </div>
       </div>
     </div>
