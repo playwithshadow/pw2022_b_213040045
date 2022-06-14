@@ -169,7 +169,7 @@ $tbladmin = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE id   = '
                                 </div>
                                 <div class="card-body">
                                     <?php
-                                    $jumlahanggota = query("SELECT * FROM tbl_login NATUAL JOIN tbl_level WHERE level = 'anggota'");
+                                    $jumlahanggota = query("SELECT * FROM tbl_login NATURAL JOIN tbl_level WHERE level = 'anggota'");
                                     $jumlahanggota = count($jumlahanggota);
                                     ?>
                                     <h1 class="text-center"><?= $jumlahanggota; ?></h1>

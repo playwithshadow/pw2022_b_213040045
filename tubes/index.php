@@ -76,8 +76,8 @@
   <header class="py-5">
     <div class="container px-5">
       <div class="row justify-content-center">
-        <div class="col-lg-8 col-xxl-6">
-          <div class="text-start my-5">
+        <div class="col-lg col-sm-6">
+          <div class="text-center my-5">
             <h1 class="fw-bolder mb-3 text-center">Tentang Kami</h1>
             <img class="img-fluid rounded-3 my-5" src="assets/img/vantechwhite.png" alt="..." />
             <p class="lead fw-normal text-muted align-items-center ms-3 mb-4">
